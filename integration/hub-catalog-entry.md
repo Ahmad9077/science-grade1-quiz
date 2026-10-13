@@ -1,5 +1,17 @@
-# Hub integration for «علوم» (`science-grade1`)
+# Hub integration for «علوم - بنات» (`science-grade1`) and «علوم - أولاد» (`science-grade1-boys`)
 
+## Boys' copy release (2026-10-13, approved by the family: «انشر»)
+- Site: `science-grade1-quiz@6e1acc0` deployed; boys' page live at https://ahmad9077.github.io/science-grade1-quiz/boys/
+  (and https://haya-nt3lm.com/science-grade1-quiz/boys/). Same bundle and audio as the girls' page; `boys/index.html`
+  marks its root `data-audience="boys"`, so the page reports as `science-grade1-boys` and keeps its own local stars.
+- Hub `quizzes-hub@7ffbec6`: `quizCatalog` renames `science-grade1` to «علوم - بنات» and adds `science-grade1-boys`
+  «علوم - أولاد» (color `#dcecfb`); `schema.sql` seed rows; `script.js?v=33`; migration `017_science_grade1_boys_copy.sql`
+  (identical to `integration/seed-science-grade1.sql`).
+- Migration 017 applied once in the Supabase SQL editor and verified: both quizzes have 79 profiles; titles renamed;
+  `science-grade1` keeps its 4 existing assignments; `science-grade1-boys` has 0 assignments (needs a named approval).
+- Live check: both pages load the access guard with their own quiz id; boys' wording and `audio/*/boys/` clips served.
+
+## Girls' copy (first release)
 Status (2026-10-13, approved by the family): **published and connected**.
 - Production site live at https://ahmad9077.github.io/science-grade1-quiz/ (signed-out visitors are redirected to the Hub).
 - Hub `quizzes-hub@5799097`: catalog entry, schema seed row, `script.js?v=29`, migration `016_seed_science_grade1_quiz.sql`.

@@ -15,8 +15,8 @@
 مسجلة في `public/audio/*/boys/`. لكل نسخة نتائجها ونجومها الخاصة.
 
 ## الحالة
-نسخة البنات منشورة على https://ahmad9077.github.io/science-grade1-quiz/ ومربوطة بالـ Hub (13 أكتوبر 2026). غير مفعّلة لأي حساب بعد.
-نسخة الأولاد: معاينة فقط، بانتظار الاعتماد قبل النشر والربط.
+النسختان منشورتان ومربوطتان بالـ Hub (13 أكتوبر 2026): «علوم - بنات» على https://ahmad9077.github.io/science-grade1-quiz/
+و«علوم - أولاد» على https://ahmad9077.github.io/science-grade1-quiz/boys/. نسخة الأولاد غير مفعّلة لأي حساب بعد.
 تفاصيل الربط والتحقق في `integration/hub-catalog-entry.md`.
 
 ## Development
