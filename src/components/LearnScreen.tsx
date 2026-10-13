@@ -2,7 +2,8 @@ import { useCallback, useEffect, useRef, useState, type PointerEvent } from 'rea
 import { Art } from '../art/Art'
 import { useNarrator } from '../audio/NarratorContext'
 import { sfx } from '../audio/sfx'
-import { FACTS, TOPICS, clip, factArt, type TopicId } from '../data/catalog'
+import { WORDS, clip } from '../audience'
+import { FACTS, TOPICS, factArt, type TopicId } from '../data/catalog'
 import { toneStyle } from '../data/tones'
 import { arabicNumber } from '../domain/format'
 import { ArrowIcon, BackButton, BigButton, SpeakerButton, order } from './ui'
@@ -83,7 +84,7 @@ export function LearnScreen({ topic, onBack, onDone, onPractice }: LearnScreenPr
             <span key={entry.id} className={`dot ${n === index ? 'is-current' : n < index ? 'is-done' : ''}`} />
           ))}
         </div>
-        {fact ? <SpeakerButton onClick={() => void narrator.play([{ clip: clip.fact(fact.id) }])} label="اسمعي الشرح" /> : <span className="spacer" />}
+        {fact ? <SpeakerButton onClick={() => void narrator.play([{ clip: clip.fact(fact.id) }])} label={WORDS.listenFact} /> : <span className="spacer" />}
       </header>
 
       <div className="learn-stage">
@@ -121,7 +122,7 @@ export function LearnScreen({ topic, onBack, onDone, onPractice }: LearnScreenPr
             <h2 className="learn-done-title">رائع! أنهيت درس {meta?.short}</h2>
             <p className="learn-done-sub">والآن هيا نتدرب</p>
             <BigButton onClick={onPractice} pulse>
-              تدربي الآن
+              {WORDS.practiceNow}
             </BigButton>
           </article>
         )}

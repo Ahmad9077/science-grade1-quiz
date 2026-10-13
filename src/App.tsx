@@ -3,7 +3,8 @@ import { wakeAudio } from './audio/context'
 import { Narrator } from './audio/player'
 import { NarratorContext } from './audio/NarratorContext'
 import { setSfxEnabled } from './audio/sfx'
-import { TOPICS, clip, type TopicId } from './data/catalog'
+import { APP_ROOT, clip } from './audience'
+import { TOPICS, type TopicId } from './data/catalog'
 import { loadProgress, recordLearned, recordRound, saveProgress, type SavedProgress } from './domain/progress'
 import { buildPractice, buildTest, starsFor } from './domain/round'
 import type { BootstrapContext } from './hub/bootstrap'
@@ -40,7 +41,7 @@ function screenKey(screen: Screen): string {
 }
 
 export default function App({ context, bridge }: { context: BootstrapContext; bridge: HubBridge }) {
-  const narrator = useMemo(() => new Narrator(import.meta.env.BASE_URL), [])
+  const narrator = useMemo(() => new Narrator(APP_ROOT ?? import.meta.env.BASE_URL), [])
   const [screen, setScreen] = useState<Screen>({ name: 'splash' })
   const [progress, setProgress] = useState<SavedProgress>(() => loadProgress())
   const [muted, setMuted] = useState(readMuted)

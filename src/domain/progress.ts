@@ -1,6 +1,8 @@
+import { QUIZ_ID } from '../audience'
 import type { TopicId } from '../data/catalog'
 
-const STORAGE_KEY = 'science-grade1:progress:v1'
+// Each copy keeps its own stars, so a girl and a boy can share one device.
+const STORAGE_KEY = `${QUIZ_ID}:progress:v1`
 const RECENT_LIMIT = 40
 
 export type StarKey = TopicId | 'test'

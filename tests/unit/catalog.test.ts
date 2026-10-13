@@ -1,7 +1,8 @@
 import fs from 'node:fs'
 import { describe, expect, it } from 'vitest'
 import { DRAWINGS } from '../../src/art/drawings'
-import { FACTS, QUESTIONS, QUIZ_ID, THINGS, TOPICS, audioCues, factArt } from '../../src/data/catalog'
+import { WORDING } from '../../src/audience'
+import { AUDIENCES, FACTS, QUESTIONS, THINGS, TOPICS, UI_CLIPS, audioCues, clipsFor, factArt, type UiClip } from '../../src/data/catalog'
 import { PRACTICE_SIZE } from '../../src/domain/round'
 
 const allArt = [
@@ -12,14 +13,15 @@ const allArt = [
 ]
 
 describe('question bank', () => {
-  it('uses the permanent quiz id', () => {
-    expect(QUIZ_ID).toBe('science-grade1')
+  it('uses the permanent quiz ids for the girls\' and boys\' copies', () => {
+    expect(AUDIENCES.girls).toEqual({ quizId: 'science-grade1', title: 'علوم - بنات' })
+    expect(AUDIENCES.boys).toEqual({ quizId: 'science-grade1-boys', title: 'علوم - أولاد' })
   })
 
   it('keeps every published question key', () => {
     const keys = new Set(QUESTIONS.map((q) => q.key))
-    const permanent = fs.readFileSync('integration/seed-science-grade1.sql', 'utf8').match(/'[a-z]+:[a-z0-9-]+'/g) ?? []
-    expect(permanent.length).toBe(79)
+    const permanent = new Set(fs.readFileSync('integration/seed-science-grade1.sql', 'utf8').match(/'[a-z]+:[a-z0-9-]+'/g) ?? [])
+    expect(permanent.size).toBe(79)
     for (const key of permanent) expect(keys.has(key.slice(1, -1)), key).toBe(true)
   })
 
@@ -118,5 +120,33 @@ describe('narration', () => {
 
   it('names every option with its own clip', () => {
     for (const q of QUESTIONS) for (const o of q.options) expect(o.clip).toMatch(/^o\//)
+  })
+})
+
+describe('boys\' copy', () => {
+  // Words that speak to a girl; none may reach the boys' screens or narration.
+  const feminine = /أحسنتي|شطورة|بطلة|عليج|إنتي|أنتي|تبين|تطلعين|تعلمي|تدربي|اسمعي|حاولي|ارجعي|افتحي|اختاري|شفتي|خلصتي|تصيرين/
+  const girls = clipsFor('girls')
+  const boys = clipsFor('boys')
+  const boysCues = new Map(audioCues().filter((cue) => cue.id.includes('/boys/')).map((cue) => [cue.id, cue.text]))
+  const spoken = (id: string) => boysCues.get(id) ?? audioCues().find((cue) => cue.id === id)!.text
+
+  it('speaks to a boy on every screen', () => {
+    for (const [key, value] of Object.entries(WORDING.boys)) {
+      for (const text of [value].flat()) expect(text, key).not.toMatch(feminine)
+    }
+  })
+
+  it('re-records every narration line that speaks to a girl', () => {
+    for (const id of Object.keys(UI_CLIPS) as UiClip[]) expect(spoken(boys.ui(id)), id).not.toMatch(feminine)
+    for (const fact of FACTS) expect(spoken(boys.fact(fact.id)), fact.id).not.toMatch(feminine)
+    for (const q of QUESTIONS) expect(spoken(boys.question(q.key)), q.key).not.toMatch(feminine)
+  })
+
+  it('keeps the girls\' copy as it was', () => {
+    expect(girls.ui('welcome')).toBe('ui/welcome')
+    expect(girls.fact('r-nest')).toBe('f/r-nest')
+    expect(spoken(girls.ui('praise-1'))).toBe('أحسنتي!')
+    expect(boys.ui('correct-is')).toBe('ui/correct-is')
   })
 })

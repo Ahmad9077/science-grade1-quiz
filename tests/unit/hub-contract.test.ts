@@ -52,10 +52,13 @@ describe('hub contract', () => {
   it('ships a seed that registers the quiz and profiles but no assignments', () => {
     execFileSync('node', ['scripts/generate-hub-seed.ts', '--check'])
     const sql = fs.readFileSync('integration/seed-science-grade1.sql', 'utf8')
-    expect(sql).toContain("'science-grade1'")
-    expect(sql).toContain('https://ahmad9077.github.io/science-grade1-quiz/')
+    expect(sql).toContain("('science-grade1', 'علوم - بنات', 'https://ahmad9077.github.io/science-grade1-quiz/'")
+    expect(sql).toContain("('science-grade1-boys', 'علوم - أولاد', 'https://ahmad9077.github.io/science-grade1-quiz/boys/'")
     expect(sql).not.toMatch(/insert into public\.quiz_assignments/i)
-    for (const question of QUESTIONS) expect(sql).toContain(`'${question.key}'`)
+    for (const question of QUESTIONS) {
+      expect(sql).toContain(`('science-grade1', '${question.key}'`)
+      expect(sql).toContain(`('science-grade1-boys', '${question.key}'`)
+    }
   })
 
   it('keeps the manifest id and production path in step with the code', () => {

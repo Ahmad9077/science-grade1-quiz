@@ -1,8 +1,8 @@
 import { expect, type Page } from '@playwright/test'
 import { QUESTIONS } from '../../src/data/catalog'
 
-export async function start(page: Page) {
-  await page.goto('/')
+export async function start(page: Page, path = '/') {
+  await page.goto(path)
   await page.getByRole('button', { name: /هيا نبدأ/ }).click()
   await expect(page.locator('.home')).toBeVisible()
 }

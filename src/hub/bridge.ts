@@ -1,4 +1,4 @@
-import { QUIZ_ID } from '../data/catalog'
+import { QUIZ_ID } from '../audience'
 import type { BuildMode, Difficulty, HubWindow } from './contracts'
 
 export interface Attempt {

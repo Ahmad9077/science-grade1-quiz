@@ -2,28 +2,31 @@ import { expect, test } from '@playwright/test'
 import { answer, start } from './helpers'
 
 // Visual review captures: run with SCREENS=1 npx playwright test screens
+// (add SCREENS_PATH=/boys/ for the boys' copy).
+const path = process.env.SCREENS_PATH ?? '/'
+const copy = path.includes('boys') ? 'boys' : 'girls'
 test.skip(!process.env.SCREENS, 'screenshots only on request')
 
 test('capture every screen', async ({ page }, info) => {
   test.setTimeout(120_000)
-  const shot = (name: string) => page.screenshot({ path: `test-results/screens/${info.project.name}-${name}.png`, fullPage: !name.match(/question|correct|wrong|q4/) })
-  await page.goto('/')
+  const shot = (name: string) => page.screenshot({ path: `test-results/screens/${copy}-${info.project.name}-${name}.png`, fullPage: !name.match(/question|correct|wrong|q4/) })
+  await page.goto(path)
   await page.waitForTimeout(1500)
   await shot('1-splash')
-  await start(page)
+  await start(page, path)
   await page.waitForTimeout(1200)
   await shot('2-home')
   await page.locator('.topic-card[data-topic="plants"]').click()
   await page.waitForTimeout(1200)
   await shot('3-topic')
-  await page.getByRole('button', { name: /تعلمي/ }).click()
+  await page.locator('.mode-learn').click()
   await page.waitForTimeout(1500)
   await shot('4-learn')
   await page.locator('.learn-next').click()
   await page.waitForTimeout(1500)
   await shot('4b-learn')
   await page.locator('.round-button').first().click()
-  await page.getByRole('button', { name: /تدربي/ }).click()
+  await page.locator('.mode-practice').click()
   await page.waitForTimeout(1300)
   await shot('5-question')
   await answer(page, true)

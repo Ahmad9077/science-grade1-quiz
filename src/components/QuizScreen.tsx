@@ -3,19 +3,16 @@ import { Art } from '../art/Art'
 import { celebrate } from '../art/confetti'
 import { useNarrator } from '../audio/NarratorContext'
 import { sfx } from '../audio/sfx'
-import { FACTS, clip, roundClips, type Option, type Question, type UiClip } from '../data/catalog'
+import { WORDS, clip } from '../audience'
+import { FACTS, roundClips, type Option, type Question, type UiClip } from '../data/catalog'
 import { TONES, toneStyle, type ToneId } from '../data/tones'
 import { arabicNumber } from '../domain/format'
 import { arrangeOptions } from '../domain/round'
 import type { Attempt } from '../hub/bridge'
 import { ArrowIcon, BigButton, CloseButton, SpeakerButton, StarIcon, order } from './ui'
 
-const PRAISE: { text: string; clip: UiClip }[] = [
-  { text: 'أحسنتي!', clip: 'praise-1' },
-  { text: 'شطورة!', clip: 'praise-2' },
-  { text: 'ممتاز يا بطلة!', clip: 'praise-3' },
-  { text: 'برافو عليج!', clip: 'praise-4' },
-]
+const PRAISE_CLIPS: UiClip[] = ['praise-1', 'praise-2', 'praise-3', 'praise-4']
+const PRAISE = PRAISE_CLIPS.map((id, index) => ({ text: WORDS.praise[index]!, clip: id }))
 
 // Narration starts once the question has settled on screen.
 const ASK_DELAY_MS = 380
@@ -65,7 +62,7 @@ export function QuizScreen({ round, intro = false, onExit, onFinish }: QuizScree
 
   // Load every clip of the round up front, so no question waits for its audio.
   useEffect(() => {
-    narrator.preload(roundClips(round.questions))
+    narrator.preload(roundClips(round.questions, clip))
   }, [narrator, round.questions])
 
   useEffect(() => {
@@ -250,7 +247,7 @@ export function QuizScreen({ round, intro = false, onExit, onFinish }: QuizScree
           </div>
           {fact ? <p className="feedback-fact">{fact.text}</p> : null}
           <div className="feedback-actions">
-            <SpeakerButton onClick={() => fact && void narrator.play([{ clip: clip.fact(fact.id) }])} label="اسمعي الشرح" />
+            <SpeakerButton onClick={() => fact && void narrator.play([{ clip: clip.fact(fact.id) }])} label={WORDS.listenFact} />
             <BigButton onClick={next} pulse className="next-button">
               {index + 1 >= round.questions.length ? 'النتيجة' : 'التالي'}
               <ArrowIcon direction="next" />
@@ -262,7 +259,7 @@ export function QuizScreen({ round, intro = false, onExit, onFinish }: QuizScree
       {confirmExit ? (
         <div className="sheet-backdrop fade-in">
           <div className="sheet pop" role="dialog" aria-modal="true" aria-labelledby="exit-title">
-            <p id="exit-title" className="sheet-title">تبين تطلعين؟</p>
+            <p id="exit-title" className="sheet-title">{WORDS.exitTitle}</p>
             <p className="sheet-sub">إجابات هذي الجولة ما راح تنحفظ.</p>
             <div className="sheet-actions">
               <BigButton onClick={() => setConfirmExit(false)}>أكمل اللعب</BigButton>

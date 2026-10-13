@@ -3,7 +3,8 @@ import { Art } from '../art/Art'
 import { burst } from '../art/confetti'
 import { useNarrator } from '../audio/NarratorContext'
 import { sfx } from '../audio/sfx'
-import { FACTS, QUESTIONS, clip, factArt } from '../data/catalog'
+import { WORDS, clip } from '../audience'
+import { FACTS, QUESTIONS, factArt } from '../data/catalog'
 import { TONES, toneStyle } from '../data/tones'
 import { arabicNumber } from '../domain/format'
 import { starsFor } from '../domain/round'
@@ -45,7 +46,7 @@ export function ResultsScreen({ round, attempts, onAgain, onHome }: ResultsProps
   return (
     <main className="screen results-screen" style={toneStyle(round.tone)}>
       <section className="results-card rise" style={order(0)}>
-        <h1 className="results-title pop">{stars === 3 ? 'واو! أنتي بطلة العلوم' : stars === 2 ? 'أحسنتي!' : 'بداية حلوة!'}</h1>
+        <h1 className="results-title pop">{stars === 3 ? WORDS.doneGreat : stars === 2 ? WORDS.doneGood : 'بداية حلوة!'}</h1>
 
         <div className="results-stars" role="img" aria-label={`${arabicNumber(stars)} من ٣ نجوم`}>
           {[1, 2, 3].map((n) => (
@@ -62,7 +63,7 @@ export function ResultsScreen({ round, attempts, onAgain, onHome }: ResultsProps
 
         <div className="results-actions rise" style={order(0, { '--base-delay': '1300ms' })}>
           <BigButton onClick={onAgain} pulse={stars < 3}>
-            حاولي مرة ثانية
+            {WORDS.tryAgain}
           </BigButton>
           <BigButton tone="paper" onClick={onHome}>
             الدروس

@@ -5,6 +5,7 @@ import '@fontsource/lalezar/latin-400.css'
 import '@fontsource-variable/baloo-bhaijaan-2'
 import './styles/app.css'
 import App from './App'
+import { WORDS } from './audience'
 import { HUB_URL, bootstrapQuiz } from './hub/bootstrap'
 import { HubBridge } from './hub/bridge'
 
@@ -29,9 +30,9 @@ async function mount(): Promise<void> {
     const main = document.createElement('main')
     main.className = 'screen bootstrap-error'
     const title = document.createElement('h1')
-    title.textContent = 'تعذّر فتح «علوم»'
+    title.textContent = 'تعذر فتح «علوم»'
     const text = document.createElement('p')
-    text.textContent = 'ارجعي إلى صفحة الاختبارات ثم افتحي «علوم» مرة أخرى.'
+    text.textContent = WORDS.openFailed
     const link = document.createElement('a')
     link.className = 'big-button big-button-leaf'
     link.href = HUB_URL

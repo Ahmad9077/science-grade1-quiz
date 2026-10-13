@@ -5,7 +5,14 @@
 // Question keys are permanent Hub identifiers: never rename or reuse one.
 // This file is self-contained so Node scripts can import it directly.
 
-export const QUIZ_ID = 'science-grade1'
+// The same lessons are published twice: «علوم - بنات» speaks to a girl and
+// «علوم - أولاد» to a boy. Each copy is its own Hub quiz with its own results.
+export type Audience = 'girls' | 'boys'
+
+export const AUDIENCES: Record<Audience, { quizId: string; title: string }> = {
+  girls: { quizId: 'science-grade1', title: 'علوم - بنات' },
+  boys: { quizId: 'science-grade1-boys', title: 'علوم - أولاد' },
+}
 
 export type TopicId = 'plants' | 'movement' | 'covering' | 'food' | 'breathing' | 'reproduction'
 export type QuestionKind = 'pick' | 'sort' | 'tf'
@@ -635,12 +642,37 @@ export const UI_CLIPS = {
 
 export type UiClip = keyof typeof UI_CLIPS
 
-export const clip = {
-  question: (key: string) => `q/${key.replace(':', '/')}`,
-  fact: (id: string) => `f/${id}`,
-  topic: (id: TopicId) => `t/${id}`,
-  ui: (id: UiClip) => `ui/${id}`,
+// The boys' copy re-records only the lines that speak to the child; the rest is shared.
+const BOYS_UI_CLIPS: Partial<Record<UiClip, string>> = {
+  welcome: 'هلا والله يا بطل العلوم! اختار درس… ويلا نبدأ.',
+  'praise-1': 'أحسنت!',
+  'praise-2': 'شطور!',
+  'praise-3': 'ممتاز يا بطل!',
+  'praise-4': 'برافو عليك!',
+  'done-great': 'واو! إنت بطل العلوم!',
+  'done-good': 'أحسنت! تدرب مرة ثانية… وبتصير أقوى.',
+  'learn-done': 'شطور! خلصت الدرس… يلا نتدرب.',
 }
+
+const BOYS_FACT_SAY: Record<string, string> = {
+  'r-nest': 'إذا شفت بيض في عش… فهذا بيض طيور، مثل الحمامة والعصفور.',
+}
+
+/** Clip ids for one copy of the site; the boys' own recordings live under a boys/ folder. */
+export function clipsFor(audience: Audience) {
+  const boys = audience === 'boys'
+  return {
+    question: (key: string) => `q/${key.replace(':', '/')}`,
+    fact: (id: string) => (boys && id in BOYS_FACT_SAY ? `f/boys/${id}` : `f/${id}`),
+    topic: (id: TopicId) => `t/${id}`,
+    ui: (id: UiClip) => (boys && id in BOYS_UI_CLIPS ? `ui/boys/${id}` : `ui/${id}`),
+  }
+}
+
+export type Clips = ReturnType<typeof clipsFor>
+
+const girlsClip = clipsFor('girls')
+const boysClip = clipsFor('boys')
 
 export interface AudioCue {
   id: string
@@ -649,11 +681,13 @@ export interface AudioCue {
 
 export function audioCues(): AudioCue[] {
   return [
-    ...(Object.keys(UI_CLIPS) as UiClip[]).map((id) => ({ id: clip.ui(id), text: UI_CLIPS[id] })),
-    ...TOPIC_SOURCE.map((topic) => ({ id: clip.topic(topic.id), text: topic.say })),
-    ...FACT_SOURCE.map((entry) => ({ id: clip.fact(entry.id), text: entry.say })),
-    ...QUESTION_SOURCE.map((question) => ({ id: clip.question(question.key), text: question.say })),
+    ...(Object.keys(UI_CLIPS) as UiClip[]).map((id) => ({ id: girlsClip.ui(id), text: UI_CLIPS[id] })),
+    ...TOPIC_SOURCE.map((topic) => ({ id: girlsClip.topic(topic.id), text: topic.say })),
+    ...FACT_SOURCE.map((entry) => ({ id: girlsClip.fact(entry.id), text: entry.say })),
+    ...QUESTION_SOURCE.map((question) => ({ id: girlsClip.question(question.key), text: question.say })),
     ...optionCues(),
+    ...(Object.keys(BOYS_UI_CLIPS) as UiClip[]).map((id) => ({ id: boysClip.ui(id), text: BOYS_UI_CLIPS[id]! })),
+    ...Object.entries(BOYS_FACT_SAY).map(([id, text]) => ({ id: boysClip.fact(id), text })),
   ].map((cue) => ({ ...cue, text: bare(cue.text) }))
 }
 
@@ -670,7 +704,7 @@ function optionCues(): AudioCue[] {
 }
 
 /** Every clip a round needs, so it can be loaded before the first question. */
-export function roundClips(questions: Question[]): string[] {
+export function roundClips(questions: Question[], clip: Clips): string[] {
   return [
     ...questions.flatMap((question) => [clip.question(question.key), ...question.options.map((option) => option.clip), clip.fact(question.fact)]),
     clip.ui('correct-is'),

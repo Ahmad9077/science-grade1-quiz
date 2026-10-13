@@ -44,6 +44,12 @@
       "durationMs": 4878,
       "bytes": 39540
     },
+    "f/boys/r-nest": {
+      "text": "إذا شفت بيض في عش… فهذا بيض طيور، مثل الحمامة والعصفور.",
+      "hash": "b636ffb1b1f32246",
+      "durationMs": 5539,
+      "bytes": 44973
+    },
     "f/c-birds": {
       "text": "الطيور جسمها مغطى بريش… مثل الببغاء، والبطريق، والبطة.",
       "hash": "abd4c084f7725250",
@@ -1219,6 +1225,54 @@
       "hash": "5520236839e7c368",
       "durationMs": 2091,
       "bytes": 17388
+    },
+    "ui/boys/done-good": {
+      "text": "أحسنت! تدرب مرة ثانية… وبتصير أقوى.",
+      "hash": "e2df400dcd41b020",
+      "durationMs": 3744,
+      "bytes": 30554
+    },
+    "ui/boys/done-great": {
+      "text": "واو! إنت بطل العلوم!",
+      "hash": "0bf59e5e597bb0c6",
+      "durationMs": 2542,
+      "bytes": 20940
+    },
+    "ui/boys/learn-done": {
+      "text": "شطور! خلصت الدرس… يلا نتدرب.",
+      "hash": "f38237dfd7f68c56",
+      "durationMs": 3380,
+      "bytes": 27628
+    },
+    "ui/boys/praise-1": {
+      "text": "أحسنت!",
+      "hash": "c19764725e35690a",
+      "durationMs": 977,
+      "bytes": 8402
+    },
+    "ui/boys/praise-2": {
+      "text": "شطور!",
+      "hash": "e1712d513fdee885",
+      "durationMs": 964,
+      "bytes": 8193
+    },
+    "ui/boys/praise-3": {
+      "text": "ممتاز يا بطل!",
+      "hash": "423a51aa0652e356",
+      "durationMs": 1634,
+      "bytes": 13626
+    },
+    "ui/boys/praise-4": {
+      "text": "برافو عليك!",
+      "hash": "1a024fe4665a8386",
+      "durationMs": 1303,
+      "bytes": 10909
+    },
+    "ui/boys/welcome": {
+      "text": "هلا والله يا بطل العلوم! اختار درس… ويلا نبدأ.",
+      "hash": "b59dcff249bc4816",
+      "durationMs": 4451,
+      "bytes": 36196
     },
     "ui/correct-is": {
       "text": "الجواب الصح هو…",

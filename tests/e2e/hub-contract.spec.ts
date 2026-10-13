@@ -49,3 +49,25 @@ test('production build stops when the Hub denies access', async ({ page }) => {
   await expect(page.locator('.bootstrap-error')).toBeVisible()
   await expect(page.getByRole('button', { name: /هيا نبدأ/ })).toHaveCount(0)
 })
+
+test('production boys copy registers as science-grade1-boys and reads shared audio', async ({ page }) => {
+  await page.route('https://ahmad9077.github.io/quizzes-hub/**', async (route) => {
+    const url = route.request().url()
+    if (url.includes('access-guard.js')) {
+      return route.fulfill({
+        contentType: 'text/javascript',
+        body: `window.__guardQuizId = document.currentScript.dataset.quizId;
+               window.QuizzesHubAccessReady = Promise.resolve({ ok: true, quizId: 'science-grade1-boys', difficulty: 'medium' });`,
+      })
+    }
+    return route.fulfill({ contentType: 'text/javascript', body: '' })
+  })
+  const welcome = page.waitForResponse((res) => res.url().includes('/audio/ui/boys/welcome.mp3'))
+  await page.goto('http://127.0.0.1:4184/science-grade1-quiz/boys/')
+  await page.getByRole('button', { name: /هيا نبدأ/ }).click()
+  const response = await welcome
+  expect(new URL(response.url()).pathname).toBe('/science-grade1-quiz/audio/ui/boys/welcome.mp3')
+  expect(response.status()).toBe(200)
+  expect(await page.evaluate(() => (window as unknown as { __guardQuizId: string }).__guardQuizId)).toBe('science-grade1-boys')
+  await expect(page.locator('.preview-badge')).toHaveCount(0)
+})

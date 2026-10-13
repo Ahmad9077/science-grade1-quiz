@@ -8,25 +8,27 @@ const script = html.match(/<script type="module"[^>]*src="\.\/(assets\/[^"]+\.js
 const style = html.match(/<link rel="stylesheet"[^>]*href="\.\/(assets\/[^"]+\.css)"/)?.[1]
 if (!script || !style) throw new Error('Could not find the built script and stylesheet in dist/index.html.')
 
-const page = `<title>علوم</title>
-<meta name="description" content="نسخة تجريبية لتدريب طفلة الصف الأول على دروس العلوم.">
+// One page per copy: the girls' page (page.html) and the boys' page (page-boys.html).
+const page = (title, description, audience) => `<title>${title}</title>
+<meta name="description" content="${description}">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@400..800&family=Lalezar&display=swap">
 <link rel="stylesheet" href="${style}">
-<div id="root"></div>
+<div id="root"${audience ? ` data-audience="${audience}"` : ''}></div>
 <script type="module" src="${script}"></script>
 `
-fs.writeFileSync('dist/page.html', page)
+fs.writeFileSync('dist/page.html', page('علوم', 'نسخة تجريبية لتدريب طفلة الصف الأول على دروس العلوم.'))
+fs.writeFileSync('dist/page-boys.html', page('علوم - أولاد', 'نسخة تجريبية لتدريب طفل الصف الأول على دروس العلوم.', 'boys'))
 const files = []
 const walk = (dir) => {
   for (const entry of fs.readdirSync(`dist/${dir}`, { withFileTypes: true })) {
     const path = dir ? `${dir}/${entry.name}` : entry.name
     if (entry.isDirectory()) walk(path)
-    else if (!['index.html', 'page.html', 'files.json'].includes(path) && !path.endsWith('.map')) files.push({ path })
+    else if (!['index.html', 'boys/index.html', 'page.html', 'page-boys.html', 'files.json'].includes(path) && !path.endsWith('.map')) files.push({ path })
   }
 }
 walk('')
 fs.writeFileSync('dist/files.json', JSON.stringify(files))
-console.log(`page.html → ${script}, ${style}; ${files.length} supporting files`)
+console.log(`page.html + page-boys.html → ${script}, ${style}; ${files.length} supporting files`)

@@ -1,7 +1,8 @@
 import { useEffect } from 'react'
 import { Art } from '../art/Art'
 import { useNarrator } from '../audio/NarratorContext'
-import { FACTS, TOPICS, clip, type TopicId } from '../data/catalog'
+import { WORDS, clip } from '../audience'
+import { FACTS, TOPICS, type TopicId } from '../data/catalog'
 import { toneStyle } from '../data/tones'
 import { arabicNumber } from '../domain/format'
 import type { SavedProgress } from '../domain/progress'
@@ -57,7 +58,7 @@ export function TopicScreen({ topic, progress, onBack, onLearn, onPractice }: To
             <Art art="📖" />
           </span>
           <span className="mode-text">
-            <span className="mode-title">تعلمي</span>
+            <span className="mode-title">{WORDS.learn}</span>
             <span className="mode-sub">{arabicNumber(learnFacts.length)} بطاقات مع أمثلة</span>
           </span>
           {learned ? <span className="learned-chip">✓</span> : null}
@@ -73,7 +74,7 @@ export function TopicScreen({ topic, progress, onBack, onLearn, onPractice }: To
             <Art art="🎯" />
           </span>
           <span className="mode-text">
-            <span className="mode-title">تدربي</span>
+            <span className="mode-title">{WORDS.practice}</span>
             <span className="mode-sub">{arabicNumber(PRACTICE_SIZE)} أسئلة</span>
           </span>
           <Stars count={progress.stars[topic] ?? 0} size="sm" />

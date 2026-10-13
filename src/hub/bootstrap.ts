@@ -1,4 +1,4 @@
-import { QUIZ_ID } from '../data/catalog'
+import { QUIZ_ID } from '../audience'
 import type { BuildMode, Difficulty, HubAdaptivePlan, HubWindow, QuizSource } from './contracts'
 
 export const HUB_URL = 'https://ahmad9077.github.io/quizzes-hub/'

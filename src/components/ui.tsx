@@ -1,4 +1,5 @@
 import { useEffect, useState, type CSSProperties, type ReactNode } from 'react'
+import { WORDS } from '../audience'
 import { useNarrator } from '../audio/NarratorContext'
 import { arabicNumber } from '../domain/format'
 
@@ -32,7 +33,7 @@ export function useSpeaking(): boolean {
   return speaking
 }
 
-export function SpeakerButton({ onClick, label = 'اسمعي مرة ثانية' }: { onClick: () => void; label?: string }) {
+export function SpeakerButton({ onClick, label = WORDS.listenAgain }: { onClick: () => void; label?: string }) {
   const speaking = useSpeaking()
   return (
     <button type="button" className={`speaker-button press ${speaking ? 'is-speaking' : ''}`} onClick={onClick} aria-label={label}>
