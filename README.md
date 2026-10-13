@@ -8,7 +8,8 @@
 - **الاختبار التجريبي**: ١٢ سؤالًا من كل الدروس.
 
 ## الحالة
-نسخة تجريبية فقط. غير منشورة وغير مربوطة بالـ Hub. خطوات الربط بعد الاعتماد في `integration/hub-catalog-entry.md`.
+منشور على https://ahmad9077.github.io/science-grade1-quiz/ ومربوط بالـ Hub (13 أكتوبر 2026). غير مفعّل لأي حساب بعد.
+تفاصيل الربط والتحقق في `integration/hub-catalog-entry.md`.
 
 ## Development
 ```bash

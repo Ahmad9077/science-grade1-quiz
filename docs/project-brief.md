@@ -12,6 +12,6 @@
 - Stable project ID: `science-grade1`
 - Stable question-key strategy: `<lesson>:<slug>` written by hand, never derived from order or wording
 - Preview scope: separate preview build, no Hub or Supabase calls, stars stored on the device only
-- Production actions currently authorized: none
+- Production actions authorized and done (2026-10-13): production site, Hub catalog, Supabase registration
 - Account assignments currently authorized: none
 - Acceptance checks: unit tests (content, narration, rounds, Hub contract, seed), Playwright on iPhone/iPad WebKit and desktop Chromium

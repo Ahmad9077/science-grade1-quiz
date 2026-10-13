@@ -1,6 +1,11 @@
 # Hub integration for «علوم» (`science-grade1`)
 
-Status: **not applied**. Everything here waits for explicit approval of the reviewed preview.
+Status (2026-10-13, approved by the family): **published and connected**.
+- Production site live at https://ahmad9077.github.io/science-grade1-quiz/ (signed-out visitors are redirected to the Hub).
+- Hub `quizzes-hub@5799097`: catalog entry, schema seed row, `script.js?v=29`, migration `016_seed_science_grade1_quiz.sql`.
+- Migration 016 applied once in the Supabase SQL editor and verified: 79 profiles across 6 lessons, catalog row present,
+  0 assignments for `science-grade1`; profiles 3, assignments 20, progress 214 unchanged before and after.
+- Not assigned to any account yet (needs a named approval).
 
 ## 1. Production site
 - Repository: `Ahmad9077/science-grade1-quiz` (GitHub Pages, branch `gh-pages` or Actions deploy of `dist-hub/`).
