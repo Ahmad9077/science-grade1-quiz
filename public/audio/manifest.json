@@ -1,0 +1,1284 @@
+{
+  "voice": "Maryam Essa - Kuwaiti Calm & Warm",
+  "voiceId": "w0uhBAmNIG5kUDeaFEsA",
+  "model": "eleven_v4",
+  "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.8,
+    "style": 0.2
+  },
+  "clips": {
+    "f/b-crab": {
+      "text": "وسرطان البحر بعد… يتنفس بالخياشيم.",
+      "hash": "fbbc6afe15b12f49",
+      "durationMs": 3641,
+      "bytes": 29718
+    },
+    "f/b-fish-out": {
+      "text": "السمكة تحتاج الماي عشان تعيش… إذا طلعت من الماي وقت طويل، تموت.",
+      "hash": "9c0d9c3b99dd613f",
+      "durationMs": 5809,
+      "bytes": 47063
+    },
+    "f/b-gills": {
+      "text": "أما السمكة والقرش… يتنفسون داخل الماي بالخياشيم.",
+      "hash": "2a2bb379445e63df",
+      "durationMs": 4633,
+      "bytes": 37659
+    },
+    "f/b-like-us": {
+      "text": "الحيوانات تتنفس مثلنا… بس مو كلها بنفس الطريقة.",
+      "hash": "0757d27307613c23",
+      "durationMs": 4369,
+      "bytes": 35569
+    },
+    "f/b-lungs": {
+      "text": "القطة، والأرنب، والدجاجة، والسلحفاة… تتنفس الهوا بالرئتين، مثلنا بالضبط.",
+      "hash": "2c30ea113d569815",
+      "durationMs": 7456,
+      "bytes": 60229
+    },
+    "f/b-lungs-more": {
+      "text": "والزرافة، والدب، والطيور… بعد تتنفس بالرئتين.",
+      "hash": "7f1d2b6dd7ac575a",
+      "durationMs": 4878,
+      "bytes": 39540
+    },
+    "f/c-birds": {
+      "text": "الطيور جسمها مغطى بريش… مثل الببغاء، والبطريق، والبطة.",
+      "hash": "abd4c084f7725250",
+      "durationMs": 5549,
+      "bytes": 44973
+    },
+    "f/c-crocodile": {
+      "text": "التمساح جسمه مغطى بحراشف… قوية وخشنة.",
+      "hash": "84d259b76a2e8de9",
+      "durationMs": 4884,
+      "bytes": 39540
+    },
+    "f/c-different": {
+      "text": "كل حيوان له غطا يغطي جسمه… والأغطية مو نفس الشي، مختلفة.",
+      "hash": "9ff3d162f03951c4",
+      "durationMs": 5990,
+      "bytes": 48526
+    },
+    "f/c-duck": {
+      "text": "وريش البطة يمنع الماي يدخل جسمها… عشان جذي ما تتبلل وهي تسبح.",
+      "hash": "3f1d310859ff73a5",
+      "durationMs": 6047,
+      "bytes": 48944
+    },
+    "f/c-fish": {
+      "text": "السمكة جسمها مغطى بقشور… صغيرة ولامعة.",
+      "hash": "482e875b8c52493d",
+      "durationMs": 4974,
+      "bytes": 40376
+    },
+    "f/c-fur": {
+      "text": "الثعلب، والأسد، والذئب… جسمهم مغطى بشعر.",
+      "hash": "3e1554604535d3c8",
+      "durationMs": 4720,
+      "bytes": 38286
+    },
+    "f/c-protect": {
+      "text": "وليش الغطا مهم؟ لأنه يحمي جسم الحيوان.",
+      "hash": "ba0e11100d2ae753",
+      "durationMs": 3773,
+      "bytes": 30763
+    },
+    "f/c-turtle": {
+      "text": "السلحفاة جسمها مغطى بصندوق عظمي… قوي، يحميها.",
+      "hash": "ea543d2731f71a90",
+      "durationMs": 5217,
+      "bytes": 42256
+    },
+    "f/c-warm": {
+      "text": "شعر الذئب يدفيه… عشان ما يبرد.",
+      "hash": "c8efb05e93dd97c5",
+      "durationMs": 3454,
+      "bytes": 28255
+    },
+    "f/f-chain": {
+      "text": "والحيوانات اللي تاكل لحوم… تاكل الحيوانات اللي تاكل أعشاب.",
+      "hash": "3bd67c35211d1761",
+      "durationMs": 5015,
+      "bytes": 40585
+    },
+    "f/f-crocodile": {
+      "text": "التمساح ياكل لحوم حيوانات ثانية.",
+      "hash": "8c10d99dde114375",
+      "durationMs": 3087,
+      "bytes": 25329
+    },
+    "f/f-different": {
+      "text": "الحيوانات مو كلها تاكل نفس الأكل… أكلها مختلف.",
+      "hash": "d4157d484e3e3b15",
+      "durationMs": 4216,
+      "bytes": 34315
+    },
+    "f/f-elephant": {
+      "text": "والفيل، والزرافة… بعد ياكلون نباتات.",
+      "hash": "a941c1e9ab0b6da1",
+      "durationMs": 3942,
+      "bytes": 32016
+    },
+    "f/f-lion": {
+      "text": "الأسد ياكل لحوم… واللبوة تعطي صغارها لحم ياكلونه.",
+      "hash": "c53f119ffe2decda",
+      "durationMs": 5029,
+      "bytes": 40794
+    },
+    "f/f-meat": {
+      "text": "وفي حيوانات تاكل لحوم… مثل الذئب، والثعبان، والصقر.",
+      "hash": "6773ad2eb710cc1d",
+      "durationMs": 5053,
+      "bytes": 41003
+    },
+    "f/f-plants": {
+      "text": "في حيوانات تاكل نباتات… مثل الأرنب، والحصان، والجمل.",
+      "hash": "92ae2334248a7640",
+      "durationMs": 5207,
+      "bytes": 42256
+    },
+    "f/m-crawl": {
+      "text": "الثعبان ما عنده رجول… فيزحف على بطنه.",
+      "hash": "05bdb317ac56fc5b",
+      "durationMs": 3787,
+      "bytes": 30763
+    },
+    "f/m-different": {
+      "text": "الحيوانات تتحرك من مكان لمكان… بس كل حيوان له طريقته!",
+      "hash": "e10e644df19721fb",
+      "durationMs": 5473,
+      "bytes": 44346
+    },
+    "f/m-duck": {
+      "text": "في حيوانات تتحرك بأكثر من طريقة… البطة: تسبح في الماي، وتمشي على الأرض، وتطير في السما!",
+      "hash": "5cf9fb4342430a56",
+      "durationMs": 8363,
+      "bytes": 67543
+    },
+    "f/m-fly": {
+      "text": "الطيور تطير بجناحاتها في السما… مثل الببغاء، والحمامة، والبومة.",
+      "hash": "45c2277e4c03a545",
+      "durationMs": 5911,
+      "bytes": 47899
+    },
+    "f/m-jump": {
+      "text": "الأرنب يقفز… والكنغر يقفز قفزات كبيرة!",
+      "hash": "ad474f46624bc7e2",
+      "durationMs": 4986,
+      "bytes": 40376
+    },
+    "f/m-penguin": {
+      "text": "والبطريق يمشي ويسبح… بس ما يطير.",
+      "hash": "d6c6bb5508167b1d",
+      "durationMs": 3686,
+      "bytes": 30136
+    },
+    "f/m-seaturtle": {
+      "text": "والسلحفاة البحرية… تزحف على الرمل، وتسبح في البحر.",
+      "hash": "754869975f593338",
+      "durationMs": 4584,
+      "bytes": 37241
+    },
+    "f/m-swim": {
+      "text": "السمكة تسبح في الماي… والحوت بعد يسبح.",
+      "hash": "e695cd29225dd1b5",
+      "durationMs": 3629,
+      "bytes": 29509
+    },
+    "f/m-walk": {
+      "text": "الحصان يمشي على رجوله… والكلب والأسد بعد يمشون.",
+      "hash": "3cfbbb9deed887d1",
+      "durationMs": 4796,
+      "bytes": 38913
+    },
+    "f/p-carrot": {
+      "text": "الجزر… هو جذر النبتة! ينمو تحت التراب، وإحنا ناكله.",
+      "hash": "27983845da8722c9",
+      "durationMs": 5337,
+      "bytes": 43301
+    },
+    "f/p-cauliflower": {
+      "text": "القرنبيط… الجزء الأبيض اللي ناكله هو زهرته. والبروكلي بعد ناكل زهرته.",
+      "hash": "0b0be4dc9b9b3eb9",
+      "durationMs": 6474,
+      "bytes": 52287
+    },
+    "f/p-different": {
+      "text": "يعني… مو كل النباتات ناكل منها نفس الجزء! من الجزر ناكل الجذر، ومن الخس ناكل الأوراق، ومن القرنبيط ناكل الزهرة.",
+      "hash": "5d7521c57abd6010",
+      "durationMs": 10126,
+      "bytes": 81545
+    },
+    "f/p-flower": {
+      "text": "والزهرة… في نباتات ناكل زهرتها، مثل: القرنبيط، والبروكلي.",
+      "hash": "15edb342b6a2fd76",
+      "durationMs": 6004,
+      "bytes": 48526
+    },
+    "f/p-leaf": {
+      "text": "الأوراق لونها أخضر… وفي أوراق ناكلها، مثل: الخس، والنعناع.",
+      "hash": "b425b380a6f459fa",
+      "durationMs": 5812,
+      "bytes": 47063
+    },
+    "f/p-lettuce": {
+      "text": "الخس… ناكل أوراقه الخضرا.",
+      "hash": "14213fa26be1279a",
+      "durationMs": 2668,
+      "bytes": 21985
+    },
+    "f/p-parts": {
+      "text": "النبات له أربعة أجزاء… الجذر، والساق، والأوراق، والزهرة.",
+      "hash": "d6a2e3e9d10b39d6",
+      "durationMs": 5804,
+      "bytes": 47063
+    },
+    "f/p-radish": {
+      "text": "وفي نباتات ناكل منها أكثر من جزء… مثل الفجل الأبيض: ناكل جذره الأبيض، وناكل أوراقه بعد.",
+      "hash": "d2ff55404491a6ab",
+      "durationMs": 7881,
+      "bytes": 63572
+    },
+    "f/p-root": {
+      "text": "الجذر يكون تحت التراب… ويشرب الماي للنبتة. ومن الجذور اللي ناكلها: الجزر.",
+      "hash": "04e428dba565666b",
+      "durationMs": 7019,
+      "bytes": 56676
+    },
+    "f/p-stem": {
+      "text": "الساق يشيل النبتة ويخليها واقفة… ومن السيقان اللي ناكلها: قصب السكر.",
+      "hash": "e68c9b08206b74b2",
+      "durationMs": 6357,
+      "bytes": 51452
+    },
+    "f/p-sugarcane": {
+      "text": "قصب السكر… ناكل ساقه الطويل، ومنه يسوون السكر.",
+      "hash": "c68c14568fd7df4c",
+      "durationMs": 4687,
+      "bytes": 38077
+    },
+    "f/r-birds": {
+      "text": "وكل الطيور تتكاثر بالبيض… مثل الدجاجة، والعصفور، والبطة.",
+      "hash": "bb7c4431f074c03c",
+      "durationMs": 5549,
+      "bytes": 44973
+    },
+    "f/r-birth": {
+      "text": "القطة، والخروف، والدب… تتكاثر بالولادة: تولد صغارها.",
+      "hash": "97d2cd8e64c2d47a",
+      "durationMs": 5857,
+      "bytes": 47481
+    },
+    "f/r-eggs": {
+      "text": "والسلحفاة، والسمكة… تتكاثر بالبيض.",
+      "hash": "20f6e2c6abdf4065",
+      "durationMs": 3856,
+      "bytes": 31389
+    },
+    "f/r-giraffe": {
+      "text": "الزرافة… تاكل نباتات، وتتكاثر بالولادة.",
+      "hash": "e2649bc671cbbb86",
+      "durationMs": 4139,
+      "bytes": 33688
+    },
+    "f/r-nest": {
+      "text": "إذا شفتي بيض في عش… فهذا بيض طيور، مثل الحمامة والعصفور.",
+      "hash": "784dfa17b71a01b8",
+      "durationMs": 5377,
+      "bytes": 43510
+    },
+    "f/r-ways": {
+      "text": "الحيوانات تتكاثر… يعني تجيب صغار. وفيه طريقتين: الولادة، والبيض.",
+      "hash": "ad6ebb07e5db53b7",
+      "durationMs": 6705,
+      "bytes": 54168
+    },
+    "o/bear": {
+      "text": "دب",
+      "hash": "f24f628013104add",
+      "durationMs": 880,
+      "bytes": 7566
+    },
+    "o/birth": {
+      "text": "بالولادة",
+      "hash": "9c583e3be7c1b22a",
+      "durationMs": 1055,
+      "bytes": 9029
+    },
+    "o/broccoli": {
+      "text": "بروكلي",
+      "hash": "cfb90c0fda1fbec4",
+      "durationMs": 868,
+      "bytes": 7566
+    },
+    "o/butterfly": {
+      "text": "فراشة",
+      "hash": "c57bf8bc80432e79",
+      "durationMs": 939,
+      "bytes": 7984
+    },
+    "o/camel": {
+      "text": "جمل",
+      "hash": "76d26ab0697ea018",
+      "durationMs": 743,
+      "bytes": 6521
+    },
+    "o/carrot": {
+      "text": "جزر",
+      "hash": "017680436783d55f",
+      "durationMs": 813,
+      "bytes": 7148
+    },
+    "o/cat": {
+      "text": "قطة",
+      "hash": "af2f2c7056196a91",
+      "durationMs": 673,
+      "bytes": 5894
+    },
+    "o/cauliflower": {
+      "text": "قرنبيط",
+      "hash": "8525537db404af1d",
+      "durationMs": 1079,
+      "bytes": 9238
+    },
+    "o/chicken": {
+      "text": "دجاجة",
+      "hash": "719509ecc2fc1b23",
+      "durationMs": 921,
+      "bytes": 7984
+    },
+    "o/colorfish": {
+      "text": "سمكة ملونة",
+      "hash": "d5a0ef4e8d09056d",
+      "durationMs": 1480,
+      "bytes": 12372
+    },
+    "o/cover-feathers": {
+      "text": "ريش",
+      "hash": "667b00c6d42d46fc",
+      "durationMs": 880,
+      "bytes": 7566
+    },
+    "o/cover-fur": {
+      "text": "شعر",
+      "hash": "29f3eda9ee68c510",
+      "durationMs": 747,
+      "bytes": 6521
+    },
+    "o/cover-plates": {
+      "text": "حراشف",
+      "hash": "4a1da2ee6ee7743f",
+      "durationMs": 1105,
+      "bytes": 9447
+    },
+    "o/cover-scales": {
+      "text": "قشور",
+      "hash": "143c52104ac359cd",
+      "durationMs": 1040,
+      "bytes": 8820
+    },
+    "o/cover-shell": {
+      "text": "صندوق عظمي",
+      "hash": "8f86e519bebdb03f",
+      "durationMs": 1525,
+      "bytes": 12790
+    },
+    "o/crab": {
+      "text": "سرطان البحر",
+      "hash": "71ee46665847279f",
+      "durationMs": 1359,
+      "bytes": 11536
+    },
+    "o/crocodile": {
+      "text": "تمساح",
+      "hash": "6a0054a616b8b65a",
+      "durationMs": 1060,
+      "bytes": 9029
+    },
+    "o/deer": {
+      "text": "غزال",
+      "hash": "1d52be896daa3f0a",
+      "durationMs": 926,
+      "bytes": 7984
+    },
+    "o/dog": {
+      "text": "كلب",
+      "hash": "3b49e6114931b599",
+      "durationMs": 718,
+      "bytes": 6312
+    },
+    "o/duck": {
+      "text": "بطة",
+      "hash": "ab64fec195af2cf6",
+      "durationMs": 744,
+      "bytes": 6521
+    },
+    "o/duck-crawl-walk-jump": {
+      "text": "تزحف، وتمشي، وتقفز",
+      "hash": "1ac7a2802f92fdf1",
+      "durationMs": 2746,
+      "bytes": 22612
+    },
+    "o/duck-fly-walk-crawl": {
+      "text": "تطير، وتمشي، وتزحف",
+      "hash": "142797c494d78a44",
+      "durationMs": 2755,
+      "bytes": 22612
+    },
+    "o/duck-swim-walk-fly": {
+      "text": "تسبح، وتمشي، وتطير",
+      "hash": "eba790f0eb57e1ca",
+      "durationMs": 2570,
+      "bytes": 21149
+    },
+    "o/egg": {
+      "text": "بالبيض",
+      "hash": "89ea9865da0f2553",
+      "durationMs": 990,
+      "bytes": 8402
+    },
+    "o/elephant": {
+      "text": "فيل",
+      "hash": "11f6fc73d8dbceac",
+      "durationMs": 710,
+      "bytes": 6312
+    },
+    "o/false": {
+      "text": "خطأ",
+      "hash": "4a46d322bfbf962a",
+      "durationMs": 766,
+      "bytes": 6730
+    },
+    "o/fish": {
+      "text": "سمكة",
+      "hash": "063dabe3207a2262",
+      "durationMs": 819,
+      "bytes": 7148
+    },
+    "o/fish-tiger": {
+      "text": "سمكة ونمر",
+      "hash": "020035f2e4d80f65",
+      "durationMs": 1631,
+      "bytes": 13626
+    },
+    "o/food-meat": {
+      "text": "لحوم",
+      "hash": "6f1b0ac2db6b60ba",
+      "durationMs": 886,
+      "bytes": 7566
+    },
+    "o/food-plants": {
+      "text": "نباتات",
+      "hash": "1d8b397c5018e1b4",
+      "durationMs": 1099,
+      "bytes": 9447
+    },
+    "o/gills": {
+      "text": "بالخياشيم",
+      "hash": "ae954b62883f68b2",
+      "durationMs": 1150,
+      "bytes": 9865
+    },
+    "o/hawk": {
+      "text": "صقر",
+      "hash": "856aabea2eda811a",
+      "durationMs": 759,
+      "bytes": 6730
+    },
+    "o/horse": {
+      "text": "حصان",
+      "hash": "97293706c4ffd2dd",
+      "durationMs": 960,
+      "bytes": 8193
+    },
+    "o/lettuce": {
+      "text": "خس",
+      "hash": "c0ae8aeb9724d4cd",
+      "durationMs": 880,
+      "bytes": 7566
+    },
+    "o/lion": {
+      "text": "أسد",
+      "hash": "f85e8d12cdeaad90",
+      "durationMs": 856,
+      "bytes": 7357
+    },
+    "o/lizard": {
+      "text": "سحلية",
+      "hash": "3190788e23c7bc4c",
+      "durationMs": 945,
+      "bytes": 8193
+    },
+    "o/lungs": {
+      "text": "بالرئتين",
+      "hash": "64603f6415948176",
+      "durationMs": 1122,
+      "bytes": 9447
+    },
+    "o/meat-only": {
+      "text": "لحوم بس",
+      "hash": "035c88eeae9f37ed",
+      "durationMs": 1529,
+      "bytes": 12790
+    },
+    "o/move-crawl": {
+      "text": "يزحف",
+      "hash": "e39d31d094ed02d5",
+      "durationMs": 1012,
+      "bytes": 8611
+    },
+    "o/move-fly": {
+      "text": "يطير",
+      "hash": "9b48104926fe3f68",
+      "durationMs": 960,
+      "bytes": 8193
+    },
+    "o/move-jump": {
+      "text": "يقفز",
+      "hash": "aa774d8aff0a59a1",
+      "durationMs": 904,
+      "bytes": 7775
+    },
+    "o/move-swim": {
+      "text": "يسبح",
+      "hash": "7e76704a105cfb1f",
+      "durationMs": 931,
+      "bytes": 7984
+    },
+    "o/move-walk": {
+      "text": "يمشي",
+      "hash": "09b1ebc36c52e981",
+      "durationMs": 820,
+      "bytes": 7148
+    },
+    "o/octopus": {
+      "text": "أخطبوط",
+      "hash": "9fb6a85b24ec3846",
+      "durationMs": 1083,
+      "bytes": 9238
+    },
+    "o/owl": {
+      "text": "بومة",
+      "hash": "abedbd7f2370287f",
+      "durationMs": 707,
+      "bytes": 6312
+    },
+    "o/parrot-rabbit": {
+      "text": "ببغاء وأرنب",
+      "hash": "04192d42e46a62ac",
+      "durationMs": 2000,
+      "bytes": 16552
+    },
+    "o/part-flower": {
+      "text": "الزهرة",
+      "hash": "742ac812f3071aac",
+      "durationMs": 1120,
+      "bytes": 9447
+    },
+    "o/part-leaf": {
+      "text": "الورقة",
+      "hash": "05e981a56a742680",
+      "durationMs": 893,
+      "bytes": 7775
+    },
+    "o/part-root": {
+      "text": "الجذر",
+      "hash": "3a3c213f174d41ff",
+      "durationMs": 960,
+      "bytes": 8193
+    },
+    "o/part-stem": {
+      "text": "الساق",
+      "hash": "e59f513e010693b7",
+      "durationMs": 1017,
+      "bytes": 8611
+    },
+    "o/penguin": {
+      "text": "بطريق",
+      "hash": "1e78e83755d99255",
+      "durationMs": 1120,
+      "bytes": 9447
+    },
+    "o/pigeon": {
+      "text": "حمامة",
+      "hash": "de90f3ac511b5f81",
+      "durationMs": 927,
+      "bytes": 7984
+    },
+    "o/plants-and-meat": {
+      "text": "نباتات ولحوم",
+      "hash": "6ddfa02159731494",
+      "durationMs": 1915,
+      "bytes": 15925
+    },
+    "o/plants-only": {
+      "text": "نباتات بس",
+      "hash": "98e9af816a384250",
+      "durationMs": 1435,
+      "bytes": 11954
+    },
+    "o/rabbit": {
+      "text": "أرنب",
+      "hash": "c5d3774e1186dfa1",
+      "durationMs": 785,
+      "bytes": 6939
+    },
+    "o/shark": {
+      "text": "قرش",
+      "hash": "c840f6b3dc8f7457",
+      "durationMs": 795,
+      "bytes": 6939
+    },
+    "o/sheep": {
+      "text": "خروف",
+      "hash": "932faafe13e92a4a",
+      "durationMs": 931,
+      "bytes": 7984
+    },
+    "o/snake": {
+      "text": "ثعبان",
+      "hash": "87e60f255b7577a5",
+      "durationMs": 961,
+      "bytes": 8193
+    },
+    "o/sparrow": {
+      "text": "عصفور",
+      "hash": "3a673e5532a11c08",
+      "durationMs": 972,
+      "bytes": 8402
+    },
+    "o/sparrow-penguin": {
+      "text": "عصفور وبطريق",
+      "hash": "cb9fc8a833fd88e5",
+      "durationMs": 1844,
+      "bytes": 15298
+    },
+    "o/sugarcane": {
+      "text": "قصب السكر",
+      "hash": "2282ca9c5c9279bd",
+      "durationMs": 1217,
+      "bytes": 10283
+    },
+    "o/the-flying": {
+      "text": "الطيران",
+      "hash": "5b527e644bb18a69",
+      "durationMs": 1041,
+      "bytes": 8820
+    },
+    "o/the-swimming": {
+      "text": "السباحة",
+      "hash": "c7560cf2db7ac3a0",
+      "durationMs": 1023,
+      "bytes": 8820
+    },
+    "o/tiger": {
+      "text": "نمر",
+      "hash": "6546bc39ca3fdd47",
+      "durationMs": 800,
+      "bytes": 6939
+    },
+    "o/true": {
+      "text": "صح",
+      "hash": "4b3ecd1237a29ad1",
+      "durationMs": 701,
+      "bytes": 6103
+    },
+    "o/turtle": {
+      "text": "سلحفاة",
+      "hash": "00bb0ad344d34339",
+      "durationMs": 1281,
+      "bytes": 10909
+    },
+    "o/warmth": {
+      "text": "الدفا",
+      "hash": "4fbeb34458332dfd",
+      "durationMs": 825,
+      "bytes": 7148
+    },
+    "o/whale": {
+      "text": "حوت",
+      "hash": "beaaa3703479b014",
+      "durationMs": 1040,
+      "bytes": 8820
+    },
+    "o/zebra": {
+      "text": "حمار وحشي",
+      "hash": "db3c64acdbfa6935",
+      "durationMs": 1484,
+      "bytes": 12372
+    },
+    "q/breathing/breathes-in-water": {
+      "text": "أي حيوان يتنفس داخل الماي؟",
+      "hash": "46dd2e26768b209f",
+      "durationMs": 2607,
+      "bytes": 21358
+    },
+    "q/breathing/cat": {
+      "text": "شلون تتنفس القطة؟",
+      "hash": "294116a9efb63f84",
+      "durationMs": 1668,
+      "bytes": 13835
+    },
+    "q/breathing/chicken": {
+      "text": "شلون تتنفس الدجاجة؟",
+      "hash": "16737ba138fd345e",
+      "durationMs": 1860,
+      "bytes": 15507
+    },
+    "q/breathing/fish": {
+      "text": "شلون تتنفس السمكة؟",
+      "hash": "0f9414cd7b904e6e",
+      "durationMs": 1789,
+      "bytes": 14880
+    },
+    "q/breathing/fish-air-gills": {
+      "text": "السمك يتنفس هوا الجو بالخياشيم.",
+      "hash": "be4bed5f690755c1",
+      "durationMs": 2977,
+      "bytes": 24284
+    },
+    "q/breathing/fish-needs-water": {
+      "text": "السمكة تحتاج الماي عشان تعيش.",
+      "hash": "626346c3dab3fe66",
+      "durationMs": 2799,
+      "bytes": 23030
+    },
+    "q/breathing/giraffe": {
+      "text": "شلون تتنفس الزرافة؟",
+      "hash": "5d6b816b95475d7a",
+      "durationMs": 1850,
+      "bytes": 15298
+    },
+    "q/breathing/has-lungs": {
+      "text": "أي حيوان عنده رئتين؟",
+      "hash": "a1860e41d9e581db",
+      "durationMs": 2317,
+      "bytes": 19060
+    },
+    "q/breathing/lungs-air": {
+      "text": "بعض الحيوانات تتنفس الهوا بالرئتين.",
+      "hash": "6a9a4a7fc851f842",
+      "durationMs": 3343,
+      "bytes": 27210
+    },
+    "q/breathing/odd-one-out": {
+      "text": "أي حيوان يتنفس بطريقة مختلفة عن الباقين؟",
+      "hash": "4d73b879b20235b7",
+      "durationMs": 3782,
+      "bytes": 30763
+    },
+    "q/breathing/shark": {
+      "text": "شلون يتنفس القرش؟",
+      "hash": "f819fc6e3a949886",
+      "durationMs": 1777,
+      "bytes": 14880
+    },
+    "q/breathing/turtle": {
+      "text": "شلون تتنفس السلحفاة؟",
+      "hash": "91739c152b2c9ff2",
+      "durationMs": 1942,
+      "bytes": 16134
+    },
+    "q/covering/all-same": {
+      "text": "كل الحيوانات غطا جسمها نفس الشي.",
+      "hash": "efc03083416bcf7b",
+      "durationMs": 3120,
+      "bytes": 25538
+    },
+    "q/covering/crocodile": {
+      "text": "شنو يغطي جسم التمساح؟",
+      "hash": "43d68caa4436c35a",
+      "durationMs": 2095,
+      "bytes": 17388
+    },
+    "q/covering/crocodile-plates": {
+      "text": "جسم التمساح مغطى بحراشف.",
+      "hash": "9233d65a68b9fcdd",
+      "durationMs": 2856,
+      "bytes": 23448
+    },
+    "q/covering/fish": {
+      "text": "شنو يغطي جسم السمكة؟",
+      "hash": "97ea17f4f95fed02",
+      "durationMs": 1984,
+      "bytes": 16343
+    },
+    "q/covering/fox": {
+      "text": "شنو يغطي جسم الثعلب؟",
+      "hash": "2f97a43c9da4cc5e",
+      "durationMs": 2160,
+      "bytes": 17806
+    },
+    "q/covering/keeps-water-out": {
+      "text": "أي حيوان غطاه يمنع الماي يدخل جسمه؟",
+      "hash": "dfbfb98371c598ff",
+      "durationMs": 3304,
+      "bytes": 27001
+    },
+    "q/covering/odd-one-out": {
+      "text": "أي حيوان غطا جسمه مختلف عن الباقين؟",
+      "hash": "12731d4947a4fb15",
+      "durationMs": 3515,
+      "bytes": 28673
+    },
+    "q/covering/parrot": {
+      "text": "شنو يغطي جسم الببغاء؟",
+      "hash": "4f617857965f6118",
+      "durationMs": 2087,
+      "bytes": 17179
+    },
+    "q/covering/protects": {
+      "text": "غطا جسم الحيوان يحميه.",
+      "hash": "b4a7e75e51361208",
+      "durationMs": 2246,
+      "bytes": 18433
+    },
+    "q/covering/same-cover-group": {
+      "text": "أي مجموعة جسمهم مغطى بنفس الغطا؟",
+      "hash": "02d01e2c1cfafe3f",
+      "durationMs": 3381,
+      "bytes": 27628
+    },
+    "q/covering/turtle": {
+      "text": "شنو يغطي جسم السلحفاة؟",
+      "hash": "a7e33d1aeba4767b",
+      "durationMs": 2175,
+      "bytes": 18015
+    },
+    "q/covering/which-scales": {
+      "text": "أي حيوان جسمه مغطى بقشور؟",
+      "hash": "6c77ff514f00d5cb",
+      "durationMs": 3134,
+      "bytes": 25538
+    },
+    "q/covering/wolf-warmth": {
+      "text": "غطا جسم الذئب… يساعده على شنو؟",
+      "hash": "a9879fe131195326",
+      "durationMs": 3117,
+      "bytes": 25538
+    },
+    "q/food/all-eat-meat": {
+      "text": "كل الحيوانات اللي حولنا تاكل لحوم.",
+      "hash": "1be0d89799a37d63",
+      "durationMs": 3039,
+      "bytes": 24911
+    },
+    "q/food/camel": {
+      "text": "شنو ياكل الجمل؟",
+      "hash": "dd28aba3464e0199",
+      "durationMs": 1424,
+      "bytes": 11954
+    },
+    "q/food/eats-other-animals": {
+      "text": "أي حيوان ياكل لحوم حيوانات ثانية؟",
+      "hash": "df89ebf187a387ec",
+      "durationMs": 3011,
+      "bytes": 24702
+    },
+    "q/food/elephant-plants": {
+      "text": "الفيل ياكل نباتات.",
+      "hash": "ebbdc8630cd95e76",
+      "durationMs": 2136,
+      "bytes": 17597
+    },
+    "q/food/food-differs": {
+      "text": "الحيوانات أكلها مختلف.",
+      "hash": "47c4fc55956f18f4",
+      "durationMs": 2295,
+      "bytes": 18851
+    },
+    "q/food/giraffe": {
+      "text": "شنو تاكل الزرافة؟",
+      "hash": "e9ec433182611582",
+      "durationMs": 1760,
+      "bytes": 14671
+    },
+    "q/food/hawk": {
+      "text": "شنو ياكل الصقر؟",
+      "hash": "f721004502c00795",
+      "durationMs": 1600,
+      "bytes": 13417
+    },
+    "q/food/horse": {
+      "text": "شنو ياكل الحصان؟",
+      "hash": "4f3c3d73b42375be",
+      "durationMs": 1611,
+      "bytes": 13417
+    },
+    "q/food/lion-cubs": {
+      "text": "اللبوة… شنو تعطي صغارها ياكلون؟",
+      "hash": "252984a63520c3c7",
+      "durationMs": 2878,
+      "bytes": 23657
+    },
+    "q/food/rabbit": {
+      "text": "شنو ياكل الأرنب؟",
+      "hash": "0232f89e87fd908c",
+      "durationMs": 1558,
+      "bytes": 12999
+    },
+    "q/food/snake": {
+      "text": "شنو ياكل الثعبان؟",
+      "hash": "6eefac79194a5434",
+      "durationMs": 1532,
+      "bytes": 12790
+    },
+    "q/food/which-eats-meat": {
+      "text": "أي حيوان ياكل لحوم؟",
+      "hash": "6b1d95732efdd5dd",
+      "durationMs": 2111,
+      "bytes": 17388
+    },
+    "q/food/wolf": {
+      "text": "شنو ياكل الذئب؟",
+      "hash": "378c1d2ddd67b59f",
+      "durationMs": 1420,
+      "bytes": 11954
+    },
+    "q/movement/all-same-way": {
+      "text": "كل الحيوانات تتحرك بنفس الطريقة.",
+      "hash": "66666642e7d5b291",
+      "durationMs": 3008,
+      "bytes": 24702
+    },
+    "q/movement/duck-ways": {
+      "text": "شلون تتحرك البطة؟",
+      "hash": "d6ad029178628b94",
+      "durationMs": 1702,
+      "bytes": 14253
+    },
+    "q/movement/fish": {
+      "text": "شلون تتحرك السمكة؟",
+      "hash": "432707fe52569d9d",
+      "durationMs": 1732,
+      "bytes": 14462
+    },
+    "q/movement/horse": {
+      "text": "شلون يتحرك الحصان؟",
+      "hash": "11d57a6311b058ea",
+      "durationMs": 1666,
+      "bytes": 13835
+    },
+    "q/movement/kangaroo-jumps": {
+      "text": "الكنغر يتحرك من مكان لمكان بالقفز.",
+      "hash": "cb6c345728f2f866",
+      "durationMs": 3678,
+      "bytes": 29927
+    },
+    "q/movement/like-pigeon": {
+      "text": "أي حيوان يتحرك مثل الحمامة؟",
+      "hash": "8757472ac39719b4",
+      "durationMs": 2595,
+      "bytes": 21358
+    },
+    "q/movement/more-than-one-way": {
+      "text": "أي حيوان يتحرك بأكثر من طريقة؟",
+      "hash": "2c7bf2e78de110a8",
+      "durationMs": 3051,
+      "bytes": 24911
+    },
+    "q/movement/parrot": {
+      "text": "شلون يتحرك الببغاء؟",
+      "hash": "322e01d1209a9d2c",
+      "durationMs": 2000,
+      "bytes": 16552
+    },
+    "q/movement/penguin-walks-swims": {
+      "text": "البطريق يمشي ويسبح.",
+      "hash": "9f7d1e9a4f41b936",
+      "durationMs": 2238,
+      "bytes": 18433
+    },
+    "q/movement/rabbit": {
+      "text": "شلون يتحرك الأرنب؟",
+      "hash": "9ff266d025d8a9a4",
+      "durationMs": 1793,
+      "bytes": 14880
+    },
+    "q/movement/rabbit-swims": {
+      "text": "الأرنب يتحرك من مكان لمكان بالسباحة.",
+      "hash": "fed39c95f0151735",
+      "durationMs": 3952,
+      "bytes": 32225
+    },
+    "q/movement/snake": {
+      "text": "شلون يتحرك الثعبان؟",
+      "hash": "30a87eede74e338e",
+      "durationMs": 1739,
+      "bytes": 14462
+    },
+    "q/movement/which-crawls": {
+      "text": "أي حيوان يزحف؟",
+      "hash": "ed0933b582170013",
+      "durationMs": 1933,
+      "bytes": 15925
+    },
+    "q/movement/which-flies": {
+      "text": "أي حيوان يطير؟",
+      "hash": "870cfb8541cff921",
+      "durationMs": 1760,
+      "bytes": 14671
+    },
+    "q/movement/which-jumps": {
+      "text": "أي حيوان يقفز؟",
+      "hash": "fb8d56e71522b125",
+      "durationMs": 1861,
+      "bytes": 15507
+    },
+    "q/plants/carrot": {
+      "text": "أي جزء ناكل من الجزر؟",
+      "hash": "1e504e7ab6ddc5ca",
+      "durationMs": 1932,
+      "bytes": 15925
+    },
+    "q/plants/cauliflower": {
+      "text": "أي جزء ناكل من القرنبيط؟",
+      "hash": "87fdc87ff5d9305c",
+      "durationMs": 2104,
+      "bytes": 17388
+    },
+    "q/plants/eat-some-parts": {
+      "text": "ناكل بعض أجزاء النبات.",
+      "hash": "32b29bc5cf5c0350",
+      "durationMs": 2132,
+      "bytes": 17597
+    },
+    "q/plants/four-parts": {
+      "text": "النبات يتكون من ثلاثة أجزاء بس: جذر، وساق، وزهرة.",
+      "hash": "949c37e43c4da629",
+      "durationMs": 5404,
+      "bytes": 43719
+    },
+    "q/plants/lettuce": {
+      "text": "أي جزء ناكل من الخس؟",
+      "hash": "ce03ede06315a608",
+      "durationMs": 1997,
+      "bytes": 16552
+    },
+    "q/plants/lettuce-leaves": {
+      "text": "إحنا ناكل أوراق الخس.",
+      "hash": "47b06d1bb2c3988a",
+      "durationMs": 2000,
+      "bytes": 16552
+    },
+    "q/plants/mint": {
+      "text": "أي جزء ناكل من النعناع؟",
+      "hash": "4be3e9ff0ed151f7",
+      "durationMs": 2240,
+      "bytes": 18433
+    },
+    "q/plants/radish-two-parts": {
+      "text": "الفجل الأبيض ناكل منه الجذر والأوراق.",
+      "hash": "e30b24a1c90ad9c2",
+      "durationMs": 3581,
+      "bytes": 29300
+    },
+    "q/plants/root-in-soil": {
+      "text": "أي جزء من النبات يكون تحت التراب؟",
+      "hash": "39a200704f235eb4",
+      "durationMs": 3096,
+      "bytes": 25329
+    },
+    "q/plants/sugarcane": {
+      "text": "أي جزء ناكل من قصب السكر؟",
+      "hash": "1ee06fd761c1e11b",
+      "durationMs": 2407,
+      "bytes": 19896
+    },
+    "q/plants/which-flower": {
+      "text": "أي نبات ناكل منه الزهرة؟",
+      "hash": "a8b9e5ea93e7839c",
+      "durationMs": 2403,
+      "bytes": 19687
+    },
+    "q/plants/which-root": {
+      "text": "أي نبات ناكل منه الجذر؟",
+      "hash": "7c1340e71fb4a2a0",
+      "durationMs": 2429,
+      "bytes": 19896
+    },
+    "q/plants/which-stem": {
+      "text": "أي نبات ناكل منه الساق؟",
+      "hash": "1deb97f5831f83e9",
+      "durationMs": 2328,
+      "bytes": 19269
+    },
+    "q/reproduction/all-give-birth": {
+      "text": "كل الحيوانات تتكاثر بالولادة.",
+      "hash": "3e9c7e63d278ba0c",
+      "durationMs": 2811,
+      "bytes": 23030
+    },
+    "q/reproduction/bear": {
+      "text": "شلون يتكاثر الدب؟",
+      "hash": "a3fb1c6354a8aa08",
+      "durationMs": 1751,
+      "bytes": 14671
+    },
+    "q/reproduction/birds-lay-eggs": {
+      "text": "الطيور تتكاثر بالبيض.",
+      "hash": "accf1fb7dfe24bd7",
+      "durationMs": 2268,
+      "bytes": 18642
+    },
+    "q/reproduction/cat": {
+      "text": "شلون تتكاثر القطة؟",
+      "hash": "cb5ec46398965eac",
+      "durationMs": 1772,
+      "bytes": 14671
+    },
+    "q/reproduction/chicken": {
+      "text": "شلون تتكاثر الدجاجة؟",
+      "hash": "fff136d932bb0805",
+      "durationMs": 1895,
+      "bytes": 15716
+    },
+    "q/reproduction/colorfish": {
+      "text": "شلون تتكاثر السمكة الملونة؟",
+      "hash": "a48b3a9c6f5f9bf6",
+      "durationMs": 2361,
+      "bytes": 19478
+    },
+    "q/reproduction/eggs-and-feathers": {
+      "text": "أي حيوان يتكاثر بالبيض، وجسمه مغطى بريش؟",
+      "hash": "17ac5e60fd05a661",
+      "durationMs": 4274,
+      "bytes": 34733
+    },
+    "q/reproduction/giraffe": {
+      "text": "شلون تتكاثر الزرافة؟",
+      "hash": "17036831d3193f5b",
+      "durationMs": 1884,
+      "bytes": 15716
+    },
+    "q/reproduction/giraffe-plants-birth": {
+      "text": "الزرافة تاكل نباتات وتتكاثر بالولادة.",
+      "hash": "ac75df75740effb1",
+      "durationMs": 3479,
+      "bytes": 28464
+    },
+    "q/reproduction/nest-eggs": {
+      "text": "لقينا بيض في عش جنب الدريشة… منو حطه؟",
+      "hash": "21b973b5667b7ce7",
+      "durationMs": 3681,
+      "bytes": 29927
+    },
+    "q/reproduction/sheep": {
+      "text": "شلون يتكاثر الخروف؟",
+      "hash": "fe05f4b681cf6f16",
+      "durationMs": 1896,
+      "bytes": 15716
+    },
+    "q/reproduction/sparrow": {
+      "text": "شلون يتكاثر العصفور؟",
+      "hash": "46a437ed1a65872e",
+      "durationMs": 1883,
+      "bytes": 15716
+    },
+    "q/reproduction/turtle": {
+      "text": "شلون تتكاثر السلحفاة؟",
+      "hash": "050a27996607ece5",
+      "durationMs": 2030,
+      "bytes": 16761
+    },
+    "t/breathing": {
+      "text": "شلون تتنفس الحيوانات؟",
+      "hash": "7f6a77053feeee9c",
+      "durationMs": 2023,
+      "bytes": 16761
+    },
+    "t/covering": {
+      "text": "شنو يغطي جسم الحيوانات؟",
+      "hash": "34c76026d5cdf465",
+      "durationMs": 2182,
+      "bytes": 18015
+    },
+    "t/food": {
+      "text": "شنو تاكل الحيوانات؟",
+      "hash": "5683294d227ba73c",
+      "durationMs": 1840,
+      "bytes": 15298
+    },
+    "t/movement": {
+      "text": "شلون تتحرك الحيوانات؟",
+      "hash": "245e098403719409",
+      "durationMs": 1961,
+      "bytes": 16343
+    },
+    "t/plants": {
+      "text": "أي أجزاء النبات ناكل؟",
+      "hash": "8d45aba4761b7a03",
+      "durationMs": 1961,
+      "bytes": 16343
+    },
+    "t/reproduction": {
+      "text": "شلون تتكاثر الحيوانات؟",
+      "hash": "5520236839e7c368",
+      "durationMs": 2091,
+      "bytes": 17388
+    },
+    "ui/correct-is": {
+      "text": "الجواب الصح هو…",
+      "hash": "a71cefc3c29d5de2",
+      "durationMs": 1760,
+      "bytes": 14671
+    },
+    "ui/done-good": {
+      "text": "أحسنتي! تدربي مرة ثانية… وبتصيرين أقوى.",
+      "hash": "e00fa18fb004cb3e",
+      "durationMs": 4184,
+      "bytes": 34106
+    },
+    "ui/done-great": {
+      "text": "واو! إنتي بطلة العلوم!",
+      "hash": "fefc93db25e41e3f",
+      "durationMs": 2643,
+      "bytes": 21776
+    },
+    "ui/learn-done": {
+      "text": "شطورة! خلصتي الدرس… يلا نتدرب.",
+      "hash": "07418d48bdb35176",
+      "durationMs": 3460,
+      "bytes": 28255
+    },
+    "ui/praise-1": {
+      "text": "أحسنتي!",
+      "hash": "a5451039fbaca0ed",
+      "durationMs": 1044,
+      "bytes": 8820
+    },
+    "ui/praise-2": {
+      "text": "شطورة!",
+      "hash": "61e4793525a8d7ef",
+      "durationMs": 1024,
+      "bytes": 8820
+    },
+    "ui/praise-3": {
+      "text": "ممتاز يا بطلة!",
+      "hash": "d211ddc5ff3238f0",
+      "durationMs": 1642,
+      "bytes": 13626
+    },
+    "ui/praise-4": {
+      "text": "برافو عليج!",
+      "hash": "e4b82a73cbe798dc",
+      "durationMs": 1360,
+      "bytes": 11536
+    },
+    "ui/test-intro": {
+      "text": "هذا اختبار تجريبي… فيه أسئلة من كل الدروس. يلا نبدأ!",
+      "hash": "ec0f6110731b4521",
+      "durationMs": 4998,
+      "bytes": 40585
+    },
+    "ui/welcome": {
+      "text": "هلا والله يا بطلة العلوم! اختاري درس… ويلا نبدأ.",
+      "hash": "fb4c82e4a406daff",
+      "durationMs": 4743,
+      "bytes": 38495
+    }
+  }
+}

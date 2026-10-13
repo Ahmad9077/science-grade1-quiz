@@ -1,0 +1,19 @@
+{
+  "id": "science-grade1",
+  "quizId": "science-grade1",
+  "title": "علوم",
+  "description": "تدريب وتحضير لاختبار العلوم للصف الأول: أجزاء النبات التي نأكلها، وانتقال الحيوانات وغطاؤها وغذاؤها وتنفسها وتكاثرها.",
+  "recommendedAge": "5–7",
+  "basePath": "/science-grade1-quiz/",
+  "questionsPerRound": 8,
+  "testQuestions": 12,
+  "topics": ["plants", "movement", "covering", "food", "breathing", "reproduction"],
+  "capabilities": {
+    "audio": true,
+    "adaptive": true,
+    "progress": true,
+    "answerReview": true,
+    "challenge": false
+  },
+  "version": "1.0.0"
+}
