@@ -1,5 +1,18 @@
 # Hub integration for «علوم - بنات» (`science-grade1`) and «علوم - أولاد» (`science-grade1-boys`)
 
+## Second test release (2026-11-05, approved by the family: «اعتمد»)
+- Content: book part two, chapter three «المواطن الطبيعية» — «أين تعيش الكائنات الحية؟» (`habitats`) and
+  «كيف نحمي أماكن عيش الكائنات الحية؟» (`protect`); 75 questions in the Ministry question-bank styles. The first test
+  (six lessons, 79 keys) is removed from the site.
+- Site: `science-grade1-quiz@87af2c9` deployed to GitHub Pages; live on https://haya-nt3lm.com/science-grade1-quiz/ and
+  `/boys/` (assets `main-BQQ1sQS2.js`); all 265 clips and 81 pictures return 200; signed-out visitors go to the Hub sign-in.
+- Hub `quizzes-hub@f4f9962`: topic labels `topic_habitats` «أين تعيش الكائنات الحية» and `topic_protect` «حماية أماكن
+  عيش الكائنات الحية», `script.js?v=41`, migration `025_science_grade1_second_test.sql` (identical to
+  `integration/seed-science-grade1.sql`, sha256 `ca63e53b…`). Catalog rows, titles and URLs unchanged.
+- Migration 025 applied once in the Supabase SQL editor and verified: 75 profiles for each copy (was 79), no first-test
+  keys left, all profiles 3485 → 3477; assignments unchanged (35 total; `science-grade1` 2, `science-grade1-boys` 1);
+  14 progress rows kept. The accounts already assigned see the new test; no assignment was added or removed.
+
 ## Boys' copy release (2026-10-13, approved by the family: «انشر»)
 - Site: `science-grade1-quiz@6e1acc0` deployed; boys' page live at https://ahmad9077.github.io/science-grade1-quiz/boys/
   (and https://haya-nt3lm.com/science-grade1-quiz/boys/). Same bundle and audio as the girls' page; `boys/index.html`
