@@ -3,28 +3,25 @@ import { wakeAudio } from './audio/context'
 import { Narrator } from './audio/player'
 import { NarratorContext } from './audio/NarratorContext'
 import { setSfxEnabled } from './audio/sfx'
-import { APP_ROOT, clip } from './audience'
-import { TOPICS, type TopicId } from './data/catalog'
-import { loadProgress, recordLearned, recordRound, saveProgress, type SavedProgress } from './domain/progress'
+import { APP_ROOT, QUIZ_ID } from './audience'
+import { arLines, type TopicId } from './data/catalog'
+import { loadProgress, recordRound, saveProgress, type SavedProgress } from './domain/progress'
 import { buildPractice, buildTest, starsFor } from './domain/round'
+import { sayLine } from './domain/voice'
 import type { BootstrapContext } from './hub/bootstrap'
 import type { Attempt, HubBridge } from './hub/bridge'
 import { Home } from './components/Home'
-import { LearnScreen } from './components/LearnScreen'
 import { QuizScreen, type Round } from './components/QuizScreen'
 import { ResultsScreen } from './components/ResultsScreen'
 import { Splash } from './components/Splash'
-import { TopicScreen } from './components/TopicScreen'
 
 type Screen =
   | { name: 'splash' }
   | { name: 'home' }
-  | { name: 'topic'; topic: TopicId }
-  | { name: 'learn'; topic: TopicId }
-  | { name: 'quiz'; round: Round }
+  | { name: 'quiz'; round: Round; intro?: string }
   | { name: 'results'; round: Round; attempts: Attempt[] }
 
-const MUTE_KEY = 'science-grade1:muted'
+const MUTE_KEY = `${QUIZ_ID}:muted`
 
 function readMuted(): boolean {
   try {
@@ -35,7 +32,6 @@ function readMuted(): boolean {
 }
 
 function screenKey(screen: Screen): string {
-  if (screen.name === 'topic' || screen.name === 'learn') return `${screen.name}-${screen.topic}`
   if (screen.name === 'quiz' || screen.name === 'results') return `${screen.name}-${screen.round.id}`
   return screen.name
 }
@@ -72,8 +68,8 @@ export default function App({ context, bridge }: { context: BootstrapContext; br
   const start = useCallback(() => {
     wakeAudio()
     setScreen({ name: 'home' })
-    void narrator.play([{ clip: clip.ui('welcome') }])
-    narrator.preload([...TOPICS.map((topic) => clip.topic(topic.id)), clip.ui('test-intro')])
+    void narrator.play([{ clip: sayLine('welcome').clip }])
+    narrator.preload(arLines('test-intro').map((line) => line.clip))
   }, [narrator])
 
   const startPractice = useCallback(
@@ -81,15 +77,19 @@ export default function App({ context, bridge }: { context: BootstrapContext; br
       roundId.current += 1
       setScreen({
         name: 'quiz',
-        round: { id: roundId.current, kind: 'practice', tone: topic, questions: buildPractice(topic, context.preferredKeys, progress.recent) },
+        round: { id: roundId.current, kind: 'practice', tone: topic, questions: buildPractice(topic, context.preferredKeys, progress.recent, Math.random, context.source === 'preview') },
       })
     },
-    [context.preferredKeys, progress.recent],
+    [context.preferredKeys, context.source, progress.recent],
   )
 
   const startTest = useCallback(() => {
     roundId.current += 1
-    setScreen({ name: 'quiz', round: { id: roundId.current, kind: 'test', tone: 'test', questions: buildTest(context.preferredKeys, progress.recent) } })
+    setScreen({
+      name: 'quiz',
+      round: { id: roundId.current, kind: 'test', tone: 'test', questions: buildTest(context.preferredKeys, progress.recent) },
+      intro: sayLine('test-intro').clip,
+    })
   }, [context.preferredKeys, progress.recent])
 
   const finishRound = useCallback(
@@ -111,12 +111,19 @@ export default function App({ context, bridge }: { context: BootstrapContext; br
 
   return (
     <NarratorContext.Provider value={narrator}>
-      <div className="sky" aria-hidden="true">
+      <div className="world" aria-hidden="true">
+        <span className="sun" />
         <span className="cloud cloud-1" />
         <span className="cloud cloud-2" />
-        <span className="cloud cloud-3" />
-        <span className="hill hill-back" />
-        <span className="hill hill-front" />
+        <span className="horizon">
+          <span className="horizon-sea" />
+          <span className="horizon-sand" />
+        </span>
+        {['🐟', '🌴', '🐚', '🌿', '🐦', '♻️'].map((glyph, n) => (
+          <span key={n} className={`float-glyph glyph-${n + 1}`}>
+            {glyph}
+          </span>
+        ))}
       </div>
       <div key={screenKey(screen)} className="screen-frame">
         {screen.name === 'splash' ? <Splash onStart={start} /> : null}
@@ -125,34 +132,12 @@ export default function App({ context, bridge }: { context: BootstrapContext; br
             progress={progress}
             muted={muted}
             onToggleSound={() => setMuted((value) => !value)}
-            onOpenTopic={(topic) => setScreen({ name: 'topic', topic })}
+            onOpenTopic={startPractice}
             onStartTest={startTest}
           />
         ) : null}
-        {screen.name === 'topic' ? (
-          <TopicScreen
-            topic={screen.topic}
-            progress={progress}
-            onBack={goHome}
-            onLearn={() => setScreen({ name: 'learn', topic: screen.topic })}
-            onPractice={() => startPractice(screen.topic)}
-          />
-        ) : null}
-        {screen.name === 'learn' ? (
-          <LearnScreen
-            topic={screen.topic}
-            onBack={() => setScreen({ name: 'topic', topic: screen.topic })}
-            onDone={() => setProgress((current) => recordLearned(current, screen.topic))}
-            onPractice={() => startPractice(screen.topic)}
-          />
-        ) : null}
         {screen.name === 'quiz' ? (
-          <QuizScreen
-            round={screen.round}
-            intro={screen.round.kind === 'test'}
-            onExit={screen.round.kind === 'test' ? goHome : () => setScreen({ name: 'topic', topic: screen.round.tone as TopicId })}
-            onFinish={(attempts) => finishRound(screen.round, attempts)}
-          />
+          <QuizScreen round={screen.round} intro={screen.intro} onExit={goHome} onFinish={(attempts) => finishRound(screen.round, attempts)} />
         ) : null}
         {screen.name === 'results' ? (
           <ResultsScreen

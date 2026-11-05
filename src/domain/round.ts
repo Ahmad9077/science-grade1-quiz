@@ -1,18 +1,31 @@
-import { QUESTIONS, TOPICS, type Option, type Question, type TopicId } from '../data/catalog'
+import { QUESTIONS, dressQuestion, type Format, type Option, type Question, type Random, type TopicId } from '../data/catalog'
+import { shuffle } from './variety'
+import { lineOf, voiceQuestion } from './voice'
+
+export { shuffle }
+export type { Random }
 
 export const PRACTICE_SIZE = 8
-export const TEST_PER_TOPIC = 2
 
-export type Random = () => number
-
-export function shuffle<T>(items: readonly T[], random: Random = Math.random): T[] {
-  const copy = [...items]
-  for (let i = copy.length - 1; i > 0; i -= 1) {
-    const j = Math.floor(random() * (i + 1))
-    ;[copy[i], copy[j]] = [copy[j] as T, copy[i] as T]
-  }
-  return copy
-}
+/**
+ * The mock test, laid out like the Ministry's question bank for this term: «السؤال الأول» ✓ in
+ * the box, «الثاني» ✓/✗ sentences, «الثالث» the numbers table, «الرابع» the animals and their
+ * homes, then one of the book's picture questions and one written question. `slot` is the
+ * paper's «السؤال الأول، الثاني…» an entry belongs to.
+ */
+export const TEST_PLAN: { slot: number; formats: Format[] }[] = [
+  { slot: 1, formats: ['tick'] },
+  { slot: 1, formats: ['tick'] },
+  { slot: 1, formats: ['tick'] },
+  { slot: 2, formats: ['tf'] },
+  { slot: 2, formats: ['tf'] },
+  { slot: 2, formats: ['tf'] },
+  { slot: 3, formats: ['table'] },
+  { slot: 4, formats: ['homes'] },
+  { slot: 5, formats: ['scene', 'number', 'color', 'cross', 'circle'] },
+  { slot: 6, formats: ['choose', 'word', 'sort'] },
+]
+export const TEST_SIZE = TEST_PLAN.length
 
 /** Hub-preferred keys first (in plan order), then questions not seen recently, then the rest. */
 export function orderQuestions(
@@ -40,38 +53,87 @@ export function buildPractice(
   preferredKeys: readonly string[] = [],
   recentKeys: readonly string[] = [],
   random: Random = Math.random,
+  /** Keep the preferred questions first, in their order (a preview opened with chosen keys). */
+  keepOrder = false,
 ): Question[] {
-  const chosen = orderQuestions(questionsFor(topic), preferredKeys, recentKeys, random).slice(0, PRACTICE_SIZE)
-  return mixKinds(chosen, random)
+  const ordered = orderQuestions(questionsFor(topic), preferredKeys, recentKeys, random)
+  if (keepOrder && preferredKeys.length > 0) {
+    const first = ordered.filter((question) => preferredKeys.includes(question.key))
+    const rest = ordered.filter((question) => !first.includes(question)).slice(0, Math.max(0, PRACTICE_SIZE - first.length))
+    return dressRound([...first, ...mixKinds(rest, random)].slice(0, PRACTICE_SIZE), random)
+  }
+  // At most two of any one style, so a lesson round shows the paper's different questions.
+  const counts = new Map<Format, number>()
+  const chosen: Question[] = []
+  for (const question of ordered) {
+    if (chosen.length >= PRACTICE_SIZE) break
+    const seen = counts.get(question.format) ?? 0
+    if (seen >= 2) continue
+    counts.set(question.format, seen + 1)
+    chosen.push(question)
+  }
+  for (const question of ordered) if (chosen.length < PRACTICE_SIZE && !chosen.includes(question)) chosen.push(question)
+  return dressRound(mixKinds(chosen, random), random)
 }
 
+/** One question per entry of the plan, spreading the two lessons as evenly as the plan allows. */
 export function buildTest(
   preferredKeys: readonly string[] = [],
   recentKeys: readonly string[] = [],
   random: Random = Math.random,
 ): Question[] {
-  const picked = TOPICS.flatMap((topic) =>
-    orderQuestions(questionsFor(topic.id), preferredKeys, recentKeys, random).slice(0, TEST_PER_TOPIC),
-  )
-  return mixKinds(shuffle(picked, random), random)
+  const ordered = orderQuestions(QUESTIONS, preferredKeys, recentKeys, random)
+  const picked: Question[] = []
+  const perTopic = new Map<TopicId, number>()
+  for (const entry of TEST_PLAN) {
+    const candidates = ordered.filter((question) => entry.formats.includes(question.format) && !picked.includes(question))
+    const least = Math.min(...candidates.map((question) => perTopic.get(question.topic) ?? 0))
+    const pick = candidates.find((question) => (perTopic.get(question.topic) ?? 0) === least) ?? candidates[0]!
+    picked.push(pick)
+    perTopic.set(pick.topic, (perTopic.get(pick.topic) ?? 0) + 1)
+  }
+  return dressRound(picked, random)
+}
+
+/**
+ * This round's pictures for every question, and its instruction lines: a style's lines are dealt
+ * from one deck, and a line already said in this round goes to the back of the next pass.
+ */
+function dressRound(questions: Question[], random: Random): Question[] {
+  const said = new Map<Format, number[]>()
+  return questions.map((question) => {
+    const before = said.get(question.format) ?? []
+    const voiced = voiceQuestion(dressQuestion(question, random), random, before)
+    said.set(question.format, [...before, lineOf(voiced)])
+    return voiced
+  })
+}
+
+/** The paper's question number for a test question. */
+export function testSlot(index: number): { slot: number; part: number; parts: number } {
+  const entry = TEST_PLAN[index]
+  if (!entry) return { slot: index + 1, part: 1, parts: 1 }
+  const same = TEST_PLAN.filter((other) => other.slot === entry.slot)
+  return { slot: entry.slot, part: TEST_PLAN.slice(0, index + 1).filter((other) => other.slot === entry.slot).length, parts: same.length }
 }
 
 /** Avoid runs of the same question style so a round keeps changing pace. */
 function mixKinds(questions: Question[], random: Random): Question[] {
   const result: Question[] = []
-  const pool = [...questions]
+  const pool = shuffle(questions, random)
   while (pool.length > 0) {
     const last = result.at(-1)
-    const index = pool.findIndex((question) => question.kind !== last?.kind || question.topic !== last?.topic)
-    const pickIndex = index === -1 ? Math.floor(random() * pool.length) : index
+    const index = pool.findIndex((question) => question.format !== last?.format)
+    const pickIndex = index === -1 ? 0 : index
     result.push(...pool.splice(pickIndex, 1))
   }
   return result
 }
 
-/** Picture choices are shuffled; two-way sorts and true/false keep a fixed layout. */
+/** Choices are shuffled every time, except «صح/خطأ», the two words in brackets and fixed sets. */
 export function arrangeOptions(question: Question, random: Random = Math.random): Option[] {
-  return question.kind === 'pick' ? shuffle(question.options, random) : [...question.options]
+  if (question.kind === 'pick') return question.fixedOrder ? [...question.options] : shuffle(question.options, random)
+  return [...question.options]
 }
 
 export function starsFor(score: number, total: number): 1 | 2 | 3 {

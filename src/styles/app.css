@@ -1,38 +1,49 @@
-/* Layout: a storybook sky-and-meadow page. One centred column of chunky sticker cards,
-   each lesson painted in its own colour, with every action within a small thumb's reach.
-   Deliberately a single bright daytime look for young children (no dark variant). */
+/* Layout: «علوم» — the second science test, chapter three «المواطن الطبيعية». An exam paper
+   on a pale sky, above a horizon that is sea on one side and sand on the other, like the book's
+   question «أين تعيش الكائنات الحية؟». The lesson on habitats keeps the sea's blue, the lesson on
+   protecting them the leaf's green; the mock test takes the orange of the book's colouring
+   activity. Answers are marked the way a teacher marks a paper: a pen ring, a ✓ in a box, a ✗.
+   A single bright daytime look (no dark variant). */
 :root {
-  --sky: #dcf1ff;
-  --meadow: #e8f7dc;
-  --paper: #fffdf6;
-  --ink: #24352a;
-  --ink-soft: #586a5c;
-  --leaf: #3d9a4a;
-  --leaf-deep: #256b31;
-  --sun: #ffc93c;
-  --sun-deep: #b97c00;
+  --sky: #eef7fc;
+  --meadow: #fbefd6;
+  --paper: #fffefa;
+  --ink: #1d3343;
+  --ink-soft: #566a78;
+  --leaf: #2f9a4f;
+  --leaf-deep: #1d6b35;
+  --sun: #f2a93b;
+  --sun-deep: #a8620e;
   --good: #2fa868;
   --good-deep: #1b7547;
   --good-tint: #dcf6e6;
   --miss: #ec5f4f;
   --miss-deep: #b33a2c;
   --miss-tint: #fff0e6;
-  --cloud: #ffffff;
-  --hill-back: #c4e8ab;
-  --hill-front: #a6da8a;
-  --star-empty: #ece5cf;
-  --shadow: rgba(36, 53, 42, 0.2);
+  --rule-blue: #b9d6f2;
+  --rule-red: #f4b3c0;
+  --margin-red: #f08aa0;
+  --star-empty: #dfe9ee;
+  --shadow: rgba(29, 51, 67, 0.2);
+  --sea: #4aa8df;
+  --sea-deep: #1f74ad;
+  --sand: #f3d491;
+  --sand-deep: #d9a649;
+  --land-paint: #ff9a3c;
+  --water-paint: #3fa3ec;
 
   --font-display: 'Lalezar', 'Baloo Bhaijaan 2 Variable', 'Baloo Bhaijaan 2', 'Geeza Pro', system-ui, sans-serif;
   --font-body: 'Baloo Bhaijaan 2 Variable', 'Baloo Bhaijaan 2', 'Geeza Pro', 'Noto Sans Arabic', 'Segoe UI', system-ui, sans-serif;
+  --font-reading: 'Noto Naskh Arabic', 'Geeza Pro', 'Noto Sans Arabic', serif;
   --font-emoji: 'Apple Color Emoji', 'Segoe UI Emoji', 'Noto Color Emoji', sans-serif;
 
   --radius: 26px;
   --edge: 3px solid var(--ink);
   --lift: 0 6px 0 var(--ink);
-  --tone: var(--leaf);
-  --tint: #e1f5dc;
-  --deep: var(--leaf-deep);
+  --tone: var(--sea-deep);
+  --tint: #dcf0fb;
+  --deep: #135f8e;
+  --pen: #d6312f;
 
   color-scheme: light;
 }
@@ -88,97 +99,101 @@ p {
   margin: 0;
 }
 
-/* ── Scenery ───────────────────────────────────────────── */
-.sky {
+/* ── Scenery: a pale sky, a sun, and a horizon of sea and sand ── */
+.world {
   position: fixed;
   inset: 0;
   z-index: 0;
   overflow: hidden;
   pointer-events: none;
-  background: linear-gradient(180deg, var(--sky) 0%, var(--sky) 35%, var(--meadow) 100%);
+  background:
+    radial-gradient(circle at 22px 26px, rgba(255, 255, 255, 0.7) 0 3px, transparent 4px) 0 0 / 92px 100px,
+    linear-gradient(180deg, #dff1fb 0%, var(--sky) 55%, #f7f3e6 100%);
+}
+
+.sun {
+  position: absolute;
+  top: 26px;
+  inset-inline-end: 7%;
+  width: 74px;
+  height: 74px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #ffe08a 0 55%, rgba(255, 224, 138, 0.35) 56% 70%, transparent 71%);
+  opacity: 0.8;
 }
 
 .cloud {
   position: absolute;
-  width: 128px;
-  height: 40px;
-  border-radius: 40px;
-  background: var(--cloud);
-  opacity: 0.85;
-  animation: drift 80s linear infinite;
+  height: 26px;
+  border-radius: 999px;
+  background: #fff;
+  opacity: 0.75;
+  box-shadow: 18px -12px 0 4px #fff, 44px -2px 0 0 #fff;
+  animation: drift 40s linear infinite alternate;
+}
+
+.cloud-1 { top: 70px; inset-inline-start: 8%; width: 90px; }
+.cloud-2 { top: 150px; inset-inline-start: 62%; width: 70px; animation-delay: -18s; opacity: 0.6; }
+
+@keyframes drift {
+  from { transform: translateX(-20px); }
+  to { transform: translateX(30px); }
+}
+
+/* The chapter's world at the foot of the page: the sea where Arabic reading ends, the sand
+   where it starts (the book's own order: «على اليابسة» then «في الماء»). */
+.horizon {
+  position: absolute;
+  inset: auto 0 0;
+  height: 70px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  opacity: 0.38;
+}
+
+.horizon-sand {
+  grid-column: 1;
+  grid-row: 1;
+  background:
+    radial-gradient(120% 90px at 30% 100%, var(--sand) 0 60%, transparent 61%),
+    radial-gradient(90% 70px at 85% 100%, #f7dfa8 0 60%, transparent 61%);
+}
+
+.horizon-sea {
+  grid-column: 2;
+  grid-row: 1;
+  background:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='16'%3E%3Cpath d='M0 10 Q 10 2 20 10 T 40 10 T 60 10 T 80 10' fill='none' stroke='%23ffffff' stroke-width='3'/%3E%3C/svg%3E") 0 18px / 80px 16px repeat-x,
+    linear-gradient(180deg, transparent 0 22px, var(--sea) 22px 100%);
+  border-start-end-radius: 40px;
+}
+
+[dir='rtl'] .horizon-sand { grid-column: 1; }
+
+.float-glyph {
+  position: absolute;
+  font-family: var(--font-emoji);
+  font-size: clamp(36px, 9vw, 64px);
+  line-height: 1;
+  opacity: 0.14;
+  animation: float-glyph 14s ease-in-out infinite alternate;
   will-change: transform;
 }
 
-.cloud::before,
-.cloud::after {
-  content: '';
-  position: absolute;
-  border-radius: 50%;
-  background: var(--cloud);
-}
+.glyph-1 { top: 12%; left: 5%; }
+.glyph-2 { top: 18%; right: 9%; animation-delay: -3s; }
+.glyph-3 { top: 44%; left: 4%; animation-delay: -6s; }
+.glyph-4 { top: 58%; right: 5%; animation-delay: -9s; }
+.glyph-5 { bottom: 14%; left: 16%; animation-delay: -2s; }
+.glyph-6 { bottom: 7%; right: 24%; animation-delay: -7s; }
 
-.cloud::before {
-  width: 56px;
-  height: 56px;
-  top: -28px;
-  left: 18px;
-}
-
-.cloud::after {
-  width: 44px;
-  height: 44px;
-  top: -18px;
-  left: 62px;
-}
-
-.cloud-1 {
-  top: 7%;
-  animation-delay: -12s;
-}
-
-.cloud-2 {
-  top: 19%;
-  scale: 0.7;
-  animation-duration: 110s;
-  animation-delay: -60s;
-}
-
-.cloud-3 {
-  top: 33%;
-  scale: 0.55;
-  animation-duration: 95s;
-  animation-delay: -35s;
-  opacity: 0.7;
-}
-
-@keyframes drift {
+@keyframes float-glyph {
   from {
-    transform: translateX(-30vw);
+    transform: translateY(0) rotate(-8deg);
   }
   to {
-    transform: translateX(130vw);
+    transform: translateY(-26px) rotate(8deg);
   }
-}
-
-.hill {
-  position: absolute;
-  border-radius: 50%;
-}
-
-.hill-back {
-  width: 150vw;
-  height: 44vh;
-  left: -30vw;
-  bottom: -30vh;
-  background: var(--hill-back);
-}
-
-.hill-front {
-  width: 120vw;
-  height: 40vh;
-  right: -40vw;
-  bottom: -30vh;
-  background: var(--hill-front);
 }
 
 /* ── Frame ─────────────────────────────────────────────── */
@@ -445,6 +460,48 @@ p {
   overflow: visible;
 }
 
+/* Letters and numbers, in the reading font the book uses. */
+.art-text {
+  width: auto;
+  min-width: 0.7em;
+  height: auto;
+  font-family: var(--font-reading);
+  font-weight: 700;
+  line-height: 1.1;
+  white-space: nowrap;
+  color: var(--ink);
+}
+
+.blank-slot {
+  display: inline-block;
+  width: 0.62em;
+  height: 0.9em;
+  margin-inline-end: 0.06em;
+  border-bottom: 0.08em solid var(--tone);
+  vertical-align: -0.08em;
+}
+
+/* Things to count: a tidy grid, at most three in a row, like the book's boxes. */
+.art-count {
+  display: inline-grid;
+  grid-template-columns: repeat(3, auto);
+  gap: 0.08em 0.12em;
+  width: auto;
+  height: auto;
+  font-family: var(--font-emoji);
+  font-size: 0.42em;
+}
+
+.art-count.count-of-1 {
+  grid-template-columns: auto;
+  font-size: 0.7em;
+}
+
+.art-count.count-of-2,
+.art-count.count-of-4 {
+  grid-template-columns: repeat(2, auto);
+}
+
 /* ── Splash ────────────────────────────────────────────── */
 .splash {
   align-items: center;
@@ -486,18 +543,19 @@ p {
   place-items: center;
 }
 
-.magnifier {
+.blocks-mark {
   position: absolute;
-  width: clamp(70px, 20vw, 104px);
-  top: -34%;
-  left: -18%;
-  rotate: -12deg;
+  width: clamp(58px, 16vw, 88px);
+  bottom: 88%;
+  left: -10%;
+  rotate: -8deg;
 }
 
 .logo-word {
-  font-family: var(--font-display);
-  font-weight: 400;
-  font-size: clamp(5.5rem, 26vw, 8.5rem);
+  margin: 0;
+  font-family: var(--font-reading);
+  font-weight: 700;
+  font-size: clamp(3.2rem, 14vw, 5.2rem);
   line-height: 1.1;
   color: var(--sun);
   -webkit-text-stroke: 5px var(--ink);
@@ -534,8 +592,9 @@ p {
 }
 
 .brand-word {
-  font-family: var(--font-display);
-  font-size: 2.1rem;
+  font-family: var(--font-reading);
+  font-weight: 700;
+  font-size: 2rem;
   line-height: 1;
   color: var(--leaf);
   -webkit-text-stroke: 2px var(--ink);
@@ -678,262 +737,6 @@ p {
   color: var(--ink-soft);
   max-width: 46ch;
   margin-inline: auto;
-}
-
-/* ── Topic ─────────────────────────────────────────────── */
-.topic-hero {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 8px;
-  padding: 18px 12px 22px;
-  border: var(--edge);
-  border-radius: 32px;
-  background:
-    radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.75) 0 26px, transparent 27px),
-    radial-gradient(circle at 15% 75%, rgba(255, 255, 255, 0.55) 0 16px, transparent 17px),
-    var(--tint);
-  box-shadow: var(--lift);
-}
-
-.topic-hero-art {
-  position: relative;
-  width: 220px;
-  max-width: 100%;
-  height: 140px;
-}
-
-.hero-art {
-  position: absolute;
-}
-
-.hero-art-0 {
-  font-size: 92px;
-  top: 0;
-  right: 18px;
-}
-
-.hero-art-1 {
-  font-size: 74px;
-  bottom: 0;
-  left: 18px;
-}
-
-.topic-title {
-  font-family: var(--font-display);
-  font-weight: 400;
-  font-size: clamp(1.8rem, 7vw, 2.4rem);
-  line-height: 1.5;
-  color: var(--deep);
-  text-align: center;
-  text-wrap: balance;
-}
-
-.mode-cards {
-  display: grid;
-  gap: 14px;
-}
-
-.mode-card {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  width: 100%;
-  padding: 14px 16px;
-  border: var(--edge);
-  border-radius: var(--radius);
-  background: var(--paper);
-  box-shadow: var(--lift);
-  text-align: start;
-}
-
-
-
-.mode-icon {
-  display: grid;
-  place-items: center;
-  flex: none;
-  width: 70px;
-  height: 70px;
-  border-radius: 22px;
-  background: var(--tint);
-  font-size: 40px;
-}
-
-.mode-text {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-  min-width: 0;
-}
-
-.mode-title {
-  font-family: var(--font-display);
-  font-size: 1.9rem;
-  line-height: 1.3;
-  color: var(--deep);
-}
-
-.mode-sub {
-  color: var(--ink-soft);
-  font-weight: 700;
-}
-
-/* ── Learn ─────────────────────────────────────────────── */
-.dots {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 6px;
-  flex: 1;
-}
-
-.dot {
-  width: 12px;
-  height: 12px;
-  border: 2px solid var(--ink);
-  border-radius: 999px;
-  background: var(--paper);
-  transition: width 0.3s, background 0.3s;
-}
-
-.dot.is-done {
-  background: var(--tint);
-}
-
-.dot.is-current {
-  width: 30px;
-  background: var(--tone);
-}
-
-.learn-stage {
-  display: grid;
-  flex: 1;
-  min-height: 380px;
-}
-
-.learn-stage > * {
-  grid-area: 1 / 1;
-}
-
-.learn-card {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 18px;
-  padding: 34px 18px 26px;
-  border: var(--edge);
-  border-radius: 34px;
-  background:
-    radial-gradient(circle at 50% 0%, var(--tint) 0 46%, transparent 46.5%),
-    var(--paper);
-  box-shadow: 0 8px 0 var(--ink);
-  touch-action: pan-y;
-  cursor: grab;
-}
-
-.learn-card:active {
-  cursor: grabbing;
-}
-
-.learn-count {
-  position: absolute;
-  top: 12px;
-  inset-inline-start: 16px;
-  padding: 0 10px;
-  border-radius: 999px;
-  background: var(--paper);
-  border: 2px solid var(--ink);
-  font-weight: 800;
-  font-size: 0.9rem;
-  font-variant-numeric: tabular-nums;
-}
-
-.learn-art {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  font-size: 92px;
-}
-
-.learn-art.count-3 {
-  font-size: 76px;
-}
-
-.learn-art.count-4,
-.learn-art.count-5 {
-  font-size: 58px;
-}
-
-.learn-art-item {
-  display: grid;
-  place-items: center;
-}
-
-.learn-text {
-  max-width: 24ch;
-  font-size: clamp(1.45rem, 5.4vw, 2rem);
-  font-weight: 800;
-  line-height: 1.7;
-  text-align: center;
-  text-wrap: balance;
-}
-
-.learn-done {
-  gap: 14px;
-}
-
-.learn-done-art {
-  font-size: 110px;
-}
-
-.learn-done-title {
-  font-family: var(--font-display);
-  font-weight: 400;
-  font-size: 2rem;
-  line-height: 1.4;
-  color: var(--deep);
-  text-align: center;
-  text-wrap: balance;
-}
-
-.learn-done-sub {
-  font-size: 1.25rem;
-  font-weight: 700;
-  color: var(--ink-soft);
-}
-
-.learn-nav {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-.nav-button {
-  display: grid;
-  place-items: center;
-  flex: none;
-  width: 64px;
-  height: 64px;
-  border: var(--edge);
-  border-radius: 50%;
-  background: var(--paper);
-  box-shadow: var(--lift);
-  color: var(--ink);
-}
-
-.nav-button:disabled {
-  opacity: 0.35;
-  box-shadow: 0 2px 0 var(--ink);
-}
-
-.learn-next {
-  flex: 1;
 }
 
 /* ── Quiz ──────────────────────────────────────────────── */
@@ -1121,20 +924,6 @@ p {
   text-wrap: balance;
 }
 
-.options-sort .option,
-.options-tf .option {
-  min-height: 176px;
-}
-
-.options-sort .option-art,
-.options-tf .option-art {
-  font-size: 92px;
-}
-
-.options-sort .option-label,
-.options-tf .option-label {
-  font-size: 1.35rem;
-}
 
 .option.is-speaking {
   transform: scale(1.05);
@@ -1514,11 +1303,6 @@ p {
   .option-art {
     font-size: 56px;
   }
-
-  .options-sort .option-art,
-  .options-tf .option-art {
-    font-size: 76px;
-  }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -1530,7 +1314,7 @@ p {
     transition-duration: 0.01ms !important;
   }
 
-  .cloud {
+  .float-glyph {
     animation: none;
   }
 }
@@ -1666,16 +1450,6 @@ p {
 
   .option-label {
     font-size: 1.4rem;
-  }
-
-  .options-sort .option,
-  .options-tf .option {
-    min-height: 250px;
-  }
-
-  .options-sort .option-art,
-  .options-tf .option-art {
-    font-size: 130px;
   }
 
   .feedback {
@@ -1995,4 +1769,1831 @@ p {
   .learn-art-label {
     font-size: 1.25rem;
   }
+}
+
+/* ── Letters, words, shapes and the matching board ── */
+.subject-text .subject-art,
+.learn-glyph {
+  position: relative;
+  padding: 0.06em 0.34em 0;
+  border: var(--edge);
+  border-radius: 24px;
+  background:
+    linear-gradient(180deg, transparent 18%, var(--rule-red) 18% calc(18% + 2px), transparent calc(18% + 2px)),
+    repeating-linear-gradient(90deg, var(--rule-blue) 0 10px, transparent 10px 18px) 0 50% / 100% 2px no-repeat,
+    linear-gradient(180deg, transparent 80%, var(--rule-red) 80% calc(80% + 3px), transparent calc(80% + 3px)),
+    var(--paper);
+  box-shadow: var(--lift);
+}
+
+.subject-text .subject-art {
+  font-size: 104px;
+}
+
+.subject-text .art-text {
+  color: var(--deep);
+}
+
+.subject-picture .subject-art {
+  font-size: 104px;
+}
+
+.subject-count .subject-art {
+  padding: 10px 18px;
+  border: var(--edge);
+  border-radius: 24px;
+  background: var(--paper);
+  box-shadow: var(--lift);
+  font-size: 150px;
+}
+
+.blank-word {
+  font-family: var(--font-reading);
+  font-weight: 700;
+  font-size: 3.4rem;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+}
+
+.blank-word .blank-slot.is-filled {
+  border-bottom-color: var(--good);
+  color: var(--good-deep);
+  text-align: center;
+}
+
+.options.count-3 .option-slot {
+  flex-basis: calc(33.33% - 8px);
+  max-width: calc(33.33% - 8px);
+}
+
+.option-text .option-art {
+  font-size: 84px;
+}
+
+.option-text .art-text {
+  color: var(--ink);
+}
+
+.option-picture .option-art {
+  font-size: 64px;
+}
+
+/* Choosing between groups to count: one wide row each, so every item stays big. */
+.options.holds-option-count .option-slot {
+  flex-basis: 100%;
+  max-width: 100%;
+}
+
+.options.holds-option-count .option {
+  min-height: 96px;
+}
+
+.option-count .option-art {
+  font-size: 110px;
+}
+
+.option-count .art-count {
+  grid-template-columns: repeat(6, auto);
+}
+
+.feedback-answer {
+  display: inline-grid;
+  place-items: center;
+  min-width: 64px;
+  padding: 2px 14px;
+  font-size: 52px;
+  line-height: 1;
+}
+
+.feedback-answer.option-count {
+  font-size: 90px;
+}
+
+.feedback-facts {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-family: var(--font-reading);
+}
+
+.feedback-fact {
+  font-weight: 700;
+}
+
+/* The matching board: items on the left, partners on the right, lines between. */
+.match-board {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: clamp(56px, 20vw, 190px);
+  width: 100%;
+  max-width: 640px;
+  align-self: center;
+}
+
+.match-column {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.match-slot {
+  display: flex;
+}
+
+.match-item {
+  position: relative;
+  z-index: 1;
+  flex: 1;
+  display: grid;
+  place-items: center;
+  min-height: 104px;
+  padding: 8px;
+  border: var(--edge);
+  border-radius: 24px;
+  background: var(--paper);
+  box-shadow: var(--lift);
+  transition: transform 0.2s cubic-bezier(0.3, 1.4, 0.5, 1), background 0.2s, border-color 0.2s, box-shadow 0.2s;
+}
+
+.match-item .option-art {
+  font-size: 64px;
+}
+
+.match-item.option-text .option-art {
+  font-size: 70px;
+}
+
+.match-item.option-count .option-art {
+  font-size: 92px;
+}
+
+.match-item.is-selected {
+  transform: translateY(-4px) scale(1.04);
+  border-color: var(--deep);
+  background: var(--tint);
+  box-shadow: 0 8px 0 var(--deep), 0 0 0 6px var(--tone);
+}
+
+.match-item.is-matched {
+  transform: none;
+}
+
+.match-item.match-color-0 { border-color: #0a5f60; background: #d9f1ef; box-shadow: 0 6px 0 #0a5f60; }
+.match-item.match-color-1 { border-color: #9c3216; background: #fde3da; box-shadow: 0 6px 0 #9c3216; }
+.match-item.match-color-2 { border-color: #52306a; background: #efe3f5; box-shadow: 0 6px 0 #52306a; }
+
+.match-lines {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  pointer-events: none;
+}
+
+.match-line {
+  stroke-width: 7;
+  stroke-linecap: round;
+  stroke-dasharray: 800;
+  stroke-dashoffset: 800;
+  animation: draw-line 0.45s ease-out forwards;
+}
+
+.match-line.match-color-0 { stroke: #0f8b8d; }
+.match-line.match-color-1 { stroke: #e4572e; }
+.match-line.match-color-2 { stroke: #7b4b94; }
+
+@keyframes draw-line {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.shake {
+  animation: shake 0.45s ease-in-out;
+}
+
+/* Feedback: a kind word before the right answer. */
+.feedback-encourage {
+  margin: 0;
+  font-weight: 800;
+  font-size: 1.05rem;
+  color: var(--ink-soft);
+}
+
+/* Matching: the right column waits until a name on the right is chosen. */
+.match-item.is-waiting {
+  opacity: 0.72;
+}
+
+.match-column-first.nudge .match-item:not(.is-matched) {
+  animation: nudge 0.6s ease-in-out;
+}
+
+@keyframes nudge {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-8px) scale(1.03); }
+  60% { transform: translateX(6px) scale(1.03); }
+}
+
+.match-item.match-color-3 { border-color: #7a5512; background: #fbefd2; box-shadow: 0 6px 0 #7a5512; }
+.match-line.match-color-3 { stroke: #c9962b; }
+
+/* ── «التربية الإسلامية»: the mark, the brand and the lesson cards ── */
+.star-mark {
+  display: block;
+}
+
+/* The splash stage is taller than wide, so the title sits between the two arcs of pictures. */
+.splash .splash-stage {
+  aspect-ratio: 0.82;
+}
+
+.logo-mark {
+  width: clamp(92px, 26vw, 140px);
+  height: auto;
+  margin-bottom: 4px;
+  filter: drop-shadow(0 6px 0 rgba(31, 42, 51, 0.22));
+  animation: turn-slow 30s linear infinite;
+}
+
+@keyframes turn-slow {
+  to {
+    rotate: 360deg;
+  }
+}
+
+.logo-word {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(2.1rem, 9.4vw, 3.4rem);
+  line-height: 1.25;
+  white-space: nowrap;
+  color: #fff;
+  -webkit-text-stroke: 6px var(--ink);
+  paint-order: stroke fill;
+  text-shadow: 0 6px 0 var(--ink);
+}
+
+.logo-sub {
+  margin-top: 6px;
+  padding: 0 18px;
+  border: 3px solid var(--ink);
+  border-radius: 999px;
+  background: var(--leaf);
+  color: #fff;
+  font-family: var(--font-display);
+  font-size: 1.45rem;
+  line-height: 1.5;
+}
+
+.orbit-item .art-pic img {
+  width: clamp(54px, 15vw, 78px);
+  height: clamp(54px, 15vw, 78px);
+  object-fit: cover;
+  border: 3px solid var(--ink);
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 4px 0 var(--ink);
+}
+
+.brand-word {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(1.3rem, 5.6vw, 1.85rem);
+  white-space: nowrap;
+  color: var(--ink);
+  -webkit-text-stroke: 0;
+}
+
+.brand-mark {
+  width: 44px;
+  height: 44px;
+}
+
+.test-banner-art {
+  overflow: hidden;
+  width: 78px;
+  height: 78px;
+  border-radius: 22px;
+  background: #fff;
+}
+
+.test-banner-art .art-pic img {
+  width: 78px;
+  height: 78px;
+  object-fit: cover;
+}
+
+/* Five lessons: two to a row on a phone, the last one wide; three to a row on an iPad. */
+.topic-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px 12px;
+}
+
+.topic-card {
+  position: relative;
+  gap: 4px;
+  padding: 30px 8px 12px;
+  background:
+    radial-gradient(circle at 50% 46%, rgba(255, 255, 255, 0.75) 0 46px, transparent 47px),
+    var(--tint);
+}
+
+.topic-card:last-child:nth-child(odd) {
+  grid-column: 1 / -1;
+}
+
+/* The field's name in the corner, like the book's coloured page tab. */
+.topic-card-field {
+  position: absolute;
+  top: -3px;
+  inset-inline-start: 16px;
+  padding: 0 12px 2px;
+  border: 3px solid var(--ink);
+  border-top: 0;
+  border-radius: 0 0 14px 14px;
+  background: var(--tone);
+  color: #fff;
+  font-family: var(--font-display);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.topic-card-art {
+  display: grid;
+  place-items: center;
+  height: auto;
+}
+
+.topic-card-art .art {
+  position: static;
+}
+
+.topic-card-art .art-pic img {
+  width: 92px;
+  height: 92px;
+  object-fit: cover;
+  border: 3px solid var(--ink);
+  border-radius: 50%;
+  background: #fff;
+}
+
+.topic-card-title {
+  min-height: 2.6em;
+  font-size: 1.15rem;
+}
+
+/* ── The exam paper: heading, instruction, hadith, sentences ── */
+.question {
+  gap: 14px;
+}
+
+.paper-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 10px;
+  padding: 10px 12px;
+  border: var(--edge);
+  border-radius: 22px;
+  background: var(--paper);
+  box-shadow: 0 5px 0 var(--ink);
+}
+
+.paper-pill {
+  flex: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0 14px 2px;
+  border: 3px solid var(--ink);
+  border-radius: 999px;
+  background: var(--tone);
+  color: #fff;
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  line-height: 1.6;
+}
+
+.paper-flower {
+  color: #fff3c4;
+  font-size: 1.1em;
+  line-height: 1;
+}
+
+.instruction {
+  flex: 1 1 210px;
+  min-width: 0;
+  color: var(--deep);
+  font-weight: 800;
+  font-size: clamp(1.05rem, 4.2vw, 1.3rem);
+  line-height: 1.6;
+  text-wrap: pretty;
+}
+
+.paper-head .speaker-button {
+  flex: none;
+}
+
+/* A hadith in the book's cream panel; the missing word is a dotted line. */
+.hadith-card {
+  position: relative;
+  padding: 14px 18px 18px;
+  border: var(--edge);
+  border-radius: 28px;
+  background:
+    radial-gradient(circle at 0 0, var(--tint) 0 22px, transparent 23px),
+    radial-gradient(circle at 100% 0, var(--tint) 0 22px, transparent 23px),
+    radial-gradient(circle at 0 100%, var(--tint) 0 22px, transparent 23px),
+    radial-gradient(circle at 100% 100%, var(--tint) 0 22px, transparent 23px),
+    #fff9e0;
+  box-shadow: var(--lift);
+}
+
+.hadith-lead {
+  font-weight: 900;
+  font-size: clamp(1.15rem, 4.6vw, 1.4rem);
+}
+
+.hadith-text {
+  font-family: var(--font-reading);
+  font-weight: 700;
+  font-size: clamp(1.45rem, 5.8vw, 2.05rem);
+  line-height: 2.05;
+  color: #0d7a4c;
+  text-wrap: pretty;
+}
+
+.hadith-blank {
+  display: inline-block;
+  min-width: 3.4em;
+  margin-inline: 4px;
+  border-bottom: 3px dotted var(--ink-soft);
+  color: var(--ink-soft);
+  font-family: var(--font-body);
+  font-size: 0.7em;
+  line-height: 1.6;
+  text-align: center;
+  vertical-align: baseline;
+}
+
+.hadith-blank.is-filled {
+  min-width: 0;
+  border-bottom-color: transparent;
+  font-family: var(--font-reading);
+  font-size: 1em;
+}
+
+/* The teacher's red pen: answers written into the paper. */
+.ink-word,
+.ink-mark {
+  color: var(--pen);
+  animation: ink-in 0.5s cubic-bezier(0.3, 1.4, 0.5, 1) both;
+}
+
+@keyframes ink-in {
+  from {
+    opacity: 0;
+    transform: scale(1.6) rotate(-8deg);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.statement,
+.prompt-card {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 14px;
+  border: var(--edge);
+  border-radius: 24px;
+  background: var(--paper);
+  box-shadow: var(--lift);
+}
+
+.statement-number {
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  border: 3px solid var(--ink);
+  border-radius: 50%;
+  background: var(--tone);
+  color: #fff;
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  line-height: 1;
+}
+
+.statement-text,
+.prompt-card .prompt {
+  flex: 1;
+  min-width: 0;
+  font-family: var(--font-reading);
+  font-weight: 700;
+  font-size: clamp(1.35rem, 5.4vw, 1.85rem);
+  line-height: 1.85;
+  text-wrap: pretty;
+}
+
+/* «(   )»: the bracket the child marks; the mark is written in after answering. */
+.statement-slot,
+.mark-slot {
+  flex: none;
+  display: inline-flex;
+  align-items: center;
+  direction: ltr;
+  color: var(--ink-soft);
+  font-size: 1.8rem;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.slot-mark {
+  display: inline-grid;
+  place-items: center;
+  width: 1.5em;
+  height: 1.3em;
+}
+
+.slot-mark.ink-mark {
+  font-size: 1.2em;
+}
+
+/* ── Answers: pills «( … )», ✓ and ✗ stamps, pictures ── */
+.question .options {
+  padding-inline: 8px;
+  gap: 14px 12px;
+}
+
+.option-slot {
+  min-width: 0;
+}
+
+.option,
+.option-art {
+  min-width: 0;
+  max-width: 100%;
+}
+
+.options.holds-option-txt .option-slot {
+  flex: 1 1 calc(50% - 12px);
+  max-width: 100%;
+}
+
+.options.holds-option-txt.count-3 .option-slot {
+  flex-basis: calc(33.33% - 12px);
+}
+
+.options.holds-option-txt.has-long .option-slot {
+  flex-basis: 100%;
+}
+
+.question .option.option-txt {
+  min-height: 72px;
+  padding: 10px 12px;
+  border-radius: 999px;
+}
+
+.option-txt .option-art {
+  font-family: var(--font-reading);
+  font-weight: 700;
+  font-size: clamp(1.2rem, 4.8vw, 1.5rem);
+  line-height: 1.6;
+  text-align: center;
+}
+
+.art-text {
+  white-space: normal;
+  line-height: 1.5;
+  text-wrap: balance;
+}
+
+/* The paper prints each choice between brackets: «( الجنة )». */
+.option.option-txt .art-text {
+  display: inline-block;
+}
+
+.option.option-txt .art-text::before {
+  content: '( ';
+  color: var(--ink-soft);
+}
+
+.option.option-txt .art-text::after {
+  content: ' )';
+  color: var(--ink-soft);
+}
+
+.options.holds-option-tf .option-slot {
+  flex: 1 1 calc(50% - 12px);
+  max-width: 220px;
+}
+
+.question .option.option-tf {
+  min-height: 112px;
+}
+
+.question .option.option-pic {
+  min-height: 0;
+}
+
+.mark-board .art-pic img {
+  max-width: 150px;
+  margin-inline: auto;
+}
+
+.art-tf {
+  width: auto;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 1.1;
+}
+
+.tf-mark {
+  font-size: 58px;
+  font-weight: 900;
+}
+
+.tf-yes .tf-mark {
+  color: var(--good-deep);
+}
+
+.tf-no .tf-mark {
+  color: var(--miss-deep);
+}
+
+.tf-word {
+  font-size: 1.2rem;
+  font-weight: 900;
+}
+
+.options.holds-option-pic .option-slot {
+  flex: 1 1 calc(33.33% - 12px);
+  max-width: 190px;
+}
+
+.options.holds-option-pic.count-2 .option-slot {
+  flex-basis: calc(50% - 12px);
+}
+
+.option-pic {
+  min-height: 0;
+  padding: 8px;
+}
+
+.art-pic {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.art-pic img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: contain;
+  border-radius: 16px;
+  background: #fff;
+  -webkit-user-drag: none;
+}
+
+/* The pen ring of «حوّط»: drawn round the chosen answer. */
+.ink-ring {
+  position: absolute;
+  inset: -12px -10px;
+  width: calc(100% + 20px);
+  height: calc(100% + 24px);
+  overflow: visible;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.ink-ring path {
+  fill: none;
+  stroke: var(--pen);
+  stroke-width: 5;
+  stroke-linecap: round;
+  stroke-dasharray: 100;
+  stroke-dashoffset: 100;
+  vector-effect: non-scaling-stroke;
+  animation: draw-ring 0.55s ease-out forwards;
+}
+
+.ink-good path {
+  stroke: var(--good);
+}
+
+.ink-miss path {
+  stroke: var(--miss);
+}
+
+@keyframes draw-ring {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* ── Pictures to circle or to mark ── */
+.picture-board {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.picture-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px 12px;
+  padding-inline: 8px;
+}
+
+.picture-board.count-4 .picture-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.picture-button,
+.mark-cell {
+  position: relative;
+  min-width: 0;
+  padding: 8px;
+  border: var(--edge);
+  border-radius: 22px;
+  background: var(--paper);
+  box-shadow: var(--lift);
+  transition: background 0.2s, border-color 0.2s, transform 0.25s cubic-bezier(0.3, 1.4, 0.5, 1), opacity 0.3s;
+}
+
+.picture-button:not(:disabled):active {
+  transform: scale(0.95);
+}
+
+.picture-button.is-picked {
+  background: #fff4f2;
+}
+
+.picture-button.is-correct,
+.picture-button.is-reveal,
+.mark-cell.is-correct {
+  border-color: var(--good-deep);
+  background: var(--good-tint);
+}
+
+.picture-button.is-wrong,
+.mark-cell.is-wrong {
+  border-color: var(--miss-deep);
+  background: var(--miss-tint);
+  animation: shake 0.5s ease-in-out;
+}
+
+.picture-button.is-dim {
+  opacity: 0.55;
+}
+
+.picture-tile {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.picture-frame {
+  display: block;
+  width: 100%;
+}
+
+.picture-caption {
+  font-weight: 800;
+  font-size: clamp(0.92rem, 3.6vw, 1.1rem);
+  line-height: 1.45;
+  text-align: center;
+  text-wrap: balance;
+}
+
+.mark-cell {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.mark-choices {
+  display: flex;
+  gap: 8px;
+}
+
+.mark-choice {
+  display: grid;
+  place-items: center;
+  width: 54px;
+  height: 48px;
+  border: 3px solid var(--ink);
+  border-radius: 14px;
+  background: var(--paper);
+  box-shadow: 0 4px 0 var(--ink);
+  font-size: 1.7rem;
+  font-weight: 900;
+  line-height: 1;
+  transition: transform 0.15s, box-shadow 0.15s, background 0.15s;
+}
+
+.mark-choice-yes {
+  color: var(--good-deep);
+}
+
+.mark-choice-no {
+  color: var(--miss-deep);
+}
+
+.uses-faces .mark-choice {
+  font-family: var(--font-emoji);
+  font-size: 1.55rem;
+}
+
+.mark-choice.is-on {
+  background: var(--tint);
+  transform: translateY(3px);
+  box-shadow: 0 1px 0 var(--ink);
+}
+
+.mark-truth {
+  padding: 0 12px;
+  border: 2px solid var(--good-deep);
+  border-radius: 999px;
+  background: var(--paper);
+  color: var(--good-deep);
+  font-weight: 900;
+  font-size: 1.15rem;
+}
+
+.mark-truth::before {
+  content: 'الصحيح: ';
+  font-size: 0.85em;
+}
+
+.check-row {
+  display: flex;
+  justify-content: center;
+}
+
+.check-button {
+  min-width: min(260px, 100%);
+}
+
+.check-button.is-waiting {
+  opacity: 0.45;
+}
+
+/* ── Feedback and review ── */
+.feedback-facts {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.feedback-fact {
+  font-family: var(--font-reading);
+  font-weight: 700;
+  font-size: clamp(1.1rem, 4.4vw, 1.3rem);
+}
+
+.feedback-answer.option-txt {
+  font-family: var(--font-reading);
+  font-size: 1.2rem;
+}
+
+.feedback-answer.option-tf {
+  font-size: 1rem;
+}
+
+.feedback-answer.option-tf .tf-mark {
+  font-size: 1.6rem;
+}
+
+.feedback-answer.option-tf .art-tf {
+  flex-direction: row;
+  gap: 6px;
+}
+
+.feedback-answer.option-pic {
+  padding: 3px;
+  border-radius: 14px;
+}
+
+.feedback-answer.option-pic .art-pic img {
+  width: 58px;
+}
+
+.review-art .art-pic img {
+  width: 56px;
+  height: 56px;
+  object-fit: cover;
+  border: 2px solid var(--ink);
+  border-radius: 14px;
+}
+
+.review-q {
+  font-family: var(--font-reading);
+}
+
+/* ── Phones ── */
+@media (max-width: 480px) {
+  .topic-card-art .art-pic img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .question {
+    gap: 12px;
+  }
+
+  .picture-grid,
+  .order-items {
+    gap: 14px 10px;
+  }
+
+  .mark-choice {
+    width: 46px;
+    height: 44px;
+  }
+
+  .picture-board.count-3 .mark-choice {
+    width: 40px;
+    height: 42px;
+    font-size: 1.4rem;
+  }
+
+  .picture-board.count-3 .mark-choices {
+    gap: 4px;
+  }
+
+  .order-pictures .order-items {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .hadith-card {
+    padding: 12px 14px 14px;
+  }
+}
+
+/* ── Tablets: the iPad gets bigger pictures and a three-lesson row ── */
+@media (min-width: 760px) {
+  .topic-grid {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+  }
+
+  .topic-card {
+    grid-column: span 2;
+  }
+
+  .topic-card:nth-child(4) {
+    grid-column: 2 / span 2;
+  }
+
+  .topic-card:last-child:nth-child(odd) {
+    grid-column: 4 / span 2;
+  }
+
+  .topic-card-art .art-pic img {
+    width: 112px;
+    height: 112px;
+  }
+
+  .picture-board.count-4 .picture-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .order-pictures .order-items {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+
+  .mark-choice {
+    width: 60px;
+    height: 52px;
+  }
+}
+
+/* ══ «علوم»: the second test's own pieces ══════════════════════════════════ */
+.magnifier,
+.brand-mark,
+.logo-mark {
+  display: block;
+}
+
+.splash .logo-mark {
+  animation: bob 4s ease-in-out infinite;
+}
+
+.logo-sub {
+  background: var(--sea-deep);
+}
+
+.paper-leaf {
+  color: #fff3c4;
+  font-size: 1.05em;
+  line-height: 1;
+}
+
+/* The line Maryam says, under the paper's own instruction. */
+.voice-help {
+  margin-top: -6px;
+  padding-inline: 18px;
+  color: var(--ink-soft);
+  font-weight: 700;
+  font-size: clamp(0.98rem, 3.8vw, 1.12rem);
+  line-height: 1.5;
+}
+
+.voice-help::before {
+  content: '🔊 ';
+  font-family: var(--font-emoji);
+  font-size: 0.85em;
+}
+
+/* Two lessons side by side, each with two of its pictures. */
+.topic-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.topic-card-field {
+  font-size: 0.86rem;
+  white-space: nowrap;
+}
+
+.topic-card-art {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+}
+
+.topic-card-art .art-pic {
+  width: auto;
+}
+
+.topic-card-art .art-pic img {
+  width: clamp(62px, 18vw, 92px);
+  height: clamp(62px, 18vw, 92px);
+}
+
+.topic-card-title {
+  font-size: clamp(1rem, 4.2vw, 1.2rem);
+  text-wrap: balance;
+}
+
+/* A question with its picture: the book's picture beside its question. */
+.prompt-card.has-picture {
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.prompt-card.has-picture .prompt {
+  flex: 1 1 100%;
+}
+
+.prompt-picture {
+  display: block;
+  width: min(100%, 320px);
+}
+
+.prompt-picture .art-pic img {
+  aspect-ratio: auto;
+  max-height: 210px;
+  object-fit: contain;
+  border: 3px solid var(--ink);
+  border-radius: 18px;
+}
+
+/* The bank's small picture inside a ✓/✗ sentence. */
+.inline-picture {
+  display: inline-block;
+  vertical-align: middle;
+  width: 2.2em;
+  margin-inline: 2px;
+}
+
+.inline-picture .art-pic img {
+  border: 2px solid var(--ink-soft);
+  border-radius: 10px;
+}
+
+/* «حوط الكلمة»: the sentence with its two words between brackets. */
+.word-card {
+  padding: 18px 16px;
+  border: var(--edge);
+  border-radius: 24px;
+  background: #fff9e0;
+  box-shadow: var(--lift);
+}
+
+.word-sentence {
+  font-family: var(--font-reading);
+  font-weight: 700;
+  font-size: clamp(1.4rem, 5.6vw, 1.95rem);
+  line-height: 2.3;
+  text-wrap: pretty;
+}
+
+.word-brackets {
+  color: var(--ink-soft);
+}
+
+.word-slot {
+  display: inline;
+}
+
+.word-choice {
+  position: relative;
+  display: inline-block;
+  margin: 0 2px;
+  padding: 0 12px;
+  border: 3px dashed var(--tone);
+  border-radius: 999px;
+  background: #fff;
+  color: var(--deep);
+  font: inherit;
+  line-height: 1.6;
+  max-width: 100%;
+  transition: transform 0.15s, background 0.15s;
+}
+
+.word-choice:not(:disabled):active {
+  transform: scale(0.96);
+}
+
+.word-choice.is-correct,
+.word-choice.is-reveal {
+  border-style: solid;
+  border-color: var(--good);
+  background: var(--good-tint);
+}
+
+.word-choice.is-wrong {
+  border-style: solid;
+  border-color: var(--miss);
+  background: var(--miss-tint);
+}
+
+.word-choice.is-dim {
+  opacity: 0.5;
+}
+
+.word-choice .ink-ring {
+  inset: -10px -12px;
+  width: calc(100% + 24px);
+  height: calc(100% + 20px);
+}
+
+/* «أجب عن المطلوب»: choices in a column, each with the paper's circle to fill. */
+.circle-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding-inline: 6px;
+}
+
+.circle-choice {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-height: 64px;
+  padding: 8px 16px;
+  border: var(--edge);
+  border-radius: 20px;
+  background: var(--paper);
+  box-shadow: 0 5px 0 var(--ink);
+  text-align: start;
+  transition: transform 0.15s, box-shadow 0.15s, background 0.2s;
+}
+
+.circle-choice:not(:disabled):active {
+  transform: translateY(4px);
+  box-shadow: 0 1px 0 var(--ink);
+}
+
+.circle-dot {
+  flex: none;
+  width: 30px;
+  height: 30px;
+  border: 3px solid var(--ink);
+  border-radius: 50%;
+  background: #fff;
+}
+
+.circle-dot.is-filled {
+  background: var(--pen);
+  animation: ink-in 0.45s cubic-bezier(0.3, 1.4, 0.5, 1) both;
+}
+
+.circle-text {
+  font-family: var(--font-reading);
+  font-weight: 700;
+  font-size: clamp(1.2rem, 4.8vw, 1.5rem);
+  line-height: 1.5;
+}
+
+.circle-choice.is-lit,
+.tick-option.is-lit {
+  background: var(--tint);
+  transform: scale(1.03);
+}
+
+.circle-choice.is-correct,
+.circle-choice.is-reveal,
+.tick-option.is-correct,
+.tick-option.is-reveal {
+  border-color: var(--good-deep);
+  background: var(--good-tint);
+}
+
+.circle-choice.is-reveal .circle-dot.is-filled,
+.circle-choice.is-correct .circle-dot.is-filled {
+  background: var(--good);
+}
+
+.circle-choice.is-wrong,
+.tick-option.is-wrong {
+  border-color: var(--miss-deep);
+  background: var(--miss-tint);
+}
+
+.circle-choice.is-dim,
+.tick-option.is-dim {
+  opacity: 0.5;
+}
+
+/* «بوضع علامة (✓) في المربع»: each choice with its square box under it. */
+.tick-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px 12px;
+  padding-inline: 6px;
+}
+
+.tick-grid.count-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.tick-grid.holds-txt {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.tick-option {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+  padding: 10px 8px 12px;
+  border: var(--edge);
+  border-radius: 22px;
+  background: var(--paper);
+  box-shadow: 0 5px 0 var(--ink);
+  transition: transform 0.15s, box-shadow 0.15s, background 0.2s;
+}
+
+.tick-option:not(:disabled):active {
+  transform: translateY(4px);
+  box-shadow: 0 1px 0 var(--ink);
+}
+
+.tick-art {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  min-height: 3.2em;
+}
+
+.tick-option.kind-txt .tick-art {
+  font-family: var(--font-reading);
+  font-weight: 700;
+  font-size: clamp(1.15rem, 4.6vw, 1.4rem);
+  line-height: 1.5;
+  text-align: center;
+}
+
+.tick-option.kind-pic .art-pic img {
+  max-width: min(150px, 100%);
+  max-height: 120px;
+  margin-inline: auto;
+}
+
+.tick-box {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border: 3px solid var(--ink);
+  border-radius: 8px;
+  background: #fff;
+  font-size: 1.9rem;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.tick-box .mark-yes {
+  color: var(--pen);
+}
+
+.tick-option.is-reveal .tick-box .ink-mark,
+.tick-option.is-correct .tick-box .ink-mark {
+  color: var(--good-deep);
+}
+
+/* A group card: two pictures side by side. */
+.art-pics {
+  display: flex;
+  gap: 6px;
+  width: 100%;
+}
+
+.art-pics-one {
+  flex: 1;
+  min-width: 0;
+}
+
+.art-pics-one img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: contain;
+  border-radius: 12px;
+  background: #fff;
+}
+
+/* The paper's ✗ drawn over a picture. */
+.ink-cross {
+  position: absolute;
+  inset: 4%;
+  width: 92%;
+  height: 92%;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.ink-cross path {
+  fill: none;
+  stroke: var(--pen);
+  stroke-width: 9;
+  stroke-linecap: round;
+  stroke-dasharray: 100;
+  stroke-dashoffset: 100;
+  animation: draw-ring 0.35s ease-out forwards;
+}
+
+.ink-cross path + path {
+  animation-delay: 0.2s;
+}
+
+.ink-cross.ink-good path {
+  stroke: var(--good);
+}
+
+.ink-cross.ink-miss path {
+  stroke: var(--miss);
+}
+
+.ink-hint path {
+  stroke: var(--good);
+  stroke-dasharray: 6 7;
+  stroke-dashoffset: 0;
+  animation: none;
+  opacity: 0.85;
+}
+
+/* «لون…»: two crayons, and the line drawings take their colour. */
+.color-board {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.crayon-box {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+}
+
+.crayon {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 18px 8px 14px;
+  border: var(--edge);
+  border-radius: 999px;
+  background: var(--paper);
+  box-shadow: 0 5px 0 var(--ink);
+  font-weight: 900;
+  font-size: 1.15rem;
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.crayon-stick {
+  width: 46px;
+  height: 18px;
+  border: 2px solid var(--ink);
+  border-radius: 4px 12px 12px 4px;
+  clip-path: polygon(0 0, 78% 0, 100% 50%, 78% 100%, 0 100%);
+}
+
+.crayon-land .crayon-stick {
+  background: var(--land-paint);
+}
+
+.crayon-water .crayon-stick {
+  background: var(--water-paint);
+}
+
+.crayon.is-on {
+  transform: translateY(4px);
+  box-shadow: 0 1px 0 var(--ink);
+}
+
+.crayon-land.is-on {
+  background: #ffe9d2;
+}
+
+.crayon-water.is-on {
+  background: #dcefff;
+}
+
+.color-cell .picture-frame {
+  border-radius: 16px;
+  background: #fff;
+  transition: background 0.25s;
+}
+
+.color-cell .art-pic img {
+  mix-blend-mode: multiply;
+  background: transparent;
+}
+
+.color-cell.paint-land .picture-frame {
+  background: color-mix(in srgb, var(--land-paint) 62%, #fff);
+}
+
+.color-cell.paint-water .picture-frame {
+  background: color-mix(in srgb, var(--water-paint) 55%, #fff);
+}
+
+.paint-truth {
+  position: absolute;
+  top: -10px;
+  inset-inline-end: -8px;
+  width: 30px;
+  height: 30px;
+  border: 3px solid var(--ink);
+  border-radius: 50%;
+  z-index: 3;
+}
+
+.paint-truth.paint-land {
+  background: var(--land-paint);
+}
+
+.paint-truth.paint-water {
+  background: var(--water-paint);
+}
+
+/* The numbers: the Ministry's table, and the animals above their homes. */
+.rows-board {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.key-row {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  padding-inline: 6px;
+}
+
+.key-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  min-width: 0;
+  padding: 8px 8px 10px;
+  border: var(--edge);
+  border-radius: 20px;
+  background: var(--paper);
+  box-shadow: 0 5px 0 var(--ink);
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.key-card:not(:disabled):active {
+  transform: translateY(4px);
+  box-shadow: 0 1px 0 var(--ink);
+}
+
+.key-number {
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border: 3px solid var(--ink);
+  border-radius: 8px;
+  background: var(--tint);
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  line-height: 1;
+}
+
+.key-art {
+  display: block;
+  width: 100%;
+}
+
+.home-row {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  padding-inline: 6px;
+}
+
+.home-cell {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 8px;
+  border: 3px dashed transparent;
+  border-radius: 20px;
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.home-cell.is-current,
+.table-row.is-current,
+.scene-row.is-current {
+  border-color: var(--tone);
+  background: var(--tint);
+}
+
+.home-art {
+  display: block;
+  width: 100%;
+}
+
+.number-box {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border: 3px solid var(--ink);
+  border-radius: 10px;
+  background: #fff;
+  font-size: 1.6rem;
+}
+
+.ink-number {
+  color: var(--pen);
+  font-family: var(--font-display);
+  font-size: 1.7rem;
+  line-height: 1;
+}
+
+.table-sheet {
+  overflow: hidden;
+  border: var(--edge);
+  border-radius: 20px;
+  background: var(--paper);
+  box-shadow: var(--lift);
+}
+
+.table-head {
+  display: grid;
+  grid-template-columns: 84px 1fr;
+  background: var(--tone);
+  color: #fff;
+  font-weight: 900;
+  text-align: center;
+}
+
+.table-head span {
+  padding: 4px 8px;
+}
+
+.table-row {
+  display: grid;
+  grid-template-columns: 84px 1fr;
+  align-items: center;
+  border-top: 2px solid var(--rule-blue);
+  border-inline: 3px dashed transparent;
+}
+
+.table-blank {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  direction: ltr;
+  color: var(--ink-soft);
+  font-size: 1.6rem;
+  font-weight: 900;
+}
+
+.table-value {
+  display: inline-grid;
+  place-items: center;
+  min-width: 1.6em;
+}
+
+.table-text {
+  padding: 10px 12px;
+  border-inline-start: 2px solid var(--rule-blue);
+  font-family: var(--font-reading);
+  font-weight: 700;
+  font-size: clamp(1.15rem, 4.6vw, 1.4rem);
+  line-height: 1.6;
+}
+
+.group-head {
+  margin-bottom: -6px;
+  padding-inline: 14px;
+  color: var(--deep);
+  font-weight: 900;
+}
+
+/* A big picture to circle in, or to number. */
+.scene-board {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.scene-frame {
+  position: relative;
+  overflow: hidden;
+  border: var(--edge);
+  border-radius: 20px;
+  box-shadow: var(--lift);
+  background: #fff;
+  direction: ltr;
+}
+
+.scene-frame > .art-pic img {
+  aspect-ratio: auto;
+  border-radius: 0;
+}
+
+.scene-spot {
+  position: absolute;
+  padding: 0;
+  border: 0;
+  border-radius: 40%;
+  background: transparent;
+}
+
+.scene-spot:not(:disabled):active {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.scene-spot .ink-ring {
+  inset: -6%;
+  width: 112%;
+  height: 112%;
+}
+
+.scene-spot.is-slot {
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+}
+
+.scene-spot .ink-number {
+  font-size: clamp(1.6rem, 7vw, 2.4rem);
+}
+
+.scene-rows {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.scene-row {
+  flex: 1 1 140px;
+  padding: 6px 12px;
+  border: 3px dashed var(--rule-blue);
+  border-radius: 16px;
+  background: var(--paper);
+  font-family: var(--font-reading);
+  font-weight: 700;
+  font-size: clamp(1.1rem, 4.4vw, 1.3rem);
+}
+
+.scene-row.is-done {
+  border-style: solid;
+  border-color: var(--good);
+  opacity: 0.75;
+}
+
+.scene-row-number {
+  color: var(--pen);
+  font-family: var(--font-display);
+}
+
+.feedback-fact {
+  font-family: var(--font-reading);
+  font-weight: 700;
+  font-size: clamp(1.1rem, 4.4vw, 1.3rem);
+  line-height: 1.7;
+}
+
+.feedback-word {
+  color: var(--good-deep);
+  font-family: var(--font-reading);
+}
+
+.results-line {
+  font-weight: 800;
+  font-size: clamp(1.05rem, 4.2vw, 1.25rem);
+  color: var(--deep);
+  text-align: center;
+}
+
+@media (min-width: 700px) {
+  .tick-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .tick-grid.count-2 {
+    grid-template-columns: repeat(2, minmax(0, 220px));
+    justify-content: center;
+  }
+
+  .tick-grid.count-3 {
+    grid-template-columns: repeat(3, minmax(0, 220px));
+    justify-content: center;
+  }
+
+  .prompt-card.has-picture {
+    flex-wrap: nowrap;
+  }
+
+  .prompt-card.has-picture .prompt {
+    flex: 1 1 auto;
+  }
+
+  .prompt-picture {
+    width: 300px;
+    flex: none;
+  }
+
+  .scene-frame {
+    max-width: 640px;
+    margin-inline: auto;
+    width: 100%;
+  }
+}
+
+/* Photos of places and deeds read better larger: two to a row on a phone, the odd one centred. */
+.picture-board.count-3 .picture-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.picture-board.count-3 .picture-button:last-child {
+  grid-column: 1 / -1;
+  justify-self: center;
+  width: calc(50% - 6px);
+}
+
+@media (min-width: 700px) {
+  .picture-board.count-3 .picture-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .picture-board.count-3 .picture-button:last-child {
+    grid-column: auto;
+    width: auto;
+  }
+}
+
+/* Preview only: switch between the girls' and the boys' copy. */
+.preview-note {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.copy-switch {
+  padding: 4px 18px;
+  border: 3px solid var(--ink);
+  border-radius: 999px;
+  background: var(--paper);
+  box-shadow: 0 4px 0 var(--ink);
+  font-weight: 900;
 }

@@ -1,11 +1,11 @@
-import { Art } from '../art/Art'
+import { Art, Magnifier } from '../art/Art'
 import { TOPICS, type TopicId } from '../data/catalog'
 import { toneStyle } from '../data/tones'
 import { arabicNumber } from '../domain/format'
 import type { SavedProgress } from '../domain/progress'
-import { TEST_PER_TOPIC } from '../domain/round'
+import { TEST_SIZE } from '../domain/round'
+import { AUDIENCE, BOTH_COPIES } from '../audience'
 import { HUB_URL } from '../hub/bootstrap'
-import { Magnifier } from './Splash'
 import { PreviewBadge, SoundToggle, Stars, order } from './ui'
 
 interface HomeProps {
@@ -17,8 +17,6 @@ interface HomeProps {
 }
 
 export function Home({ progress, muted, onToggleSound, onOpenTopic, onStartTest }: HomeProps) {
-  const testCount = TOPICS.length * TEST_PER_TOPIC
-
   return (
     <main className="screen home">
       <header className="top-bar">
@@ -33,17 +31,17 @@ export function Home({ progress, muted, onToggleSound, onOpenTopic, onStartTest 
       <section className="home-body">
         <button type="button" className="test-banner press rise" style={{ ...toneStyle('test'), ...order(0) }} onClick={onStartTest}>
           <span className="test-banner-art" aria-hidden="true">
-            <Art art="🏆" />
+            <Art art="pic:polar-scene" />
           </span>
           <span className="test-banner-text">
-            <span className="test-banner-title">الاختبار التجريبي</span>
-            <span className="test-banner-sub">{arabicNumber(testCount)} سؤالا من كل الدروس</span>
+            <span className="test-banner-title">نموذج الاختبار</span>
+            <span className="test-banner-sub">{arabicNumber(TEST_SIZE)} أسئلة مثل بنك أسئلة الوزارة، من الدرسين</span>
             <Stars count={progress.stars.test ?? 0} size="sm" />
           </span>
         </button>
 
         <h2 className="section-title rise" style={order(1)}>
-          الدروس
+          الفصل الثالث: المواطن الطبيعية
         </h2>
 
         <div className="topic-grid">
@@ -56,14 +54,17 @@ export function Home({ progress, muted, onToggleSound, onOpenTopic, onStartTest 
               onClick={() => onOpenTopic(topic.id)}
               data-topic={topic.id}
             >
+              <span className="topic-card-field">
+                {topic.field} · {topic.pages}
+              </span>
               <span className="topic-card-art" aria-hidden="true">
-                <Art art={topic.art[0] ?? ''} className="art-back" />
-                <Art art={topic.art[1] ?? ''} className="art-front" />
+                {topic.art.map((art) => (
+                  <Art key={art} art={art} />
+                ))}
               </span>
               <span className="topic-card-title">{topic.title}</span>
               <span className="topic-card-foot">
                 <Stars count={progress.stars[topic.id] ?? 0} size="sm" />
-                {progress.learned.includes(topic.id) ? <span className="learned-chip">تعلمت ✓</span> : null}
               </span>
             </button>
           ))}
@@ -74,7 +75,21 @@ export function Home({ progress, muted, onToggleSound, onOpenTopic, onStartTest 
             العودة إلى صفحة الاختبارات
           </a>
         ) : (
-          <p className="preview-note">نسخة تجريبية للمعاينة: النجوم تحفظ على هذا الجهاز فقط، ولا ترسل أي نتائج إلى الـ Hub.</p>
+          <div className="preview-note">
+            <p>نسخة تجريبية للمعاينة: النجوم تحفظ على هذا الجهاز فقط، ولا ترسل أي نتائج إلى الـ Hub.</p>
+            {BOTH_COPIES ? (
+            <button
+              type="button"
+              className="copy-switch press"
+              onClick={() => {
+                window.location.hash = AUDIENCE === 'boys' ? '' : 'boys'
+                window.location.reload()
+              }}
+            >
+              {AUDIENCE === 'boys' ? 'افتح نسخة البنات' : 'افتح نسخة الأولاد'}
+            </button>
+            ) : null}
+          </div>
         )}
       </section>
     </main>

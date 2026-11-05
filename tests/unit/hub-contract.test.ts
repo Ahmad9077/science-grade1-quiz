@@ -7,15 +7,17 @@ import { HubBridge, levelFor, type Attempt } from '../../src/hub/bridge'
 import type { HubWindow } from '../../src/hub/contracts'
 
 const attempts: Attempt[] = [
-  { questionKey: 'food:rabbit', chosen: 'plants', correct: true },
-  { questionKey: 'food:wolf', chosen: 'plants', correct: false },
+  { questionKey: 'habitats:tick-lives-in-water', chosen: 'fish', correct: true },
+  { questionKey: 'protect:tf-smoke-sick', chosen: 'no', correct: false },
 ]
-const info = { kind: 'practice' as const, topic: 'food', difficulty: 'medium' as const }
+const info = { kind: 'practice' as const, topic: 'habitats', difficulty: 'medium' as const }
 
 describe('hub contract', () => {
   it('does not touch the Hub in preview mode', async () => {
     const context = await bootstrapQuiz('preview', {} as Window, {} as Document)
     expect(context).toEqual({ mode: 'preview', source: 'preview', difficulty: 'medium', preferredKeys: [] })
+    const chosen = await bootstrapQuiz('preview', { location: { search: '?keys=habitats:tf-all-on-land' } } as Window, {} as Document)
+    expect(chosen.preferredKeys).toEqual(['habitats:tf-all-on-land'])
     const record = vi.fn()
     const bridge = new HubBridge('preview', { QuizzesHubProgress: { record } } as HubWindow)
     expect(await bridge.reportRound(attempts, info)).toBe('none')
@@ -28,8 +30,8 @@ describe('hub contract', () => {
     const bridge = new HubBridge('production-hub', { QuizzesHubAdaptive: { recordAttempt }, QuizzesHubProgress: { record } })
     expect(await bridge.reportRound(attempts, info)).toBe('adaptive')
     expect(recordAttempt).toHaveBeenCalledWith([
-      { question: { key: 'food:rabbit' }, correct: true },
-      { question: { key: 'food:wolf' }, correct: false },
+      { question: { key: 'habitats:tick-lives-in-water' }, correct: true },
+      { question: { key: 'protect:tf-smoke-sick' }, correct: false },
     ])
     expect(record).not.toHaveBeenCalled()
   })
@@ -55,6 +57,10 @@ describe('hub contract', () => {
     expect(sql).toContain("('science-grade1', 'علوم - بنات', 'https://ahmad9077.github.io/science-grade1-quiz/'")
     expect(sql).toContain("('science-grade1-boys', 'علوم - أولاد', 'https://ahmad9077.github.io/science-grade1-quiz/boys/'")
     expect(sql).not.toMatch(/insert into public\.quiz_assignments/i)
+    // The first test's profiles go; attempt history stays.
+    expect(sql).toMatch(/delete from public\.question_difficulty_profiles\nwhere quiz_id in \('science-grade1', 'science-grade1-boys'\)\n {2}and question_key not in \(/)
+    expect(sql).not.toMatch(/delete from public\.(question_attempts|quiz_progress)/i)
+    expect(sql).toContain(`<> ${QUESTIONS.length} then`)
     for (const question of QUESTIONS) {
       expect(sql).toContain(`('science-grade1', '${question.key}'`)
       expect(sql).toContain(`('science-grade1-boys', '${question.key}'`)

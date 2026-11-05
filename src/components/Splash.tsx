@@ -1,7 +1,9 @@
-import { Art } from '../art/Art'
+import { Art, Magnifier } from '../art/Art'
+import { WORDS } from '../audience'
 import { BigButton, PreviewBadge, order } from './ui'
 
-const ORBIT = ['🥕', '🦜', '🐟', '🐢', '🐣', '🦋', '🥬', '🐇']
+/** The book's own creatures around the mark: sea on one side, land on the other. */
+const ORBIT = ['pic:fish', 'pic:squirrel', 'pic:bird', 'pic:rabbit', 'pic:whale', 'pic:cactus', 'pic:seaweed', 'pic:zebra']
 
 export function Splash({ onStart }: { onStart: () => void }) {
   return (
@@ -13,15 +15,17 @@ export function Splash({ onStart }: { onStart: () => void }) {
       <div className="splash-stage">
         <div className="orbit" aria-hidden="true">
           {ORBIT.map((art, index) => {
-            const angle = (index / ORBIT.length) * Math.PI * 2
+            const column = index % 4
+            const above = index < 4
+            const edge = column === 0 || column === 3
             return (
               <span
                 key={art}
                 className="orbit-item pop"
                 style={order(index, {
                   '--base-delay': '250ms',
-                  left: `${50 + Math.cos(angle) * 44}%`,
-                  top: `${50 + Math.sin(angle) * 40}%`,
+                  left: `${[12, 37, 63, 88][column]}%`,
+                  top: `${above ? (edge ? 15 : 7) : edge ? 85 : 93}%`,
                 })}
               >
                 <span className="orbit-bob" style={order(index)}>
@@ -33,13 +37,14 @@ export function Splash({ onStart }: { onStart: () => void }) {
         </div>
 
         <div className="logo logo-in">
-          <Magnifier />
+          <Magnifier className="logo-mark" />
           <h1 className="logo-word">علوم</h1>
+          <p className="logo-sub">المواطن الطبيعية</p>
         </div>
       </div>
 
       <p className="splash-tagline rise" style={order(0, { '--base-delay': '450ms' })}>
-        نتدرب معا على دروس العلوم للصف الأول
+        أين تعيش الكائنات الحية؟ وكيف نحمي أماكن عيشها؟ {WORDS.hello}
       </p>
 
       <div className="rise" style={order(0, { '--base-delay': '700ms' })}>
@@ -51,18 +56,5 @@ export function Splash({ onStart }: { onStart: () => void }) {
         </BigButton>
       </div>
     </main>
-  )
-}
-
-export function Magnifier({ className = 'magnifier' }: { className?: string }) {
-  return (
-    <svg className={className} viewBox="0 0 64 64" aria-hidden="true">
-      <path d="M40 40 L56 56" stroke="#24352a" strokeWidth="9" strokeLinecap="round" />
-      <path d="M40 40 L56 56" stroke="#a463d6" strokeWidth="5" strokeLinecap="round" />
-      <circle cx="27" cy="27" r="19" fill="#dff3ff" stroke="#24352a" strokeWidth="4" />
-      <path d="M27 38 C19 31 20 20 30 16 C35 25 33 33 27 38 Z" fill="#62c16a" stroke="#24352a" strokeWidth="2.4" strokeLinejoin="round" />
-      <path d="M27 38 C28 31 29 25 30 17" fill="none" stroke="#2f7a3a" strokeWidth="1.8" strokeLinecap="round" />
-      <path d="M15 21 Q18 14 25 12" fill="none" stroke="#ffffff" strokeWidth="3" strokeLinecap="round" />
-    </svg>
   )
 }

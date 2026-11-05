@@ -8,8 +8,7 @@ test('preview never calls the Hub or Supabase', async ({ page }) => {
     if (url.includes('ahmad9077.github.io') || url.includes('supabase')) external.push(url)
   })
   await start(page)
-  await page.locator('.topic-card[data-topic="food"]').click()
-  await page.getByRole('button', { name: /تدربي/ }).click()
+  await page.locator('.topic-card[data-topic="habitats"]').click()
   await answer(page, true)
   expect(external).toEqual([])
 })
@@ -50,7 +49,7 @@ test('production build stops when the Hub denies access', async ({ page }) => {
   await expect(page.getByRole('button', { name: /هيا نبدأ/ })).toHaveCount(0)
 })
 
-test('production boys copy registers as science-grade1-boys and reads shared audio', async ({ page }) => {
+test('production boys copy registers as science-grade1-boys and reads the shared audio and pictures', async ({ page }) => {
   await page.route('https://ahmad9077.github.io/quizzes-hub/**', async (route) => {
     const url = route.request().url()
     if (url.includes('access-guard.js')) {
@@ -62,12 +61,17 @@ test('production boys copy registers as science-grade1-boys and reads shared aud
     }
     return route.fulfill({ contentType: 'text/javascript', body: '' })
   })
-  const welcome = page.waitForResponse((res) => res.url().includes('/audio/ui/boys/welcome.mp3'))
+  const welcome = page.waitForResponse((res) => res.url().includes('/audio/ar/ui/welcome-'))
   await page.goto('http://127.0.0.1:4184/science-grade1-quiz/boys/')
   await page.getByRole('button', { name: /هيا نبدأ/ }).click()
   const response = await welcome
-  expect(new URL(response.url()).pathname).toBe('/science-grade1-quiz/audio/ui/boys/welcome.mp3')
+  expect(new URL(response.url()).pathname).toMatch(/^\/science-grade1-quiz\/audio\/ar\/ui\/welcome-\d\.mp3$/)
   expect(response.status()).toBe(200)
   expect(await page.evaluate(() => (window as unknown as { __guardQuizId: string }).__guardQuizId)).toBe('science-grade1-boys')
+  await expect(page.locator('.topic-card img').first()).toBeVisible()
+  // The boys' page sits one folder down, but its pictures come from the shared folder.
+  const pictures = await page.locator('img').evaluateAll((imgs) => imgs.map((img) => [new URL((img as HTMLImageElement).src).pathname, (img as HTMLImageElement).naturalWidth] as const))
+  expect(pictures.length).toBeGreaterThan(0)
+  for (const [path] of pictures) expect(path).toMatch(/^\/science-grade1-quiz\/pics\/[a-z-]+\.jpg$/)
   await expect(page.locator('.preview-badge')).toHaveCount(0)
 })

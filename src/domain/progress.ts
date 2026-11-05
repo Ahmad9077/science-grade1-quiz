@@ -1,19 +1,19 @@
 import { QUIZ_ID } from '../audience'
 import type { TopicId } from '../data/catalog'
 
-// Each copy keeps its own stars, so a girl and a boy can share one device.
-const STORAGE_KEY = `${QUIZ_ID}:progress:v1`
+// Each copy keeps its own stars, so a girl and a boy can share one device. Version 2 is the
+// second test (book part two): stars from the first test's lessons do not carry over.
+const STORAGE_KEY = `${QUIZ_ID}:progress:v2`
 const RECENT_LIMIT = 40
 
 export type StarKey = TopicId | 'test'
 
 export interface SavedProgress {
   stars: Partial<Record<StarKey, number>>
-  learned: TopicId[]
   recent: string[]
 }
 
-const EMPTY: SavedProgress = { stars: {}, learned: [], recent: [] }
+const EMPTY: SavedProgress = { stars: {}, recent: [] }
 
 // Storage may be unavailable (private mode, blocked site data); the app works without it.
 export function loadProgress(): SavedProgress {
@@ -23,7 +23,6 @@ export function loadProgress(): SavedProgress {
     const parsed = JSON.parse(raw) as Partial<SavedProgress>
     return {
       stars: typeof parsed.stars === 'object' && parsed.stars ? parsed.stars : {},
-      learned: Array.isArray(parsed.learned) ? parsed.learned : [],
       recent: Array.isArray(parsed.recent) ? parsed.recent.filter((key) => typeof key === 'string') : [],
     }
   } catch {
@@ -46,8 +45,4 @@ export function recordRound(progress: SavedProgress, key: StarKey, stars: number
     stars: { ...progress.stars, [key]: Math.max(progress.stars[key] ?? 0, stars) },
     recent,
   }
-}
-
-export function recordLearned(progress: SavedProgress, topic: TopicId): SavedProgress {
-  return progress.learned.includes(topic) ? progress : { ...progress, learned: [...progress.learned, topic] }
 }

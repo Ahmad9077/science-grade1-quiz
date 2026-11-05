@@ -67,7 +67,9 @@ export async function bootstrapQuiz(
   documentTarget: Document = document,
 ): Promise<BootstrapContext> {
   if (mode === 'preview') {
-    return { mode, source: 'preview', difficulty: 'medium', preferredKeys: [] }
+    // A preview can open chosen questions first (?keys=a,b), for checking one style on a device.
+    const keys = new URLSearchParams(windowTarget.location?.search ?? '').get('keys')
+    return { mode, source: 'preview', difficulty: 'medium', preferredKeys: keys ? keys.split(',').filter(Boolean) : [] }
   }
 
   const target = windowTarget as unknown as HubWindow

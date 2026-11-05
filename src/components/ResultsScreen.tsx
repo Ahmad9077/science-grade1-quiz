@@ -1,13 +1,14 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { Art } from '../art/Art'
 import { burst } from '../art/confetti'
+import { AUDIENCE } from '../audience'
 import { useNarrator } from '../audio/NarratorContext'
 import { sfx } from '../audio/sfx'
-import { WORDS, clip } from '../audience'
-import { FACTS, QUESTIONS, factArt } from '../data/catalog'
+import { FACTS, shown } from '../data/catalog'
 import { TONES, toneStyle } from '../data/tones'
 import { arabicNumber } from '../domain/format'
 import { starsFor } from '../domain/round'
+import { doneLine } from '../domain/voice'
 import type { Attempt } from '../hub/bridge'
 import type { Round } from './QuizScreen'
 import { BigButton, StarIcon, order } from './ui'
@@ -24,16 +25,18 @@ export function ResultsScreen({ round, attempts, onAgain, onHome }: ResultsProps
   const score = attempts.filter((attempt) => attempt.correct).length
   const total = attempts.length
   const stars = starsFor(score, total)
+  // One line for this result, dealt once when the screen opens.
+  const [line] = useState(() => doneLine(stars === 3, AUDIENCE))
   const missed = attempts
     .filter((attempt) => !attempt.correct)
-    .map((attempt) => QUESTIONS.find((question) => question.key === attempt.questionKey))
+    .map((attempt) => round.questions.find((question) => question.key === attempt.questionKey))
     .filter((question) => question !== undefined)
 
   useEffect(() => {
     const timers = [1, 2, 3].filter((n) => n <= stars).map((n) => window.setTimeout(() => sfx.star(), 350 + n * 260))
     timers.push(
       window.setTimeout(() => {
-        void narrator.play([{ clip: clip.ui(stars === 3 ? 'done-great' : 'done-good') }])
+        void narrator.play([{ clip: line.clip }])
         if (stars >= 2) burst(TONES[round.tone].tone)
       }, 1200),
     )
@@ -41,12 +44,15 @@ export function ResultsScreen({ round, attempts, onAgain, onHome }: ResultsProps
       timers.forEach((timer) => window.clearTimeout(timer))
       narrator.stop()
     }
-  }, [narrator, round.tone, stars])
+  }, [narrator, round.tone, stars, line])
 
   return (
     <main className="screen results-screen" style={toneStyle(round.tone)}>
       <section className="results-card rise" style={order(0)}>
-        <h1 className="results-title pop">{stars === 3 ? WORDS.doneGreat : stars === 2 ? WORDS.doneGood : 'بداية حلوة!'}</h1>
+        <h1 className="results-title pop">{stars === 3 ? 'رائع!' : stars === 2 ? 'حلو!' : 'بداية حلوة!'}</h1>
+        <p className="results-line rise" style={order(0, { '--base-delay': '900ms' })}>
+          {shown(line.text)}
+        </p>
 
         <div className="results-stars" role="img" aria-label={`${arabicNumber(stars)} من ٣ نجوم`}>
           {[1, 2, 3].map((n) => (
@@ -63,7 +69,7 @@ export function ResultsScreen({ round, attempts, onAgain, onHome }: ResultsProps
 
         <div className="results-actions rise" style={order(0, { '--base-delay': '1300ms' })}>
           <BigButton onClick={onAgain} pulse={stars < 3}>
-            {WORDS.tryAgain}
+            مرة ثانية
           </BigButton>
           <BigButton tone="paper" onClick={onHome}>
             الدروس
@@ -73,19 +79,23 @@ export function ResultsScreen({ round, attempts, onAgain, onHome }: ResultsProps
 
       {missed.length > 0 ? (
         <section className="review rise" style={order(0, { '--base-delay': '1500ms' })}>
-          <h2 className="review-title">خلينا نتذكر</h2>
+          <h2 className="review-title">خلنا نتذكر</h2>
           <ul className="review-list">
             {missed.map((question) => {
-              const fact = FACTS.find((entry) => entry.id === question.fact)
-              const art = fact?.art[0] ? factArt(fact.art[0]).art : (question.subject[0] ?? '💡')
+              const picture =
+                question.picture ??
+                (question.scene ? `pic:${question.scene.pic}` : undefined) ??
+                question.options.find((option) => option.id === question.answer && option.art.startsWith('pic'))?.art ??
+                question.options.find((option) => option.art.startsWith('pic'))?.art
+              const text = question.word ? `${question.word.before} (…) ${question.word.after}` : question.prompt || question.instruction
               return (
                 <li key={question.key} className="review-item" style={toneStyle(question.topic)}>
                   <span className="review-art" aria-hidden="true">
-                    <Art art={art} />
+                    <Art art={picture ?? (question.format === 'tf' ? '💬' : '💡')} />
                   </span>
                   <span className="review-text">
-                    <span className="review-q">{question.prompt}</span>
-                    <span className="review-fact">{fact?.text}</span>
+                    <span className="review-q">{text}</span>
+                    <span className="review-fact">{FACTS[question.fact].text}</span>
                   </span>
                 </li>
               )

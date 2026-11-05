@@ -1,6 +1,10 @@
 {
-  "voice": "Maryam Essa - Kuwaiti Calm & Warm",
-  "voiceId": "w0uhBAmNIG5kUDeaFEsA",
+  "voices": {
+    "ar": {
+      "id": "w0uhBAmNIG5kUDeaFEsA",
+      "name": "Maryam Essa - Kuwaiti Calm & Warm"
+    }
+  },
   "model": "eleven_v4",
   "settings": {
     "stability": 0.5,
@@ -8,1331 +12,1595 @@
     "style": 0.2
   },
   "clips": {
-    "f/b-crab": {
-      "text": "وسرطان البحر بعد… يتنفس بالخياشيم.",
-      "hash": "fbbc6afe15b12f49",
-      "durationMs": 3641,
-      "bytes": 29718
-    },
-    "f/b-fish-out": {
-      "text": "السمكة تحتاج الماي عشان تعيش… إذا طلعت من الماي وقت طويل، تموت.",
-      "hash": "9c0d9c3b99dd613f",
-      "durationMs": 5809,
-      "bytes": 47063
-    },
-    "f/b-gills": {
-      "text": "أما السمكة والقرش… يتنفسون داخل الماي بالخياشيم.",
-      "hash": "2a2bb379445e63df",
-      "durationMs": 4633,
-      "bytes": 37659
-    },
-    "f/b-like-us": {
-      "text": "الحيوانات تتنفس مثلنا… بس مو كلها بنفس الطريقة.",
-      "hash": "0757d27307613c23",
-      "durationMs": 4369,
-      "bytes": 35569
-    },
-    "f/b-lungs": {
-      "text": "القطة، والأرنب، والدجاجة، والسلحفاة… تتنفس الهوا بالرئتين، مثلنا بالضبط.",
-      "hash": "2c30ea113d569815",
-      "durationMs": 7456,
-      "bytes": 60229
-    },
-    "f/b-lungs-more": {
-      "text": "والزرافة، والدب، والطيور… بعد تتنفس بالرئتين.",
-      "hash": "7f1d2b6dd7ac575a",
-      "durationMs": 4878,
-      "bytes": 39540
-    },
-    "f/boys/r-nest": {
-      "text": "إذا شفت بيض في عش… فهذا بيض طيور، مثل الحمامة والعصفور.",
-      "hash": "b636ffb1b1f32246",
-      "durationMs": 5539,
-      "bytes": 44973
-    },
-    "f/c-birds": {
-      "text": "الطيور جسمها مغطى بريش… مثل الببغاء، والبطريق، والبطة.",
-      "hash": "abd4c084f7725250",
-      "durationMs": 5549,
-      "bytes": 44973
-    },
-    "f/c-crocodile": {
-      "text": "التمساح جسمه مغطى بحراشف… قوية وخشنة.",
-      "hash": "84d259b76a2e8de9",
-      "durationMs": 4884,
-      "bytes": 39540
-    },
-    "f/c-different": {
-      "text": "كل حيوان له غطا يغطي جسمه… والأغطية مو نفس الشي، مختلفة.",
-      "hash": "9ff3d162f03951c4",
-      "durationMs": 5990,
-      "bytes": 48526
-    },
-    "f/c-duck": {
-      "text": "وريش البطة يمنع الماي يدخل جسمها… عشان جذي ما تتبلل وهي تسبح.",
-      "hash": "3f1d310859ff73a5",
-      "durationMs": 6047,
-      "bytes": 48944
-    },
-    "f/c-fish": {
-      "text": "السمكة جسمها مغطى بقشور… صغيرة ولامعة.",
-      "hash": "482e875b8c52493d",
-      "durationMs": 4974,
-      "bytes": 40376
-    },
-    "f/c-fur": {
-      "text": "الثعلب، والأسد، والذئب… جسمهم مغطى بشعر.",
-      "hash": "3e1554604535d3c8",
-      "durationMs": 4720,
-      "bytes": 38286
-    },
-    "f/c-protect": {
-      "text": "وليش الغطا مهم؟ لأنه يحمي جسم الحيوان.",
-      "hash": "ba0e11100d2ae753",
-      "durationMs": 3773,
-      "bytes": 30763
-    },
-    "f/c-turtle": {
-      "text": "السلحفاة جسمها مغطى بصندوق عظمي… قوي، يحميها.",
-      "hash": "ea543d2731f71a90",
-      "durationMs": 5217,
-      "bytes": 42256
-    },
-    "f/c-warm": {
-      "text": "شعر الذئب يدفيه… عشان ما يبرد.",
-      "hash": "c8efb05e93dd97c5",
-      "durationMs": 3454,
-      "bytes": 28255
-    },
-    "f/f-chain": {
-      "text": "والحيوانات اللي تاكل لحوم… تاكل الحيوانات اللي تاكل أعشاب.",
-      "hash": "3bd67c35211d1761",
-      "durationMs": 5015,
-      "bytes": 40585
-    },
-    "f/f-crocodile": {
-      "text": "التمساح ياكل لحوم حيوانات ثانية.",
-      "hash": "8c10d99dde114375",
-      "durationMs": 3087,
-      "bytes": 25329
-    },
-    "f/f-different": {
-      "text": "الحيوانات مو كلها تاكل نفس الأكل… أكلها مختلف.",
-      "hash": "d4157d484e3e3b15",
-      "durationMs": 4216,
-      "bytes": 34315
-    },
-    "f/f-elephant": {
-      "text": "والفيل، والزرافة… بعد ياكلون نباتات.",
-      "hash": "a941c1e9ab0b6da1",
-      "durationMs": 3942,
-      "bytes": 32016
-    },
-    "f/f-lion": {
-      "text": "الأسد ياكل لحوم… واللبوة تعطي صغارها لحم ياكلونه.",
-      "hash": "c53f119ffe2decda",
-      "durationMs": 5029,
-      "bytes": 40794
-    },
-    "f/f-meat": {
-      "text": "وفي حيوانات تاكل لحوم… مثل الذئب، والثعبان، والصقر.",
-      "hash": "6773ad2eb710cc1d",
-      "durationMs": 5053,
-      "bytes": 41003
-    },
-    "f/f-plants": {
-      "text": "في حيوانات تاكل نباتات… مثل الأرنب، والحصان، والجمل.",
-      "hash": "92ae2334248a7640",
-      "durationMs": 5207,
-      "bytes": 42256
-    },
-    "f/m-crawl": {
-      "text": "الثعبان ما عنده رجول… فيزحف على بطنه.",
-      "hash": "05bdb317ac56fc5b",
-      "durationMs": 3787,
-      "bytes": 30763
-    },
-    "f/m-different": {
-      "text": "الحيوانات تتحرك من مكان لمكان… بس كل حيوان له طريقته!",
-      "hash": "e10e644df19721fb",
-      "durationMs": 5473,
-      "bytes": 44346
-    },
-    "f/m-duck": {
-      "text": "في حيوانات تتحرك بأكثر من طريقة… البطة: تسبح في الماي، وتمشي على الأرض، وتطير في السما!",
-      "hash": "5cf9fb4342430a56",
-      "durationMs": 8363,
-      "bytes": 67543
-    },
-    "f/m-fly": {
-      "text": "الطيور تطير بجناحاتها في السما… مثل الببغاء، والحمامة، والبومة.",
-      "hash": "45c2277e4c03a545",
-      "durationMs": 5911,
-      "bytes": 47899
-    },
-    "f/m-jump": {
-      "text": "الأرنب يقفز… والكنغر يقفز قفزات كبيرة!",
-      "hash": "ad474f46624bc7e2",
-      "durationMs": 4986,
-      "bytes": 40376
-    },
-    "f/m-penguin": {
-      "text": "والبطريق يمشي ويسبح… بس ما يطير.",
-      "hash": "d6c6bb5508167b1d",
-      "durationMs": 3686,
-      "bytes": 30136
-    },
-    "f/m-seaturtle": {
-      "text": "والسلحفاة البحرية… تزحف على الرمل، وتسبح في البحر.",
-      "hash": "754869975f593338",
-      "durationMs": 4584,
-      "bytes": 37241
-    },
-    "f/m-swim": {
-      "text": "السمكة تسبح في الماي… والحوت بعد يسبح.",
-      "hash": "e695cd29225dd1b5",
-      "durationMs": 3629,
-      "bytes": 29509
-    },
-    "f/m-walk": {
-      "text": "الحصان يمشي على رجوله… والكلب والأسد بعد يمشون.",
-      "hash": "3cfbbb9deed887d1",
-      "durationMs": 4796,
-      "bytes": 38913
-    },
-    "f/p-carrot": {
-      "text": "الجزر… هو جذر النبتة! ينمو تحت التراب، وإحنا ناكله.",
-      "hash": "27983845da8722c9",
-      "durationMs": 5337,
-      "bytes": 43301
-    },
-    "f/p-cauliflower": {
-      "text": "القرنبيط… الجزء الأبيض اللي ناكله هو زهرته. والبروكلي بعد ناكل زهرته.",
-      "hash": "0b0be4dc9b9b3eb9",
-      "durationMs": 6474,
-      "bytes": 52287
-    },
-    "f/p-different": {
-      "text": "يعني… مو كل النباتات ناكل منها نفس الجزء! من الجزر ناكل الجذر، ومن الخس ناكل الأوراق، ومن القرنبيط ناكل الزهرة.",
-      "hash": "5d7521c57abd6010",
-      "durationMs": 10126,
-      "bytes": 81545
-    },
-    "f/p-flower": {
-      "text": "والزهرة… في نباتات ناكل زهرتها، مثل: القرنبيط، والبروكلي.",
-      "hash": "15edb342b6a2fd76",
-      "durationMs": 6004,
-      "bytes": 48526
-    },
-    "f/p-leaf": {
-      "text": "الأوراق لونها أخضر… وفي أوراق ناكلها، مثل: الخس، والنعناع.",
-      "hash": "b425b380a6f459fa",
-      "durationMs": 5812,
-      "bytes": 47063
-    },
-    "f/p-lettuce": {
-      "text": "الخس… ناكل أوراقه الخضرا.",
-      "hash": "14213fa26be1279a",
-      "durationMs": 2668,
-      "bytes": 21985
-    },
-    "f/p-parts": {
-      "text": "النبات له أربعة أجزاء… الجذر، والساق، والأوراق، والزهرة.",
-      "hash": "d6a2e3e9d10b39d6",
-      "durationMs": 5804,
-      "bytes": 47063
-    },
-    "f/p-radish": {
-      "text": "وفي نباتات ناكل منها أكثر من جزء… مثل الفجل الأبيض: ناكل جذره الأبيض، وناكل أوراقه بعد.",
-      "hash": "d2ff55404491a6ab",
-      "durationMs": 7881,
-      "bytes": 63572
-    },
-    "f/p-root": {
-      "text": "الجذر يكون تحت التراب… ويشرب الماي للنبتة. ومن الجذور اللي ناكلها: الجزر.",
-      "hash": "04e428dba565666b",
-      "durationMs": 7019,
-      "bytes": 56676
-    },
-    "f/p-stem": {
-      "text": "الساق يشيل النبتة ويخليها واقفة… ومن السيقان اللي ناكلها: قصب السكر.",
-      "hash": "e68c9b08206b74b2",
-      "durationMs": 6357,
-      "bytes": 51452
-    },
-    "f/p-sugarcane": {
-      "text": "قصب السكر… ناكل ساقه الطويل، ومنه يسوون السكر.",
-      "hash": "c68c14568fd7df4c",
-      "durationMs": 4687,
+    "ar/f/bike": {
+      "text": "السيكل ما يطلع دخان… فهو أحسن للهوا من السيارة.",
+      "hash": "fb94eb5e41f263ae",
+      "durationMs": 4690,
       "bytes": 38077
     },
-    "f/r-birds": {
-      "text": "وكل الطيور تتكاثر بالبيض… مثل الدجاجة، والعصفور، والبطة.",
-      "hash": "bb7c4431f074c03c",
-      "durationMs": 5549,
+    "ar/f/burning": {
+      "text": "لما نحرق الزبالة… الدخان يوصخ الهوا، والرماد يضر التربة.",
+      "hash": "e53c155e5fcf0a5b",
+      "durationMs": 5517,
+      "bytes": 44764
+    },
+    "ar/f/burrow": {
+      "text": "الجحر حفرة في الأرض… يسكن فيها الأرنب، والحصني بعد.",
+      "hash": "bb2a13ecd28d99fe",
+      "durationMs": 5330,
+      "bytes": 43301
+    },
+    "ar/f/clean-beach": {
+      "text": "الشاطي النظيف… نلعب فيه ونسبح بأمان. أما الوصخ، فيضرنا ويضر السمك.",
+      "hash": "407335b484fd528c",
+      "durationMs": 7220,
+      "bytes": 58348
+    },
+    "ar/f/cloth-bag": {
+      "text": "كيس القماش… نستخدمه مرة ومرتين وثلاث، بدل كيس البلاستيك.",
+      "hash": "7fd2eca8ccc7d998",
+      "durationMs": 5843,
+      "bytes": 47272
+    },
+    "ar/f/dead-fish": {
+      "text": "السمكة ماتت… لأن الناس قطوا الزبالة في البحر.",
+      "hash": "6d85fa3121a96b4f",
+      "durationMs": 4217,
+      "bytes": 34315
+    },
+    "ar/f/harm-animals": {
+      "text": "لما نوصخ البحر والبر… الحيوانات تمرض، وممكن تموت.",
+      "hash": "99082a5e62705045",
+      "durationMs": 4945,
+      "bytes": 40167
+    },
+    "ar/f/harm-behaviors": {
+      "text": "في أشياء تضر الأماكن اللي تعيش فيها الكائنات… مثل رمي الزبالة، ودخان المصانع، وقطع الشجر، ودخان السيارات.",
+      "hash": "1bee230db03ae53b",
+      "durationMs": 9520,
+      "bytes": 76738
+    },
+    "ar/f/harm-places": {
+      "text": "أكياس الزبالة على الأرض تضر التربة… والدخان فوق يضر الهوا… والزبالة في الماي تضر الماي.",
+      "hash": "9e930ca9a0350426",
+      "durationMs": 8455,
+      "bytes": 68170
+    },
+    "ar/f/in-water": {
+      "text": "الأخطبوط، والسمكة، والمرجان… بيتهم الماي، ما يعيشون برا البحر.",
+      "hash": "89fa7f7c9aac7f00",
+      "durationMs": 5893,
+      "bytes": 47690
+    },
+    "ar/f/land-places": {
+      "text": "على اليابسة… في الغابة، والصحرا، والثلج، والسهول… كلها أماكن تعيش فيها الكائنات الحية.",
+      "hash": "c191191f58775455",
+      "durationMs": 8355,
+      "bytes": 67334
+    },
+    "ar/f/land-water": {
+      "text": "في كائنات تعيش على اليابسة… يعني على الأرض. وفي كائنات تعيش في الماي.",
+      "hash": "e82cc3db9d84bd9d",
+      "durationMs": 6320,
+      "bytes": 51034
+    },
+    "ar/f/litter-harm": {
+      "text": "القواطي، والأكياس، والدخان… كلها تضر المكان اللي نلعب فيه.",
+      "hash": "356e9c6b8d32d737",
+      "durationMs": 5545,
       "bytes": 44973
     },
-    "f/r-birth": {
-      "text": "القطة، والخروف، والدب… تتكاثر بالولادة: تولد صغارها.",
-      "hash": "97d2cd8e64c2d47a",
-      "durationMs": 5857,
-      "bytes": 47481
+    "ar/f/lost-home": {
+      "text": "إذا الحيوان خسر بيته… ما يلقى مكان يحميه من المطر والبرد والخطر.",
+      "hash": "7729a9073815cfc2",
+      "durationMs": 5717,
+      "bytes": 46227
     },
-    "f/r-eggs": {
-      "text": "والسلحفاة، والسمكة… تتكاثر بالبيض.",
-      "hash": "20f6e2c6abdf4065",
-      "durationMs": 3856,
-      "bytes": 31389
+    "ar/f/nest": {
+      "text": "العش… بيت الطيور. تبنيه فوق الشجرة، وتحط فيه بيضها.",
+      "hash": "eb243d78fabd959f",
+      "durationMs": 5255,
+      "bytes": 42674
     },
-    "f/r-giraffe": {
-      "text": "الزرافة… تاكل نباتات، وتتكاثر بالولادة.",
-      "hash": "e2649bc671cbbb86",
-      "durationMs": 4139,
-      "bytes": 33688
+    "ar/f/on-land": {
+      "text": "الجمل، والسحلية، والنخلة… كلهم يعيشون على اليابسة، في البر.",
+      "hash": "8d6891f24aec29b2",
+      "durationMs": 5954,
+      "bytes": 48108
     },
-    "f/r-nest": {
-      "text": "إذا شفتي بيض في عش… فهذا بيض طيور، مثل الحمامة والعصفور.",
-      "hash": "784dfa17b71a01b8",
-      "durationMs": 5377,
-      "bytes": 43510
+    "ar/f/places-differ": {
+      "text": "الكائنات الحية… مو كلها تعيش بنفس المكان. كل واحد له مكان يناسبه.",
+      "hash": "cd457a0c848edc13",
+      "durationMs": 6124,
+      "bytes": 49571
     },
-    "f/r-ways": {
-      "text": "الحيوانات تتكاثر… يعني تجيب صغار. وفيه طريقتين: الولادة، والبيض.",
-      "hash": "ad6ebb07e5db53b7",
-      "durationMs": 6705,
-      "bytes": 54168
+    "ar/f/plant-trees": {
+      "text": "نزرع الشجر… وما نقطعه. الشجر ينظف الهوا، ويصير بيت للطيور.",
+      "hash": "dc9bdb9bb75de467",
+      "durationMs": 6144,
+      "bytes": 49780
     },
-    "o/bear": {
-      "text": "دب",
-      "hash": "f24f628013104add",
-      "durationMs": 880,
-      "bytes": 7566
+    "ar/f/plants-harmed": {
+      "text": "إذا النبات تضرر… الكائنات الثانية بعد تمرض أو تموت، لأنها تحتاجه.",
+      "hash": "06cba91c813f5507",
+      "durationMs": 6472,
+      "bytes": 52287
     },
-    "o/birth": {
-      "text": "بالولادة",
-      "hash": "9c583e3be7c1b22a",
-      "durationMs": 1055,
-      "bytes": 9029
+    "ar/f/polar-water": {
+      "text": "في الصورة… الحوت والسمكة بس يعيشون في الماي. الباقين يمشون على الثلج.",
+      "hash": "96c4678a88760dd5",
+      "durationMs": 6166,
+      "bytes": 49989
     },
-    "o/broccoli": {
-      "text": "بروكلي",
-      "hash": "cfb90c0fda1fbec4",
-      "durationMs": 868,
-      "bytes": 7566
+    "ar/f/put-in-bin": {
+      "text": "الزبالة مكانها السلة… مو الأرض، ولا البحر.",
+      "hash": "ed1114b216dcbd6d",
+      "durationMs": 4006,
+      "bytes": 32643
     },
-    "o/butterfly": {
-      "text": "فراشة",
-      "hash": "c57bf8bc80432e79",
-      "durationMs": 939,
-      "bytes": 7984
+    "ar/f/recycle": {
+      "text": "إعادة التدوير… يعني نسوي من النفايات أشياء جديدة، وتقل الزبالة في أرضنا.",
+      "hash": "2730fa3cb3ceba4f",
+      "durationMs": 6935,
+      "bytes": 56049
     },
-    "o/camel": {
-      "text": "جمل",
-      "hash": "76d26ab0697ea018",
-      "durationMs": 743,
-      "bytes": 6521
+    "ar/f/sea-animals": {
+      "text": "الحوت، والدلفين، والقرش… يسبحون في البحر. أما الحمار الوحشي، فيمشي على اليابسة.",
+      "hash": "dcac5aa33a1f2e3c",
+      "durationMs": 7728,
+      "bytes": 62318
     },
-    "o/carrot": {
-      "text": "جزر",
-      "hash": "017680436783d55f",
-      "durationMs": 813,
-      "bytes": 7148
+    "ar/f/sea-mistake": {
+      "text": "الأرنب والعصفور… مكانهم مو في البحر! الأرنب على اليابسة، والعصفور فوق الشجر.",
+      "hash": "f0169d9f61cf817a",
+      "durationMs": 7171,
+      "bytes": 57930
     },
-    "o/cat": {
-      "text": "قطة",
-      "hash": "af2f2c7056196a91",
-      "durationMs": 673,
-      "bytes": 5894
+    "ar/f/sea-rocks": {
+      "text": "والسمك… يتخبى بين الصخور والمرجان اللي في البحر. هذا بيته.",
+      "hash": "858c24d80e71392f",
+      "durationMs": 5125,
+      "bytes": 41629
     },
-    "o/cauliflower": {
-      "text": "قرنبيط",
-      "hash": "8525537db404af1d",
-      "durationMs": 1079,
-      "bytes": 9238
+    "ar/f/shelter-differs": {
+      "text": "مو كل الحيوانات لها نفس البيت… العصفور له عش، والأرنب له جحر، والسمكة لها صخور البحر.",
+      "hash": "9c28d6a69a05f614",
+      "durationMs": 8606,
+      "bytes": 69424
     },
-    "o/chicken": {
-      "text": "دجاجة",
-      "hash": "719509ecc2fc1b23",
+    "ar/f/shelter-why": {
+      "text": "المأوى هو بيت الحيوان… يحميه من الخطر، ويساعده يعيش ويبقى.",
+      "hash": "59601c7a3cb0980d",
+      "durationMs": 5662,
+      "bytes": 45809
+    },
+    "ar/f/smoke-sick": {
+      "text": "دخان المصانع يوصخ الهوا… والناس يمرضون، ويكحون، ويصعب عليهم التنفس.",
+      "hash": "7a326cc9ed1e39a7",
+      "durationMs": 6760,
+      "bytes": 54586
+    },
+    "ar/f/sort-food": {
+      "text": "بقايا الأكل، والقشور… مكانها صندوق نفايات الأطعمة.",
+      "hash": "2ad705252ace59dd",
+      "durationMs": 4874,
+      "bytes": 39540
+    },
+    "ar/f/sort-paper": {
+      "text": "الورق… مكانه صندوق النفايات الورقية.",
+      "hash": "d5c1e2c8052bcd85",
+      "durationMs": 3754,
+      "bytes": 30554
+    },
+    "ar/f/sort-plastic": {
+      "text": "البلاستيك… مكانه صندوق النفايات البلاستيكية.",
+      "hash": "0ae79c0d8341c321",
+      "durationMs": 4077,
+      "bytes": 33270
+    },
+    "ar/f/tree-home": {
+      "text": "السنجاب… يسكن في الشجرة، داخل فتحة في جذعها.",
+      "hash": "c74019b1df9cb6e9",
+      "durationMs": 5200,
+      "bytes": 42256
+    },
+    "ar/f/turtle-plastic": {
+      "text": "السلحفاة أحيانا تحسب كيس البلاستيك أكل… وتاكله وتمرض.",
+      "hash": "9a26394ea1f541af",
+      "durationMs": 5701,
+      "bytes": 46227
+    },
+    "ar/f/waste-harm": {
+      "text": "الزبالة في البحر وفي البر… تضر الكائنات الحية، وتخرب بيوتها.",
+      "hash": "7d8ca4feaee4a686",
+      "durationMs": 5453,
+      "bytes": 44137
+    },
+    "ar/f/water-places": {
+      "text": "وفي الماي… البحر، والشعاب المرجانية… مليانة كائنات حية.",
+      "hash": "17a76fe904bcb2e5",
+      "durationMs": 5918,
+      "bytes": 47899
+    },
+    "ar/f/water-plant": {
+      "text": "الطحالب نبات… ينبت في الماي. أما الصبار والشجر، فينبتون على اليابسة.",
+      "hash": "399794d4678e51bd",
+      "durationMs": 6830,
+      "bytes": 55213
+    },
+    "ar/o/habitats-bird-home-1": {
+      "text": "العش",
+      "hash": "c0af312a7636f31a",
       "durationMs": 921,
       "bytes": 7984
     },
-    "o/colorfish": {
-      "text": "سمكة ملونة",
-      "hash": "d5a0ef4e8d09056d",
-      "durationMs": 1480,
-      "bytes": 12372
-    },
-    "o/cover-feathers": {
-      "text": "ريش",
-      "hash": "667b00c6d42d46fc",
-      "durationMs": 880,
-      "bytes": 7566
-    },
-    "o/cover-fur": {
-      "text": "شعر",
-      "hash": "29f3eda9ee68c510",
-      "durationMs": 747,
-      "bytes": 6521
-    },
-    "o/cover-plates": {
-      "text": "حراشف",
-      "hash": "4a1da2ee6ee7743f",
-      "durationMs": 1105,
-      "bytes": 9447
-    },
-    "o/cover-scales": {
-      "text": "قشور",
-      "hash": "143c52104ac359cd",
-      "durationMs": 1040,
-      "bytes": 8820
-    },
-    "o/cover-shell": {
-      "text": "صندوق عظمي",
-      "hash": "8f86e519bebdb03f",
-      "durationMs": 1525,
-      "bytes": 12790
-    },
-    "o/crab": {
-      "text": "سرطان البحر",
-      "hash": "71ee46665847279f",
-      "durationMs": 1359,
-      "bytes": 11536
-    },
-    "o/crocodile": {
-      "text": "تمساح",
-      "hash": "6a0054a616b8b65a",
-      "durationMs": 1060,
-      "bytes": 9029
-    },
-    "o/deer": {
-      "text": "غزال",
-      "hash": "1d52be896daa3f0a",
-      "durationMs": 926,
-      "bytes": 7984
-    },
-    "o/dog": {
-      "text": "كلب",
-      "hash": "3b49e6114931b599",
-      "durationMs": 718,
-      "bytes": 6312
-    },
-    "o/duck": {
-      "text": "بطة",
-      "hash": "ab64fec195af2cf6",
-      "durationMs": 744,
-      "bytes": 6521
-    },
-    "o/duck-crawl-walk-jump": {
-      "text": "تزحف، وتمشي، وتقفز",
-      "hash": "1ac7a2802f92fdf1",
-      "durationMs": 2746,
-      "bytes": 22612
-    },
-    "o/duck-fly-walk-crawl": {
-      "text": "تطير، وتمشي، وتزحف",
-      "hash": "142797c494d78a44",
-      "durationMs": 2755,
-      "bytes": 22612
-    },
-    "o/duck-swim-walk-fly": {
-      "text": "تسبح، وتمشي، وتطير",
-      "hash": "eba790f0eb57e1ca",
-      "durationMs": 2570,
-      "bytes": 21149
-    },
-    "o/egg": {
-      "text": "بالبيض",
-      "hash": "89ea9865da0f2553",
-      "durationMs": 990,
-      "bytes": 8402
-    },
-    "o/elephant": {
-      "text": "فيل",
-      "hash": "11f6fc73d8dbceac",
-      "durationMs": 710,
-      "bytes": 6312
-    },
-    "o/false": {
-      "text": "خطأ",
-      "hash": "4a46d322bfbf962a",
-      "durationMs": 766,
-      "bytes": 6730
-    },
-    "o/fish": {
-      "text": "سمكة",
-      "hash": "063dabe3207a2262",
-      "durationMs": 819,
-      "bytes": 7148
-    },
-    "o/fish-tiger": {
-      "text": "سمكة ونمر",
-      "hash": "020035f2e4d80f65",
-      "durationMs": 1631,
-      "bytes": 13626
-    },
-    "o/food-meat": {
-      "text": "لحوم",
-      "hash": "6f1b0ac2db6b60ba",
-      "durationMs": 886,
-      "bytes": 7566
-    },
-    "o/food-plants": {
-      "text": "نباتات",
-      "hash": "1d8b397c5018e1b4",
-      "durationMs": 1099,
-      "bytes": 9447
-    },
-    "o/gills": {
-      "text": "بالخياشيم",
-      "hash": "ae954b62883f68b2",
-      "durationMs": 1150,
-      "bytes": 9865
-    },
-    "o/hawk": {
-      "text": "صقر",
-      "hash": "856aabea2eda811a",
-      "durationMs": 759,
-      "bytes": 6730
-    },
-    "o/horse": {
-      "text": "حصان",
-      "hash": "97293706c4ffd2dd",
-      "durationMs": 960,
-      "bytes": 8193
-    },
-    "o/lettuce": {
-      "text": "خس",
-      "hash": "c0ae8aeb9724d4cd",
-      "durationMs": 880,
-      "bytes": 7566
-    },
-    "o/lion": {
-      "text": "أسد",
-      "hash": "f85e8d12cdeaad90",
-      "durationMs": 856,
-      "bytes": 7357
-    },
-    "o/lizard": {
-      "text": "سحلية",
-      "hash": "3190788e23c7bc4c",
-      "durationMs": 945,
-      "bytes": 8193
-    },
-    "o/lungs": {
-      "text": "بالرئتين",
-      "hash": "64603f6415948176",
-      "durationMs": 1122,
-      "bytes": 9447
-    },
-    "o/meat-only": {
-      "text": "لحوم بس",
-      "hash": "035c88eeae9f37ed",
-      "durationMs": 1529,
-      "bytes": 12790
-    },
-    "o/move-crawl": {
-      "text": "يزحف",
-      "hash": "e39d31d094ed02d5",
-      "durationMs": 1012,
-      "bytes": 8611
-    },
-    "o/move-fly": {
-      "text": "يطير",
-      "hash": "9b48104926fe3f68",
-      "durationMs": 960,
-      "bytes": 8193
-    },
-    "o/move-jump": {
-      "text": "يقفز",
-      "hash": "aa774d8aff0a59a1",
-      "durationMs": 904,
-      "bytes": 7775
-    },
-    "o/move-swim": {
-      "text": "يسبح",
-      "hash": "7e76704a105cfb1f",
-      "durationMs": 931,
-      "bytes": 7984
-    },
-    "o/move-walk": {
-      "text": "يمشي",
-      "hash": "09b1ebc36c52e981",
-      "durationMs": 820,
-      "bytes": 7148
-    },
-    "o/octopus": {
-      "text": "أخطبوط",
-      "hash": "9fb6a85b24ec3846",
-      "durationMs": 1083,
-      "bytes": 9238
-    },
-    "o/owl": {
-      "text": "بومة",
-      "hash": "abedbd7f2370287f",
-      "durationMs": 707,
-      "bytes": 6312
-    },
-    "o/parrot-rabbit": {
-      "text": "ببغاء وأرنب",
-      "hash": "04192d42e46a62ac",
-      "durationMs": 2000,
-      "bytes": 16552
-    },
-    "o/part-flower": {
-      "text": "الزهرة",
-      "hash": "742ac812f3071aac",
-      "durationMs": 1120,
-      "bytes": 9447
-    },
-    "o/part-leaf": {
-      "text": "الورقة",
-      "hash": "05e981a56a742680",
+    "ar/o/habitats-bird-home-2": {
+      "text": "الجحر",
+      "hash": "26dcc8833f684570",
       "durationMs": 893,
       "bytes": 7775
     },
-    "o/part-root": {
-      "text": "الجذر",
-      "hash": "3a3c213f174d41ff",
-      "durationMs": 960,
-      "bytes": 8193
+    "ar/o/habitats-bird-home-3": {
+      "text": "صخور البحر",
+      "hash": "d0f3a7966ecec816",
+      "durationMs": 1256,
+      "bytes": 10700
     },
-    "o/part-stem": {
-      "text": "الساق",
-      "hash": "e59f513e010693b7",
-      "durationMs": 1017,
-      "bytes": 8611
+    "ar/o/habitats-burrow-animals-1": {
+      "text": "الأرنب والحصني",
+      "hash": "f5cd9023f4bc8483",
+      "durationMs": 1762,
+      "bytes": 14671
     },
-    "o/penguin": {
-      "text": "بطريق",
-      "hash": "1e78e83755d99255",
-      "durationMs": 1120,
-      "bytes": 9447
+    "ar/o/habitats-burrow-animals-2": {
+      "text": "الدب والسنجاب",
+      "hash": "c9d43344e2b482f8",
+      "durationMs": 1726,
+      "bytes": 14462
     },
-    "o/pigeon": {
-      "text": "حمامة",
-      "hash": "de90f3ac511b5f81",
-      "durationMs": 927,
-      "bytes": 7984
+    "ar/o/habitats-burrow-animals-3": {
+      "text": "العصفور والذيب",
+      "hash": "df7c2f0a36883e52",
+      "durationMs": 1760,
+      "bytes": 14671
     },
-    "o/plants-and-meat": {
-      "text": "نباتات ولحوم",
-      "hash": "6ddfa02159731494",
-      "durationMs": 1915,
-      "bytes": 15925
-    },
-    "o/plants-only": {
-      "text": "نباتات بس",
-      "hash": "98e9af816a384250",
-      "durationMs": 1435,
-      "bytes": 11954
-    },
-    "o/rabbit": {
-      "text": "أرنب",
-      "hash": "c5d3774e1186dfa1",
-      "durationMs": 785,
-      "bytes": 6939
-    },
-    "o/shark": {
-      "text": "قرش",
-      "hash": "c840f6b3dc8f7457",
-      "durationMs": 795,
-      "bytes": 6939
-    },
-    "o/sheep": {
-      "text": "خروف",
-      "hash": "932faafe13e92a4a",
-      "durationMs": 931,
-      "bytes": 7984
-    },
-    "o/snake": {
-      "text": "ثعبان",
-      "hash": "87e60f255b7577a5",
-      "durationMs": 961,
-      "bytes": 8193
-    },
-    "o/sparrow": {
-      "text": "عصفور",
-      "hash": "3a673e5532a11c08",
-      "durationMs": 972,
-      "bytes": 8402
-    },
-    "o/sparrow-penguin": {
-      "text": "عصفور وبطريق",
-      "hash": "cb9fc8a833fd88e5",
-      "durationMs": 1844,
+    "ar/o/habitats-burrow-animals-4": {
+      "text": "الأرنب والسنجاب",
+      "hash": "4754b983a6151bac",
+      "durationMs": 1830,
       "bytes": 15298
     },
-    "o/sugarcane": {
-      "text": "قصب السكر",
-      "hash": "2282ca9c5c9279bd",
-      "durationMs": 1217,
-      "bytes": 10283
-    },
-    "o/the-flying": {
-      "text": "الطيران",
-      "hash": "5b527e644bb18a69",
-      "durationMs": 1041,
-      "bytes": 8820
-    },
-    "o/the-swimming": {
-      "text": "السباحة",
-      "hash": "c7560cf2db7ac3a0",
-      "durationMs": 1023,
-      "bytes": 8820
-    },
-    "o/tiger": {
-      "text": "نمر",
-      "hash": "6546bc39ca3fdd47",
-      "durationMs": 800,
-      "bytes": 6939
-    },
-    "o/true": {
-      "text": "صح",
-      "hash": "4b3ecd1237a29ad1",
-      "durationMs": 701,
-      "bytes": 6103
-    },
-    "o/turtle": {
-      "text": "سلحفاة",
-      "hash": "00bb0ad344d34339",
-      "durationMs": 1281,
-      "bytes": 10909
-    },
-    "o/warmth": {
-      "text": "الدفا",
-      "hash": "4fbeb34458332dfd",
-      "durationMs": 825,
-      "bytes": 7148
-    },
-    "o/whale": {
-      "text": "حوت",
-      "hash": "beaaa3703479b014",
+    "ar/o/habitats-fennec-home-1": {
+      "text": "الجحر",
+      "hash": "26dcc8833f684570",
       "durationMs": 1040,
       "bytes": 8820
     },
-    "o/zebra": {
-      "text": "حمار وحشي",
-      "hash": "db3c64acdbfa6935",
-      "durationMs": 1484,
-      "bytes": 12372
-    },
-    "q/breathing/breathes-in-water": {
-      "text": "أي حيوان يتنفس داخل الماي؟",
-      "hash": "46dd2e26768b209f",
-      "durationMs": 2607,
-      "bytes": 21358
-    },
-    "q/breathing/cat": {
-      "text": "شلون تتنفس القطة؟",
-      "hash": "294116a9efb63f84",
-      "durationMs": 1668,
-      "bytes": 13835
-    },
-    "q/breathing/chicken": {
-      "text": "شلون تتنفس الدجاجة؟",
-      "hash": "16737ba138fd345e",
-      "durationMs": 1860,
-      "bytes": 15507
-    },
-    "q/breathing/fish": {
-      "text": "شلون تتنفس السمكة؟",
-      "hash": "0f9414cd7b904e6e",
-      "durationMs": 1789,
-      "bytes": 14880
-    },
-    "q/breathing/fish-air-gills": {
-      "text": "السمك يتنفس هوا الجو بالخياشيم.",
-      "hash": "be4bed5f690755c1",
-      "durationMs": 2977,
-      "bytes": 24284
-    },
-    "q/breathing/fish-needs-water": {
-      "text": "السمكة تحتاج الماي عشان تعيش.",
-      "hash": "626346c3dab3fe66",
-      "durationMs": 2799,
-      "bytes": 23030
-    },
-    "q/breathing/giraffe": {
-      "text": "شلون تتنفس الزرافة؟",
-      "hash": "5d6b816b95475d7a",
-      "durationMs": 1850,
-      "bytes": 15298
-    },
-    "q/breathing/has-lungs": {
-      "text": "أي حيوان عنده رئتين؟",
-      "hash": "a1860e41d9e581db",
-      "durationMs": 2317,
-      "bytes": 19060
-    },
-    "q/breathing/lungs-air": {
-      "text": "بعض الحيوانات تتنفس الهوا بالرئتين.",
-      "hash": "6a9a4a7fc851f842",
-      "durationMs": 3343,
-      "bytes": 27210
-    },
-    "q/breathing/odd-one-out": {
-      "text": "أي حيوان يتنفس بطريقة مختلفة عن الباقين؟",
-      "hash": "4d73b879b20235b7",
-      "durationMs": 3782,
-      "bytes": 30763
-    },
-    "q/breathing/shark": {
-      "text": "شلون يتنفس القرش؟",
-      "hash": "f819fc6e3a949886",
-      "durationMs": 1777,
-      "bytes": 14880
-    },
-    "q/breathing/turtle": {
-      "text": "شلون تتنفس السلحفاة؟",
-      "hash": "91739c152b2c9ff2",
-      "durationMs": 1942,
-      "bytes": 16134
-    },
-    "q/covering/all-same": {
-      "text": "كل الحيوانات غطا جسمها نفس الشي.",
-      "hash": "efc03083416bcf7b",
-      "durationMs": 3120,
-      "bytes": 25538
-    },
-    "q/covering/crocodile": {
-      "text": "شنو يغطي جسم التمساح؟",
-      "hash": "43d68caa4436c35a",
-      "durationMs": 2095,
-      "bytes": 17388
-    },
-    "q/covering/crocodile-plates": {
-      "text": "جسم التمساح مغطى بحراشف.",
-      "hash": "9233d65a68b9fcdd",
-      "durationMs": 2856,
-      "bytes": 23448
-    },
-    "q/covering/fish": {
-      "text": "شنو يغطي جسم السمكة؟",
-      "hash": "97ea17f4f95fed02",
-      "durationMs": 1984,
-      "bytes": 16343
-    },
-    "q/covering/fox": {
-      "text": "شنو يغطي جسم الثعلب؟",
-      "hash": "2f97a43c9da4cc5e",
-      "durationMs": 2160,
-      "bytes": 17806
-    },
-    "q/covering/keeps-water-out": {
-      "text": "أي حيوان غطاه يمنع الماي يدخل جسمه؟",
-      "hash": "dfbfb98371c598ff",
-      "durationMs": 3304,
-      "bytes": 27001
-    },
-    "q/covering/odd-one-out": {
-      "text": "أي حيوان غطا جسمه مختلف عن الباقين؟",
-      "hash": "12731d4947a4fb15",
-      "durationMs": 3515,
-      "bytes": 28673
-    },
-    "q/covering/parrot": {
-      "text": "شنو يغطي جسم الببغاء؟",
-      "hash": "4f617857965f6118",
-      "durationMs": 2087,
-      "bytes": 17179
-    },
-    "q/covering/protects": {
-      "text": "غطا جسم الحيوان يحميه.",
-      "hash": "b4a7e75e51361208",
-      "durationMs": 2246,
-      "bytes": 18433
-    },
-    "q/covering/same-cover-group": {
-      "text": "أي مجموعة جسمهم مغطى بنفس الغطا؟",
-      "hash": "02d01e2c1cfafe3f",
-      "durationMs": 3381,
-      "bytes": 27628
-    },
-    "q/covering/turtle": {
-      "text": "شنو يغطي جسم السلحفاة؟",
-      "hash": "a7e33d1aeba4767b",
-      "durationMs": 2175,
-      "bytes": 18015
-    },
-    "q/covering/which-scales": {
-      "text": "أي حيوان جسمه مغطى بقشور؟",
-      "hash": "6c77ff514f00d5cb",
-      "durationMs": 3134,
-      "bytes": 25538
-    },
-    "q/covering/wolf-warmth": {
-      "text": "غطا جسم الذئب… يساعده على شنو؟",
-      "hash": "a9879fe131195326",
-      "durationMs": 3117,
-      "bytes": 25538
-    },
-    "q/food/all-eat-meat": {
-      "text": "كل الحيوانات اللي حولنا تاكل لحوم.",
-      "hash": "1be0d89799a37d63",
-      "durationMs": 3039,
-      "bytes": 24911
-    },
-    "q/food/camel": {
-      "text": "شنو ياكل الجمل؟",
-      "hash": "dd28aba3464e0199",
-      "durationMs": 1424,
-      "bytes": 11954
-    },
-    "q/food/eats-other-animals": {
-      "text": "أي حيوان ياكل لحوم حيوانات ثانية؟",
-      "hash": "df89ebf187a387ec",
-      "durationMs": 3011,
-      "bytes": 24702
-    },
-    "q/food/elephant-plants": {
-      "text": "الفيل ياكل نباتات.",
-      "hash": "ebbdc8630cd95e76",
-      "durationMs": 2136,
-      "bytes": 17597
-    },
-    "q/food/food-differs": {
-      "text": "الحيوانات أكلها مختلف.",
-      "hash": "47c4fc55956f18f4",
-      "durationMs": 2295,
-      "bytes": 18851
-    },
-    "q/food/giraffe": {
-      "text": "شنو تاكل الزرافة؟",
-      "hash": "e9ec433182611582",
-      "durationMs": 1760,
-      "bytes": 14671
-    },
-    "q/food/hawk": {
-      "text": "شنو ياكل الصقر؟",
-      "hash": "f721004502c00795",
-      "durationMs": 1600,
-      "bytes": 13417
-    },
-    "q/food/horse": {
-      "text": "شنو ياكل الحصان؟",
-      "hash": "4f3c3d73b42375be",
-      "durationMs": 1611,
-      "bytes": 13417
-    },
-    "q/food/lion-cubs": {
-      "text": "اللبوة… شنو تعطي صغارها ياكلون؟",
-      "hash": "252984a63520c3c7",
-      "durationMs": 2878,
-      "bytes": 23657
-    },
-    "q/food/rabbit": {
-      "text": "شنو ياكل الأرنب؟",
-      "hash": "0232f89e87fd908c",
-      "durationMs": 1558,
-      "bytes": 12999
-    },
-    "q/food/snake": {
-      "text": "شنو ياكل الثعبان؟",
-      "hash": "6eefac79194a5434",
-      "durationMs": 1532,
-      "bytes": 12790
-    },
-    "q/food/which-eats-meat": {
-      "text": "أي حيوان ياكل لحوم؟",
-      "hash": "6b1d95732efdd5dd",
-      "durationMs": 2111,
-      "bytes": 17388
-    },
-    "q/food/wolf": {
-      "text": "شنو ياكل الذئب؟",
-      "hash": "378c1d2ddd67b59f",
-      "durationMs": 1420,
-      "bytes": 11954
-    },
-    "q/movement/all-same-way": {
-      "text": "كل الحيوانات تتحرك بنفس الطريقة.",
-      "hash": "66666642e7d5b291",
-      "durationMs": 3008,
-      "bytes": 24702
-    },
-    "q/movement/duck-ways": {
-      "text": "شلون تتحرك البطة؟",
-      "hash": "d6ad029178628b94",
-      "durationMs": 1702,
-      "bytes": 14253
-    },
-    "q/movement/fish": {
-      "text": "شلون تتحرك السمكة؟",
-      "hash": "432707fe52569d9d",
-      "durationMs": 1732,
-      "bytes": 14462
-    },
-    "q/movement/horse": {
-      "text": "شلون يتحرك الحصان؟",
-      "hash": "11d57a6311b058ea",
-      "durationMs": 1666,
-      "bytes": 13835
-    },
-    "q/movement/kangaroo-jumps": {
-      "text": "الكنغر يتحرك من مكان لمكان بالقفز.",
-      "hash": "cb6c345728f2f866",
-      "durationMs": 3678,
-      "bytes": 29927
-    },
-    "q/movement/like-pigeon": {
-      "text": "أي حيوان يتحرك مثل الحمامة؟",
-      "hash": "8757472ac39719b4",
-      "durationMs": 2595,
-      "bytes": 21358
-    },
-    "q/movement/more-than-one-way": {
-      "text": "أي حيوان يتحرك بأكثر من طريقة؟",
-      "hash": "2c7bf2e78de110a8",
-      "durationMs": 3051,
-      "bytes": 24911
-    },
-    "q/movement/parrot": {
-      "text": "شلون يتحرك الببغاء؟",
-      "hash": "322e01d1209a9d2c",
-      "durationMs": 2000,
-      "bytes": 16552
-    },
-    "q/movement/penguin-walks-swims": {
-      "text": "البطريق يمشي ويسبح.",
-      "hash": "9f7d1e9a4f41b936",
-      "durationMs": 2238,
-      "bytes": 18433
-    },
-    "q/movement/rabbit": {
-      "text": "شلون يتحرك الأرنب؟",
-      "hash": "9ff266d025d8a9a4",
-      "durationMs": 1793,
-      "bytes": 14880
-    },
-    "q/movement/rabbit-swims": {
-      "text": "الأرنب يتحرك من مكان لمكان بالسباحة.",
-      "hash": "fed39c95f0151735",
-      "durationMs": 3952,
-      "bytes": 32225
-    },
-    "q/movement/snake": {
-      "text": "شلون يتحرك الثعبان؟",
-      "hash": "30a87eede74e338e",
-      "durationMs": 1739,
-      "bytes": 14462
-    },
-    "q/movement/which-crawls": {
-      "text": "أي حيوان يزحف؟",
-      "hash": "ed0933b582170013",
-      "durationMs": 1933,
-      "bytes": 15925
-    },
-    "q/movement/which-flies": {
-      "text": "أي حيوان يطير؟",
-      "hash": "870cfb8541cff921",
-      "durationMs": 1760,
-      "bytes": 14671
-    },
-    "q/movement/which-jumps": {
-      "text": "أي حيوان يقفز؟",
-      "hash": "fb8d56e71522b125",
-      "durationMs": 1861,
-      "bytes": 15507
-    },
-    "q/plants/carrot": {
-      "text": "أي جزء ناكل من الجزر؟",
-      "hash": "1e504e7ab6ddc5ca",
-      "durationMs": 1932,
-      "bytes": 15925
-    },
-    "q/plants/cauliflower": {
-      "text": "أي جزء ناكل من القرنبيط؟",
-      "hash": "87fdc87ff5d9305c",
-      "durationMs": 2104,
-      "bytes": 17388
-    },
-    "q/plants/eat-some-parts": {
-      "text": "ناكل بعض أجزاء النبات.",
-      "hash": "32b29bc5cf5c0350",
-      "durationMs": 2132,
-      "bytes": 17597
-    },
-    "q/plants/four-parts": {
-      "text": "النبات يتكون من ثلاثة أجزاء بس: جذر، وساق، وزهرة.",
-      "hash": "949c37e43c4da629",
-      "durationMs": 5404,
-      "bytes": 43719
-    },
-    "q/plants/lettuce": {
-      "text": "أي جزء ناكل من الخس؟",
-      "hash": "ce03ede06315a608",
-      "durationMs": 1997,
-      "bytes": 16552
-    },
-    "q/plants/lettuce-leaves": {
-      "text": "إحنا ناكل أوراق الخس.",
-      "hash": "47b06d1bb2c3988a",
-      "durationMs": 2000,
-      "bytes": 16552
-    },
-    "q/plants/mint": {
-      "text": "أي جزء ناكل من النعناع؟",
-      "hash": "4be3e9ff0ed151f7",
-      "durationMs": 2240,
-      "bytes": 18433
-    },
-    "q/plants/radish-two-parts": {
-      "text": "الفجل الأبيض ناكل منه الجذر والأوراق.",
-      "hash": "e30b24a1c90ad9c2",
-      "durationMs": 3581,
-      "bytes": 29300
-    },
-    "q/plants/root-in-soil": {
-      "text": "أي جزء من النبات يكون تحت التراب؟",
-      "hash": "39a200704f235eb4",
-      "durationMs": 3096,
-      "bytes": 25329
-    },
-    "q/plants/sugarcane": {
-      "text": "أي جزء ناكل من قصب السكر؟",
-      "hash": "1ee06fd761c1e11b",
-      "durationMs": 2407,
-      "bytes": 19896
-    },
-    "q/plants/which-flower": {
-      "text": "أي نبات ناكل منه الزهرة؟",
-      "hash": "a8b9e5ea93e7839c",
-      "durationMs": 2403,
-      "bytes": 19687
-    },
-    "q/plants/which-root": {
-      "text": "أي نبات ناكل منه الجذر؟",
-      "hash": "7c1340e71fb4a2a0",
-      "durationMs": 2429,
-      "bytes": 19896
-    },
-    "q/plants/which-stem": {
-      "text": "أي نبات ناكل منه الساق؟",
-      "hash": "1deb97f5831f83e9",
-      "durationMs": 2328,
-      "bytes": 19269
-    },
-    "q/reproduction/all-give-birth": {
-      "text": "كل الحيوانات تتكاثر بالولادة.",
-      "hash": "3e9c7e63d278ba0c",
-      "durationMs": 2811,
-      "bytes": 23030
-    },
-    "q/reproduction/bear": {
-      "text": "شلون يتكاثر الدب؟",
-      "hash": "a3fb1c6354a8aa08",
-      "durationMs": 1751,
-      "bytes": 14671
-    },
-    "q/reproduction/birds-lay-eggs": {
-      "text": "الطيور تتكاثر بالبيض.",
-      "hash": "accf1fb7dfe24bd7",
-      "durationMs": 2268,
-      "bytes": 18642
-    },
-    "q/reproduction/cat": {
-      "text": "شلون تتكاثر القطة؟",
-      "hash": "cb5ec46398965eac",
-      "durationMs": 1772,
-      "bytes": 14671
-    },
-    "q/reproduction/chicken": {
-      "text": "شلون تتكاثر الدجاجة؟",
-      "hash": "fff136d932bb0805",
-      "durationMs": 1895,
-      "bytes": 15716
-    },
-    "q/reproduction/colorfish": {
-      "text": "شلون تتكاثر السمكة الملونة؟",
-      "hash": "a48b3a9c6f5f9bf6",
-      "durationMs": 2361,
-      "bytes": 19478
-    },
-    "q/reproduction/eggs-and-feathers": {
-      "text": "أي حيوان يتكاثر بالبيض، وجسمه مغطى بريش؟",
-      "hash": "17ac5e60fd05a661",
-      "durationMs": 4274,
-      "bytes": 34733
-    },
-    "q/reproduction/giraffe": {
-      "text": "شلون تتكاثر الزرافة؟",
-      "hash": "17036831d3193f5b",
-      "durationMs": 1884,
-      "bytes": 15716
-    },
-    "q/reproduction/giraffe-plants-birth": {
-      "text": "الزرافة تاكل نباتات وتتكاثر بالولادة.",
-      "hash": "ac75df75740effb1",
-      "durationMs": 3479,
-      "bytes": 28464
-    },
-    "q/reproduction/nest-eggs": {
-      "text": "لقينا بيض في عش جنب الدريشة… منو حطه؟",
-      "hash": "21b973b5667b7ce7",
-      "durationMs": 3681,
-      "bytes": 29927
-    },
-    "q/reproduction/sheep": {
-      "text": "شلون يتكاثر الخروف؟",
-      "hash": "fe05f4b681cf6f16",
-      "durationMs": 1896,
-      "bytes": 15716
-    },
-    "q/reproduction/sparrow": {
-      "text": "شلون يتكاثر العصفور؟",
-      "hash": "46a437ed1a65872e",
-      "durationMs": 1883,
-      "bytes": 15716
-    },
-    "q/reproduction/turtle": {
-      "text": "شلون تتكاثر السلحفاة؟",
-      "hash": "050a27996607ece5",
-      "durationMs": 2030,
-      "bytes": 16761
-    },
-    "t/breathing": {
-      "text": "شلون تتنفس الحيوانات؟",
-      "hash": "7f6a77053feeee9c",
-      "durationMs": 2023,
-      "bytes": 16761
-    },
-    "t/covering": {
-      "text": "شنو يغطي جسم الحيوانات؟",
-      "hash": "34c76026d5cdf465",
-      "durationMs": 2182,
-      "bytes": 18015
-    },
-    "t/food": {
-      "text": "شنو تاكل الحيوانات؟",
-      "hash": "5683294d227ba73c",
-      "durationMs": 1840,
-      "bytes": 15298
-    },
-    "t/movement": {
-      "text": "شلون تتحرك الحيوانات؟",
-      "hash": "245e098403719409",
-      "durationMs": 1961,
-      "bytes": 16343
-    },
-    "t/plants": {
-      "text": "أي أجزاء النبات ناكل؟",
-      "hash": "8d45aba4761b7a03",
-      "durationMs": 1961,
-      "bytes": 16343
-    },
-    "t/reproduction": {
-      "text": "شلون تتكاثر الحيوانات؟",
-      "hash": "5520236839e7c368",
-      "durationMs": 2091,
-      "bytes": 17388
-    },
-    "ui/boys/done-good": {
-      "text": "أحسنت! تدرب مرة ثانية… وبتصير أقوى.",
-      "hash": "e2df400dcd41b020",
-      "durationMs": 3744,
-      "bytes": 30554
-    },
-    "ui/boys/done-great": {
-      "text": "واو! إنت بطل العلوم!",
-      "hash": "0bf59e5e597bb0c6",
-      "durationMs": 2542,
-      "bytes": 20940
-    },
-    "ui/boys/learn-done": {
-      "text": "شطور! خلصت الدرس… يلا نتدرب.",
-      "hash": "f38237dfd7f68c56",
-      "durationMs": 3380,
-      "bytes": 27628
-    },
-    "ui/boys/praise-1": {
-      "text": "أحسنت!",
-      "hash": "c19764725e35690a",
-      "durationMs": 977,
-      "bytes": 8402
-    },
-    "ui/boys/praise-2": {
-      "text": "شطور!",
-      "hash": "e1712d513fdee885",
-      "durationMs": 964,
+    "ar/o/habitats-fennec-home-2": {
+      "text": "البحر",
+      "hash": "e5948282096a6f64",
+      "durationMs": 907,
+      "bytes": 7775
+    },
+    "ar/o/habitats-fennec-home-3": {
+      "text": "العش",
+      "hash": "c0af312a7636f31a",
+      "durationMs": 920,
+      "bytes": 7984
+    },
+    "ar/o/habitats-lost-home-1": {
+      "text": "ما يلقى مكان يحميه",
+      "hash": "e22684b9c3c32320",
+      "durationMs": 1820,
+      "bytes": 15089
+    },
+    "ar/o/habitats-lost-home-2": {
+      "text": "يصير أقوى",
+      "hash": "31b4143577667cc4",
+      "durationMs": 1200,
+      "bytes": 10074
+    },
+    "ar/o/habitats-lost-home-3": {
+      "text": "ما يتغير شي",
+      "hash": "d49c39cb778f9c72",
+      "durationMs": 1247,
+      "bytes": 10492
+    },
+    "ar/o/habitats-rabbit-home-1": {
+      "text": "الجحر",
+      "hash": "26dcc8833f684570",
+      "durationMs": 946,
       "bytes": 8193
     },
-    "ui/boys/praise-3": {
-      "text": "ممتاز يا بطل!",
-      "hash": "423a51aa0652e356",
-      "durationMs": 1634,
-      "bytes": 13626
+    "ar/o/habitats-rabbit-home-2": {
+      "text": "العش",
+      "hash": "c0af312a7636f31a",
+      "durationMs": 956,
+      "bytes": 8193
     },
-    "ui/boys/praise-4": {
-      "text": "برافو عليك!",
-      "hash": "1a024fe4665a8386",
-      "durationMs": 1303,
-      "bytes": 10909
+    "ar/o/habitats-rabbit-home-3": {
+      "text": "صخور البحر",
+      "hash": "d0f3a7966ecec816",
+      "durationMs": 1440,
+      "bytes": 12163
     },
-    "ui/boys/welcome": {
-      "text": "هلا والله يا بطل العلوم! اختار درس… ويلا نبدأ.",
-      "hash": "b59dcff249bc4816",
-      "durationMs": 4451,
-      "bytes": 36196
-    },
-    "ui/correct-is": {
-      "text": "الجواب الصح هو…",
-      "hash": "a71cefc3c29d5de2",
+    "ar/o/habitats-sea-shelter-1": {
+      "text": "الصخور اللي في البحر",
+      "hash": "3bece4c147fd1e51",
       "durationMs": 1760,
       "bytes": 14671
     },
-    "ui/done-good": {
-      "text": "أحسنتي! تدربي مرة ثانية… وبتصيرين أقوى.",
-      "hash": "e00fa18fb004cb3e",
-      "durationMs": 4184,
-      "bytes": 34106
+    "ar/o/habitats-sea-shelter-2": {
+      "text": "أعشاش الطيور",
+      "hash": "0650f27cfdbe7622",
+      "durationMs": 1380,
+      "bytes": 11536
     },
-    "ui/done-great": {
-      "text": "واو! إنتي بطلة العلوم!",
-      "hash": "fefc93db25e41e3f",
-      "durationMs": 2643,
-      "bytes": 21776
+    "ar/o/habitats-sea-shelter-3": {
+      "text": "جحور الأرانب",
+      "hash": "af62fd99d960393f",
+      "durationMs": 1502,
+      "bytes": 12581
     },
-    "ui/learn-done": {
-      "text": "شطورة! خلصتي الدرس… يلا نتدرب.",
-      "hash": "07418d48bdb35176",
-      "durationMs": 3460,
-      "bytes": 28255
+    "ar/o/habitats-squirrel-home-1": {
+      "text": "في الشجر",
+      "hash": "0ca556956e79270c",
+      "durationMs": 958,
+      "bytes": 8193
     },
-    "ui/praise-1": {
-      "text": "أحسنتي!",
-      "hash": "a5451039fbaca0ed",
-      "durationMs": 1044,
-      "bytes": 8820
+    "ar/o/habitats-squirrel-home-2": {
+      "text": "في البحر",
+      "hash": "b7f093f92e4ba5f9",
+      "durationMs": 961,
+      "bytes": 8193
     },
-    "ui/praise-2": {
-      "text": "شطورة!",
-      "hash": "61e4793525a8d7ef",
-      "durationMs": 1024,
-      "bytes": 8820
+    "ar/o/habitats-squirrel-home-3": {
+      "text": "في جحر تحت الأرض",
+      "hash": "8b055ac25ebfb2ec",
+      "durationMs": 1901,
+      "bytes": 15716
     },
-    "ui/praise-3": {
-      "text": "ممتاز يا بطلة!",
-      "hash": "d211ddc5ff3238f0",
-      "durationMs": 1642,
-      "bytes": 13626
+    "ar/o/protect-burning-1": {
+      "text": "الهوا والتربة",
+      "hash": "4e4cac3af91c23d8",
+      "durationMs": 1653,
+      "bytes": 13835
     },
-    "ui/praise-4": {
-      "text": "برافو عليج!",
-      "hash": "e4b82a73cbe798dc",
+    "ar/o/protect-burning-2": {
+      "text": "الماي والهوا",
+      "hash": "5326d0d10ae6a770",
+      "durationMs": 1760,
+      "bytes": 14671
+    },
+    "ar/o/protect-burning-3": {
+      "text": "التربة والهوا والماي",
+      "hash": "235d8855c629373c",
+      "durationMs": 2445,
+      "bytes": 20105
+    },
+    "ar/o/protect-burning-4": {
+      "text": "التربة والماي",
+      "hash": "c218f8fe60ecf139",
+      "durationMs": 1618,
+      "bytes": 13417
+    },
+    "ar/o/protect-coughing-1": {
+      "text": "المرض وصعوبة التنفس",
+      "hash": "00471d57caa0bf50",
+      "durationMs": 2431,
+      "bytes": 20105
+    },
+    "ar/o/protect-coughing-2": {
+      "text": "القوة والنشاط",
+      "hash": "567e8ebef4119d6d",
+      "durationMs": 1866,
+      "bytes": 15507
+    },
+    "ar/o/protect-coughing-3": {
+      "text": "النوم الهادي",
+      "hash": "0a58e9a6281322a2",
+      "durationMs": 1520,
+      "bytes": 12790
+    },
+    "ar/o/protect-dead-fish-1": {
+      "text": "قط الزبالة في البحر",
+      "hash": "41eced15e55f2dac",
+      "durationMs": 1757,
+      "bytes": 14671
+    },
+    "ar/o/protect-dead-fish-2": {
+      "text": "قلة الماي",
+      "hash": "2747003b48edebb3",
+      "durationMs": 1235,
+      "bytes": 10492
+    },
+    "ar/o/protect-dead-fish-3": {
+      "text": "الجو الحار",
+      "hash": "a0245f21e599c63d",
+      "durationMs": 1381,
+      "bytes": 11536
+    },
+    "ar/o/protect-dead-fish-4": {
+      "text": "قلة الهوا",
+      "hash": "5fda26539b434187",
+      "durationMs": 1170,
+      "bytes": 9865
+    },
+    "ar/o/protect-harm-shown-1": {
+      "text": "دخان المصانع",
+      "hash": "e6d3d274b1e3e4de",
+      "durationMs": 1462,
+      "bytes": 12163
+    },
+    "ar/o/protect-harm-shown-2": {
+      "text": "قطع الشجر",
+      "hash": "7d3467726639f52d",
+      "durationMs": 1199,
+      "bytes": 10074
+    },
+    "ar/o/protect-harm-shown-3": {
+      "text": "قلة الماي",
+      "hash": "2747003b48edebb3",
+      "durationMs": 1160,
+      "bytes": 9865
+    },
+    "ar/o/protect-harm-shown-4": {
+      "text": "رمي الزبالة",
+      "hash": "6946cc29e9cff159",
+      "durationMs": 1304,
+      "bytes": 10909
+    },
+    "ar/o/protect-oiled-bird-1": {
+      "text": "تمرض الحيوانات وتموت",
+      "hash": "d743c6c69948e805",
+      "durationMs": 2358,
+      "bytes": 19478
+    },
+    "ar/o/protect-oiled-bird-2": {
+      "text": "تكبر الحيوانات بسرعة",
+      "hash": "e4245e8bfa6e062f",
+      "durationMs": 2105,
+      "bytes": 17388
+    },
+    "ar/o/protect-oiled-bird-3": {
+      "text": "تبني الحيوانات بيوت يديدة",
+      "hash": "53e1c3e71b21875f",
+      "durationMs": 2355,
+      "bytes": 19478
+    },
+    "ar/o/protect-plants-harmed-1": {
+      "text": "تمرض أو تموت",
+      "hash": "b3194c0fce29883a",
+      "durationMs": 1811,
+      "bytes": 15089
+    },
+    "ar/o/protect-plants-harmed-2": {
+      "text": "تكبر وتقوى",
+      "hash": "4ac8b8e74a4779ea",
+      "durationMs": 1830,
+      "bytes": 15298
+    },
+    "ar/o/protect-plants-harmed-3": {
+      "text": "ما يصير لها شي",
+      "hash": "bbfa7d715f1ea1c7",
       "durationMs": 1360,
       "bytes": 11536
     },
-    "ui/test-intro": {
-      "text": "هذا اختبار تجريبي… فيه أسئلة من كل الدروس. يلا نبدأ!",
-      "hash": "ec0f6110731b4521",
-      "durationMs": 4998,
-      "bytes": 40585
+    "ar/o/protect-turtle-1": {
+      "text": "تاكل الزبالة وتحسبها أكل",
+      "hash": "9a58f1f207b88945",
+      "durationMs": 2560,
+      "bytes": 20940
     },
-    "ui/welcome": {
-      "text": "هلا والله يا بطلة العلوم! اختاري درس… ويلا نبدأ.",
-      "hash": "fb4c82e4a406daff",
-      "durationMs": 4743,
-      "bytes": 38495
+    "ar/o/protect-turtle-2": {
+      "text": "تسبح وايد",
+      "hash": "0afffc9092efcb23",
+      "durationMs": 1600,
+      "bytes": 13417
+    },
+    "ar/o/protect-turtle-3": {
+      "text": "تنام على الرمل",
+      "hash": "76ff6a1ae855ec8e",
+      "durationMs": 1459,
+      "bytes": 12163
+    },
+    "ar/p/habitats/choose-bird-home": {
+      "text": "هذا الطير… شنو مأواه؟",
+      "hash": "a35017b4e12e6c3c",
+      "durationMs": 2471,
+      "bytes": 20314
+    },
+    "ar/p/habitats/choose-burrow-animals": {
+      "text": "الحيوانات اللي ممكن تعيش في هالمأوى… منو؟",
+      "hash": "d47640cced7014d7",
+      "durationMs": 3483,
+      "bytes": 28464
+    },
+    "ar/p/habitats/choose-fennec-home": {
+      "text": "الحصني اللي يعيش في الصحرا… وين بيته؟",
+      "hash": "1ba4e90e7e870413",
+      "durationMs": 3123,
+      "bytes": 25538
+    },
+    "ar/p/habitats/choose-lost-home": {
+      "text": "إذا الحيوان خسر مأواه… شنو يصير له؟",
+      "hash": "cd64038cda2a148e",
+      "durationMs": 3139,
+      "bytes": 25747
+    },
+    "ar/p/habitats/choose-rabbit-home": {
+      "text": "هذا الأرنب… شنو مأواه؟",
+      "hash": "4c26e1aa0536f9c7",
+      "durationMs": 2561,
+      "bytes": 21149
+    },
+    "ar/p/habitats/choose-sea-shelter": {
+      "text": "سمك البحر… شنو يستخدم بيت له؟",
+      "hash": "cdab9a9837897bd9",
+      "durationMs": 3046,
+      "bytes": 24911
+    },
+    "ar/p/habitats/choose-squirrel-home": {
+      "text": "السنجاب… وين يسوي بيته؟",
+      "hash": "88239346621cafb7",
+      "durationMs": 2709,
+      "bytes": 22194
+    },
+    "ar/p/habitats/circle-water-creatures": {
+      "text": "نحوط الكائنات الحية اللي تعيش في الماي… كلها.",
+      "hash": "315f340e8ab991f9",
+      "durationMs": 3863,
+      "bytes": 31389
+    },
+    "ar/p/habitats/scene-polar-water": {
+      "text": "نحوط الحيوانات اللي تعيش في الماي… مو اللي على الثلج.",
+      "hash": "c87aaef3b481b7ae",
+      "durationMs": 4129,
+      "bytes": 33688
+    },
+    "ar/p/habitats/scene-sea-mistake": {
+      "text": "في البحر… في شي غلط. منو اللي مو مكانه هني؟",
+      "hash": "d44280d8783102c4",
+      "durationMs": 4365,
+      "bytes": 35569
+    },
+    "ar/p/habitats/tf-all-on-land": {
+      "text": "كل الكائنات الحية تعيش على اليابسة.",
+      "hash": "a17f3a52a3a83a94",
+      "durationMs": 3102,
+      "bytes": 25329
+    },
+    "ar/p/habitats/tf-camel-in-water": {
+      "text": "الجمل يعيش في الماي.",
+      "hash": "e18b277c4208c243",
+      "durationMs": 2095,
+      "bytes": 17388
+    },
+    "ar/p/habitats/tf-fish-in-water": {
+      "text": "السمك من الحيوانات اللي تعيش في الماي.",
+      "hash": "388826cb03bb9be3",
+      "durationMs": 2871,
+      "bytes": 23448
+    },
+    "ar/p/habitats/tf-nest-birds": {
+      "text": "العش بيت لأنواع وايد من الطيور.",
+      "hash": "54a69b829e63cb2e",
+      "durationMs": 2927,
+      "bytes": 24075
+    },
+    "ar/p/habitats/tf-places-differ": {
+      "text": "أماكن عيش الكائنات الحية… تختلف.",
+      "hash": "7683ef7f95965b1a",
+      "durationMs": 3440,
+      "bytes": 28046
+    },
+    "ar/p/habitats/tf-rabbit-burrow": {
+      "text": "الجحور… بيوت للأرانب.",
+      "hash": "a00a5a1b5566d782",
+      "durationMs": 2880,
+      "bytes": 23657
+    },
+    "ar/p/habitats/tf-same-shelter": {
+      "text": "كل الحيوانات بيتها نفس الشي.",
+      "hash": "76484c5476cfac33",
+      "durationMs": 2400,
+      "bytes": 19687
+    },
+    "ar/p/habitats/tf-shelter-protects": {
+      "text": "المأوى يساعد الحيوانات تحمي نفسها من الخطر.",
+      "hash": "4e491fcd89f11b50",
+      "durationMs": 3946,
+      "bytes": 32225
+    },
+    "ar/p/habitats/tf-some-land-some-water": {
+      "text": "بعض الكائنات الحية تعيش على اليابسة… وبعضها في الماي.",
+      "hash": "7814d8f8c38709be",
+      "durationMs": 4757,
+      "bytes": 38704
+    },
+    "ar/p/habitats/tf-squirrel-burrow": {
+      "text": "السنجاب يسكن في جحر تحت الأرض.",
+      "hash": "c3ee686ff7d73d5f",
+      "durationMs": 3120,
+      "bytes": 25538
+    },
+    "ar/p/habitats/tick-land-place": {
+      "text": "مكان تعيش فيه الكائنات الحية على اليابسة… وينه؟",
+      "hash": "e5d4bc6a52a4abc7",
+      "durationMs": 4132,
+      "bytes": 33688
+    },
+    "ar/p/habitats/tick-lives-in-water": {
+      "text": "كائن حي يعيش في الماي… أي واحد؟",
+      "hash": "f0df3c0d86a33428",
+      "durationMs": 3302,
+      "bytes": 27001
+    },
+    "ar/p/habitats/tick-lives-on-land": {
+      "text": "حيوان يعيش على اليابسة… منو هو؟",
+      "hash": "724a2b7030c1eff2",
+      "durationMs": 3193,
+      "bytes": 26165
+    },
+    "ar/p/habitats/tick-tree-group": {
+      "text": "الحيوانات اللي تسكن في الشجر… في أي مجموعة؟",
+      "hash": "f30bdb73ae7e77c2",
+      "durationMs": 3480,
+      "bytes": 28464
+    },
+    "ar/p/habitats/tick-water-place": {
+      "text": "وين المكان اللي تعيش فيه الكائنات الحية في الماي؟",
+      "hash": "1861f3b0300e4c61",
+      "durationMs": 3520,
+      "bytes": 28673
+    },
+    "ar/p/habitats/tick-water-plant": {
+      "text": "نبات ينبت في الماي… وينه؟",
+      "hash": "0a4ac6055bf209cc",
+      "durationMs": 3045,
+      "bytes": 24911
+    },
+    "ar/p/habitats/tick-where-lives": {
+      "text": "وين يعيش هذا الكائن الحي؟",
+      "hash": "6447667060468a51",
+      "durationMs": 2155,
+      "bytes": 17806
+    },
+    "ar/p/habitats/tick-which-home": {
+      "text": "أي مأوى يناسب هذا الحيوان؟",
+      "hash": "78084f77d55e1f6c",
+      "durationMs": 2571,
+      "bytes": 21149
+    },
+    "ar/p/habitats/tick-whose-home": {
+      "text": "هذا المأوى… منو يسكن فيه؟",
+      "hash": "7293b93af2d708d0",
+      "durationMs": 2789,
+      "bytes": 22821
+    },
+    "ar/p/habitats/word-camel-land": {
+      "text": "الجمل يعيش على… اليابسة؟ ولا الماي؟",
+      "hash": "10b4b5b3fc38ede4",
+      "durationMs": 3921,
+      "bytes": 32016
+    },
+    "ar/p/habitats/word-fish-water": {
+      "text": "الأسماك من الحيوانات اللي تعيش في… الماي؟ ولا اليابسة؟",
+      "hash": "0e7b76c0cda08bb2",
+      "durationMs": 5360,
+      "bytes": 43510
+    },
+    "ar/p/habitats/word-nest-birds": {
+      "text": "العش مأوى… للطيور؟ ولا للسمك؟",
+      "hash": "acd7ea2f8a3033b9",
+      "durationMs": 3763,
+      "bytes": 30763
+    },
+    "ar/p/habitats/word-places": {
+      "text": "أماكن عيش الحيوانات والنباتات… متشابهة؟ ولا مختلفة؟",
+      "hash": "0ce4438f1028d982",
+      "durationMs": 5093,
+      "bytes": 41212
+    },
+    "ar/p/habitats/word-squirrel-trees": {
+      "text": "السنجاب يسوي بيته في… البحر؟ ولا الشجر؟",
+      "hash": "278a74bf69ef714d",
+      "durationMs": 4338,
+      "bytes": 35360
+    },
+    "ar/p/habitats/word-survive": {
+      "text": "لكل كائن حي مأوى يحميه… ويساعده على شنو؟ البقاء؟ ولا الانتقال؟",
+      "hash": "93b152d6820b2a28",
+      "durationMs": 6676,
+      "bytes": 53959
+    },
+    "ar/p/protect/choose-burning": {
+      "text": "حرق الزبالة اللي في الصورة… يضر شنو؟",
+      "hash": "57a76d03986b3ab5",
+      "durationMs": 3067,
+      "bytes": 25120
+    },
+    "ar/p/protect/choose-coughing": {
+      "text": "الهوا الملوث… شنو يسوي في الإنسان؟",
+      "hash": "69ca81ae671329e4",
+      "durationMs": 3194,
+      "bytes": 26165
+    },
+    "ar/p/protect/choose-dead-fish": {
+      "text": "ليش ماتت هالسمكة؟ شنو السبب؟",
+      "hash": "bba263c41e042cc8",
+      "durationMs": 2765,
+      "bytes": 22612
+    },
+    "ar/p/protect/choose-oiled-bird": {
+      "text": "السلوكيات الضارة… شلون تأثر على الحيوان؟",
+      "hash": "1561c56a06783ee7",
+      "durationMs": 3751,
+      "bytes": 30554
+    },
+    "ar/p/protect/choose-plants-harmed": {
+      "text": "إذا النبات تضرر… شنو يصير للكائنات الثانية؟",
+      "hash": "7441475ef03514ae",
+      "durationMs": 3848,
+      "bytes": 31389
+    },
+    "ar/p/protect/choose-turtle": {
+      "text": "ليش السلحفاة تمرض؟",
+      "hash": "897b02f33d1c6184",
+      "durationMs": 1681,
+      "bytes": 14044
+    },
+    "ar/p/protect/circle-harmful": {
+      "text": "هالمرة… نحوط الصور اللي فيها سلوك يضر.",
+      "hash": "13c850d608160d6e",
+      "durationMs": 3868,
+      "bytes": 31598
+    },
+    "ar/p/protect/circle-protect-ways": {
+      "text": "نحوط الصور اللي نحمي فيها الأماكن اللي تعيش فيها الكائنات الحية.",
+      "hash": "f9197b154c4095b0",
+      "durationMs": 4883,
+      "bytes": 39540
+    },
+    "ar/p/protect/scene-litter-desert": {
+      "text": "رحلة في البر… بس في أشياء تضر المكان. نلقى ثلاث منها ونحوطها.",
+      "hash": "5d37a77357c7e27c",
+      "durationMs": 6214,
+      "bytes": 50198
+    },
+    "ar/p/protect/sort-sort-waste": {
+      "text": "هذي النفايات… في أي صندوق نحطها؟",
+      "hash": "7138a7ead59e56a1",
+      "durationMs": 3121,
+      "bytes": 25538
+    },
+    "ar/p/protect/tf-bike-air": {
+      "text": "لما نستخدم السيكل بدال السيارة… نحمي الهوا.",
+      "hash": "6cc29a539f7294fa",
+      "durationMs": 3944,
+      "bytes": 32016
+    },
+    "ar/p/protect/tf-cutting-protects": {
+      "text": "قطع الشجر يحمي الأماكن اللي تعيش فيها الكائنات الحية.",
+      "hash": "a2ebdc26bea4ee5d",
+      "durationMs": 4246,
+      "bytes": 34524
+    },
+    "ar/p/protect/tf-park-litter": {
+      "text": "رمي الزبالة في الأماكن العامة… سلوك صح.",
+      "hash": "d39be4b879fbc72f",
+      "durationMs": 3721,
+      "bytes": 30345
+    },
+    "ar/p/protect/tf-planting": {
+      "text": "زراعة النباتات تحمي الأماكن اللي تعيش فيها الكائنات الحية من الضرر.",
+      "hash": "7794c7152de50005",
+      "durationMs": 5611,
+      "bytes": 45391
+    },
+    "ar/p/protect/tf-plants-harmed": {
+      "text": "إذا النبات تضرر… الكائنات الحية الثانية تمرض أو تموت.",
+      "hash": "94b04e284e8893d0",
+      "durationMs": 5379,
+      "bytes": 43510
+    },
+    "ar/p/protect/tf-recycling-helps": {
+      "text": "إعادة تدوير النفايات… تساعدنا.",
+      "hash": "ae3fcef09249d187",
+      "durationMs": 3080,
+      "bytes": 25120
+    },
+    "ar/p/protect/tf-smoke-harms": {
+      "text": "دخان المصانع يضر الأماكن اللي تعيش فيها الكائنات الحية.",
+      "hash": "57a5b1d8423afff7",
+      "durationMs": 4623,
+      "bytes": 37450
+    },
+    "ar/p/protect/tf-smoke-keeps": {
+      "text": "دخان المصانع يحافظ على الأماكن اللي تعيش فيها الكائنات الحية.",
+      "hash": "94dd7e242dd7c870",
+      "durationMs": 4940,
+      "bytes": 40167
+    },
+    "ar/p/protect/tf-smoke-sick": {
+      "text": "دخان المصانع يمرض الإنسان.",
+      "hash": "7a01a5c01a252a63",
+      "durationMs": 2813,
+      "bytes": 23030
+    },
+    "ar/p/protect/tf-sorting": {
+      "text": "نحمي أرضنا لما نفرز النفايات… عشان نعيد تدويرها.",
+      "hash": "eb8d9fdf0a1ea3e0",
+      "durationMs": 4536,
+      "bytes": 36823
+    },
+    "ar/p/protect/tick-clean-beach": {
+      "text": "أي شاطي نقدر نلعب ونسبح فيه؟",
+      "hash": "37b69519d760a68e",
+      "durationMs": 2537,
+      "bytes": 20940
+    },
+    "ar/p/protect/tick-dirty-air": {
+      "text": "الهوا الوصخ… شلون يضر الإنسان؟",
+      "hash": "489e440cd4e8280e",
+      "durationMs": 3280,
+      "bytes": 26792
+    },
+    "ar/p/protect/tick-harm-shown": {
+      "text": "شنو السلوك الضار اللي في الصورة؟",
+      "hash": "79f3eecee2d0aa16",
+      "durationMs": 2188,
+      "bytes": 18015
+    },
+    "ar/p/protect/tick-harmed": {
+      "text": "أي صورة فيها ضرر صار للكائنات الحية؟",
+      "hash": "ad77526e4dc8fc7a",
+      "durationMs": 3459,
+      "bytes": 28255
+    },
+    "ar/p/protect/tick-harms": {
+      "text": "أي سلوك يضر الأماكن اللي تعيش فيها الكائنات الحية؟",
+      "hash": "a0c0d23deda35972",
+      "durationMs": 4098,
+      "bytes": 33270
+    },
+    "ar/p/protect/tick-protects": {
+      "text": "أي سلوك يحمي الأماكن اللي تعيش فيها الكائنات الحية؟",
+      "hash": "5260a5337deb9bdc",
+      "durationMs": 3962,
+      "bytes": 32225
+    },
+    "ar/p/protect/word-bags": {
+      "text": "من طرق الحماية… نستخدم الأكياس القماشية؟ ولا البلاستيكية؟",
+      "hash": "40b88e4c0397db85",
+      "durationMs": 5143,
+      "bytes": 41629
+    },
+    "ar/p/protect/word-bike": {
+      "text": "عشان نحمي الهوا من الدخان… نستخدم السيارات؟ ولا السيكل؟",
+      "hash": "aeccb513ef811557",
+      "durationMs": 5073,
+      "bytes": 41212
+    },
+    "ar/p/protect/word-bin": {
+      "text": "وين نقط الزبالة؟ في المكان المخصص لها؟ ولا في الشارع؟",
+      "hash": "16f19c62fc352415",
+      "durationMs": 4372,
+      "bytes": 35569
+    },
+    "ar/p/protect/word-plant": {
+      "text": "نحمي الأماكن اللي تعيش فيها الكائنات… بالسيكل، و… زراعة النباتات؟ ولا قطعها؟",
+      "hash": "61690c7358394733",
+      "durationMs": 7085,
+      "bytes": 57303
+    },
+    "ar/p/protect/word-recycle": {
+      "text": "نحمي أرضنا من النفايات… بإعادة تدويرها؟ ولا برميها على الأرض؟",
+      "hash": "d131de5e5f3fcc9d",
+      "durationMs": 5491,
+      "bytes": 44555
+    },
+    "ar/p/protect/word-waste-harm": {
+      "text": "النفايات في الأماكن اللي تعيش فيها الكائنات الحية… تسبب لها الأمان؟ ولا الضرر؟",
+      "hash": "eaa9f6e06e9da362",
+      "durationMs": 6161,
+      "bytes": 49780
+    },
+    "ar/q/choose-1": {
+      "text": "نطالع الصورة… ونختار الجواب المناسب.",
+      "hash": "e4313181957e9c66",
+      "durationMs": 3540,
+      "bytes": 28882
+    },
+    "ar/q/choose-2": {
+      "text": "الصورة فيها سالفة… شنو الجواب الصح؟",
+      "hash": "060ddf69363ed4ad",
+      "durationMs": 3394,
+      "bytes": 27628
+    },
+    "ar/q/choose-3": {
+      "text": "نسمع السؤال زين… وبعدين نختار من الدواير.",
+      "hash": "da6147ff727759e9",
+      "durationMs": 4118,
+      "bytes": 33479
+    },
+    "ar/q/circle-1": {
+      "text": "يمكن أكثر من صورة صح… نحوطهم كلهم.",
+      "hash": "2f51082a26ae0a72",
+      "durationMs": 3765,
+      "bytes": 30763
+    },
+    "ar/q/circle-2": {
+      "text": "ندور على كل الصور اللي يبيها السؤال… ونحوطها.",
+      "hash": "b24b9f481257afb5",
+      "durationMs": 4047,
+      "bytes": 32852
+    },
+    "ar/q/circle-3": {
+      "text": "نحوط الصور الصح… وبعدين نضغط تحقق.",
+      "hash": "9591351eef275267",
+      "durationMs": 4149,
+      "bytes": 33688
+    },
+    "ar/q/color-1": {
+      "text": "وقت التلوين! اللي يعيش على اليابسة برتقالي… واللي يعيش في الماي أزرق.",
+      "hash": "927eb483858519c2",
+      "durationMs": 6303,
+      "bytes": 51034
+    },
+    "ar/q/color-2": {
+      "text": "البرتقالي لليابسة… والأزرق للماي. يلا نلون!",
+      "hash": "712a62e8cb7ee829",
+      "durationMs": 4573,
+      "bytes": 37241
+    },
+    "ar/q/color-3": {
+      "text": "نلون كل كائن حي حسب مكانه… البرتقالي لليابسة، والأزرق للماي.",
+      "hash": "d7d586617f56f87c",
+      "durationMs": 5961,
+      "bytes": 48317
+    },
+    "ar/q/cross-1": {
+      "text": "الصور اللي فيها ضرر… نحط عليها علامة خطأ.",
+      "hash": "2cbc2b18b8c4e78d",
+      "durationMs": 4029,
+      "bytes": 32852
+    },
+    "ar/q/cross-2": {
+      "text": "وين الضرر؟ صورته تاخذ علامة خطأ.",
+      "hash": "3e82934b33b8eaae",
+      "durationMs": 3293,
+      "bytes": 27001
+    },
+    "ar/q/cross-3": {
+      "text": "نطالع كل صورة… إذا فيها ضرر نحط عليها خطأ.",
+      "hash": "fae5e61a663963c4",
+      "durationMs": 4181,
+      "bytes": 34106
+    },
+    "ar/q/homes-1": {
+      "text": "كل حيوان له بيت… نحط رقم الحيوان على مأواه.",
+      "hash": "449e26829ea7570e",
+      "durationMs": 4420,
+      "bytes": 35987
+    },
+    "ar/q/homes-2": {
+      "text": "وين يسكن كل حيوان؟ نكتب رقمه تحت بيته.",
+      "hash": "e3166105ba9726ce",
+      "durationMs": 3924,
+      "bytes": 32016
+    },
+    "ar/q/homes-3": {
+      "text": "نرجع كل حيوان لمأواه… بالأرقام.",
+      "hash": "f1d27d47c9254508",
+      "durationMs": 3401,
+      "bytes": 27837
+    },
+    "ar/q/number-1": {
+      "text": "في الصورة دواير فاضية… نحط في كل وحدة رقمها.",
+      "hash": "0ababcea654b3509",
+      "durationMs": 4280,
+      "bytes": 34733
+    },
+    "ar/q/number-2": {
+      "text": "نسمع الجملة… ونحط رقمها في مكانه بالصورة.",
+      "hash": "c86e4c5c00c0e6d4",
+      "durationMs": 3860,
+      "bytes": 31389
+    },
+    "ar/q/number-3": {
+      "text": "ثلاث أرقام… وثلاث أماكن في الصورة.",
+      "hash": "3d1d42887b700b84",
+      "durationMs": 3315,
+      "bytes": 27001
+    },
+    "ar/q/scene-1": {
+      "text": "نطالع الصورة كلها زين… ونحوط فيها.",
+      "hash": "18251833d167051b",
+      "durationMs": 3680,
+      "bytes": 29927
+    },
+    "ar/q/scene-2": {
+      "text": "عيون مفتحة! ندور في الصورة ونحوط.",
+      "hash": "e775004cd4966ef8",
+      "durationMs": 3760,
+      "bytes": 30554
+    },
+    "ar/q/scene-3": {
+      "text": "الصورة كبيرة… وكل ما نلقى وحدة نحوطها.",
+      "hash": "b392b83f5dde2ee0",
+      "durationMs": 4320,
+      "bytes": 35151
+    },
+    "ar/q/sort-1": {
+      "text": "كل نوع نفايات له صندوق… وين نحط هذا؟",
+      "hash": "ea5ebdf5646ae996",
+      "durationMs": 3841,
+      "bytes": 31389
+    },
+    "ar/q/sort-2": {
+      "text": "نطالع اللي مكتوب على الصناديق… ونختار الصندوق الصح.",
+      "hash": "ef84763a4eeaee6f",
+      "durationMs": 4398,
+      "bytes": 35778
+    },
+    "ar/q/sort-3": {
+      "text": "نفرز… الورق بصندوق، والبلاستيك بصندوق، والأكل بصندوق.",
+      "hash": "1b91092295607c90",
+      "durationMs": 5735,
+      "bytes": 46436
+    },
+    "ar/q/table-1": {
+      "text": "كل جملة لها صورة… ندور رقمها ونكتبه جدامها.",
+      "hash": "f18919a9227b09fa",
+      "durationMs": 4456,
+      "bytes": 36196
+    },
+    "ar/q/table-2": {
+      "text": "نسمع الجملة اللي بالجدول… ونختار رقم الصورة اللي تناسبها.",
+      "hash": "dae5d86292630adc",
+      "durationMs": 4580,
+      "bytes": 37241
+    },
+    "ar/q/table-3": {
+      "text": "الجدول يبي أرقام… كل جملة ورقم صورتها.",
+      "hash": "a8dc8fdd8528db31",
+      "durationMs": 4256,
+      "bytes": 34524
+    },
+    "ar/q/tf-1": {
+      "text": "نسمع الجملة… إذا صح نحط صح، وإذا غلط نحط خطأ.",
+      "hash": "1e8f5070adf4dbf1",
+      "durationMs": 5154,
+      "bytes": 41838
+    },
+    "ar/q/tf-2": {
+      "text": "هالكلام صح ولا غلط؟ نفكر شوي قبل لا نجاوب.",
+      "hash": "30a118967051a38a",
+      "durationMs": 4648,
+      "bytes": 37659
+    },
+    "ar/q/tf-3": {
+      "text": "جملة وحدة… ونحكم عليها: صح ولا خطأ؟",
+      "hash": "b231717764f21d7b",
+      "durationMs": 4006,
+      "bytes": 32643
+    },
+    "ar/q/tick-1": {
+      "text": "نختار الجواب الصح… ونحط علامة صح بالمربع اللي جنبه.",
+      "hash": "39f3ebd83a7ed960",
+      "durationMs": 4537,
+      "bytes": 36823
+    },
+    "ar/q/tick-2": {
+      "text": "أي وحدة الصح؟ مربعها ياخذ علامة صح.",
+      "hash": "f3d97cab036305d4",
+      "durationMs": 3451,
+      "bytes": 28255
+    },
+    "ar/q/tick-3": {
+      "text": "نطالع الخيارات كلها زين… وبعدين نختار.",
+      "hash": "2da068643947b8d0",
+      "durationMs": 3831,
+      "bytes": 31180
+    },
+    "ar/q/word-1": {
+      "text": "بين القوسين كلمتين… نحوط الكلمة الصح.",
+      "hash": "345d46de69700254",
+      "durationMs": 3874,
+      "bytes": 31598
+    },
+    "ar/q/word-2": {
+      "text": "أي كلمة تكمل الجملة صح؟ نحوطها.",
+      "hash": "53646564ac9d70be",
+      "durationMs": 3537,
+      "bytes": 28882
+    },
+    "ar/q/word-3": {
+      "text": "كلمة وحدة بس تناسب… خلنا نلقاها.",
+      "hash": "df0c6e0d48c0531b",
+      "durationMs": 3819,
+      "bytes": 31180
+    },
+    "ar/r/habitats-homes-1": {
+      "text": "حيوان بيته الصخور اللي في البحر.",
+      "hash": "eb7981cf1d4429eb",
+      "durationMs": 2662,
+      "bytes": 21776
+    },
+    "ar/r/habitats-homes-2": {
+      "text": "حيوان بيته في الشجر.",
+      "hash": "2087bf47b248295c",
+      "durationMs": 1974,
+      "bytes": 16343
+    },
+    "ar/r/habitats-homes-3": {
+      "text": "حيوان بيته جحر في الأرض.",
+      "hash": "64be6c104ab46a18",
+      "durationMs": 2688,
+      "bytes": 21985
+    },
+    "ar/r/habitats-homes-4": {
+      "text": "حيوان يبني عشه فوق الشجرة.",
+      "hash": "8a34cb4568c689c3",
+      "durationMs": 2811,
+      "bytes": 23030
+    },
+    "ar/r/habitats-land-water-1": {
+      "text": "حيوان يعيش في الماي.",
+      "hash": "22c14b0cdf393482",
+      "durationMs": 1887,
+      "bytes": 15716
+    },
+    "ar/r/habitats-land-water-2": {
+      "text": "حيوان يعيش على اليابسة.",
+      "hash": "67d40f2319c1005b",
+      "durationMs": 2213,
+      "bytes": 18224
+    },
+    "ar/r/habitats-land-water-3": {
+      "text": "نبات ينبت في الماي.",
+      "hash": "5b2f399c25c8e023",
+      "durationMs": 2172,
+      "bytes": 18015
+    },
+    "ar/r/habitats-land-water-4": {
+      "text": "نبات ينبت على اليابسة.",
+      "hash": "eaeb46f94002f086",
+      "durationMs": 2561,
+      "bytes": 21149
+    },
+    "ar/r/protect-harm-places-1": {
+      "text": "رقم واحد… أضرار التربة.",
+      "hash": "6f12164145edd44e",
+      "durationMs": 2714,
+      "bytes": 22194
+    },
+    "ar/r/protect-harm-places-2": {
+      "text": "رقم اثنين… أضرار الهوا.",
+      "hash": "7855a3bb7c69d18e",
+      "durationMs": 2535,
+      "bytes": 20940
+    },
+    "ar/r/protect-harm-places-3": {
+      "text": "رقم ثلاثة… أضرار الماي.",
+      "hash": "20c7ea9372f42a6b",
+      "durationMs": 2663,
+      "bytes": 21776
+    },
+    "ar/r/protect-harms-1": {
+      "text": "سلوك يضر الهوا.",
+      "hash": "7ad12505a5377c61",
+      "durationMs": 1934,
+      "bytes": 16134
+    },
+    "ar/r/protect-harms-2": {
+      "text": "سلوك يضر الماي.",
+      "hash": "41bf67df6a6fc9b0",
+      "durationMs": 1896,
+      "bytes": 15716
+    },
+    "ar/r/protect-harms-3": {
+      "text": "سلوك يضر النباتات.",
+      "hash": "937d266600ba2639",
+      "durationMs": 2160,
+      "bytes": 17806
+    },
+    "ar/r/protect-harms-4": {
+      "text": "سلوك يضر الأماكن العامة.",
+      "hash": "a1c65126cdfdde56",
+      "durationMs": 2480,
+      "bytes": 20314
+    },
+    "ar/r/protect-protect-ways-1": {
+      "text": "نزرع النباتات.",
+      "hash": "e44d93e04c1c5597",
+      "durationMs": 1533,
+      "bytes": 12790
+    },
+    "ar/r/protect-protect-ways-2": {
+      "text": "نقط الزبالة في مكانها.",
+      "hash": "f1e7fcca1ad79668",
+      "durationMs": 2080,
+      "bytes": 17179
+    },
+    "ar/r/protect-protect-ways-3": {
+      "text": "نستخدم أكياس القماش.",
+      "hash": "8833edaa544bebb5",
+      "durationMs": 2080,
+      "bytes": 17179
+    },
+    "ar/r/protect-protect-ways-4": {
+      "text": "نستخدم السيكل.",
+      "hash": "bfb6fdb4b4130e82",
+      "durationMs": 1532,
+      "bytes": 12790
+    },
+    "ar/r/protect-protect-ways-5": {
+      "text": "نفرز النفايات عشان نعيد تدويرها.",
+      "hash": "2d55964507a6278b",
+      "durationMs": 2794,
+      "bytes": 22821
+    },
+    "ar/ui/board-wrong-1": {
+      "text": "لا مو هذا… نجرب غيره.",
+      "hash": "0b988c8cb0f4060d",
+      "durationMs": 2800,
+      "bytes": 23030
+    },
+    "ar/ui/board-wrong-2": {
+      "text": "امم… مو هني مكانه.",
+      "hash": "52ed28833672d842",
+      "durationMs": 2339,
+      "bytes": 19269
+    },
+    "ar/ui/board-wrong-3": {
+      "text": "شوي بعد… نطالع مرة ثانية.",
+      "hash": "1cf1f340b54e52ea",
+      "durationMs": 2703,
+      "bytes": 22194
+    },
+    "ar/ui/boys/cheer-1": {
+      "text": "يا بطل!",
+      "hash": "c1c1713d7fb2e07b",
+      "durationMs": 1082,
+      "bytes": 9238
+    },
+    "ar/ui/boys/cheer-2": {
+      "text": "يا شاطر!",
+      "hash": "5878dba3803a8e90",
+      "durationMs": 1268,
+      "bytes": 10700
+    },
+    "ar/ui/boys/cheer-3": {
+      "text": "يا عالم صغير!",
+      "hash": "dad03300f90c427a",
+      "durationMs": 1680,
+      "bytes": 14044
+    },
+    "ar/ui/boys/done-great-1": {
+      "text": "إنت عالم صغير!",
+      "hash": "7e860fcd477d5624",
+      "durationMs": 1652,
+      "bytes": 13835
+    },
+    "ar/ui/cheer-1": {
+      "text": "فديت هالجواب!",
+      "hash": "d7f0e72cbbe382ca",
+      "durationMs": 1666,
+      "bytes": 13835
+    },
+    "ar/ui/cheer-10": {
+      "text": "زين زين زين!",
+      "hash": "3976f2892ea222ff",
+      "durationMs": 1919,
+      "bytes": 15925
+    },
+    "ar/ui/cheer-11": {
+      "text": "من أول مرة… صح!",
+      "hash": "19c1aab0d57ceaf6",
+      "durationMs": 2514,
+      "bytes": 20732
+    },
+    "ar/ui/cheer-12": {
+      "text": "فكرة حلوة… وجواب صح!",
+      "hash": "9bafb83a5fce8bb3",
+      "durationMs": 2480,
+      "bytes": 20314
+    },
+    "ar/ui/cheer-13": {
+      "text": "طلع صح!",
+      "hash": "71f8b9d4d7f63414",
+      "durationMs": 1030,
+      "bytes": 8820
+    },
+    "ar/ui/cheer-14": {
+      "text": "صح صح صح!",
+      "hash": "bb4f810bebec6692",
+      "durationMs": 1738,
+      "bytes": 14462
+    },
+    "ar/ui/cheer-2": {
+      "text": "يا سلام عليه من جواب!",
+      "hash": "dad930bb7850b75e",
+      "durationMs": 2356,
+      "bytes": 19478
+    },
+    "ar/ui/cheer-3": {
+      "text": "الله الله… جواب علماء!",
+      "hash": "e448f413580f2f50",
+      "durationMs": 3140,
+      "bytes": 25747
+    },
+    "ar/ui/cheer-4": {
+      "text": "تبارك الرحمن!",
+      "hash": "489c8469e9f4b1f4",
+      "durationMs": 1756,
+      "bytes": 14671
+    },
+    "ar/ui/cheer-5": {
+      "text": "بالضبط جذي!",
+      "hash": "2646c1ac3609b036",
+      "durationMs": 1360,
+      "bytes": 11536
+    },
+    "ar/ui/cheer-6": {
+      "text": "إي والله صح!",
+      "hash": "7bb52b30a973bda8",
+      "durationMs": 1733,
+      "bytes": 14462
+    },
+    "ar/ui/cheer-7": {
+      "text": "جواب يبيض الوجه!",
+      "hash": "c60414fb0ae6afb4",
+      "durationMs": 2346,
+      "bytes": 19269
+    },
+    "ar/ui/cheer-8": {
+      "text": "حلو حيل!",
+      "hash": "7516e7dde09e7045",
+      "durationMs": 1520,
+      "bytes": 12790
+    },
+    "ar/ui/cheer-9": {
+      "text": "هذا هو الجواب!",
+      "hash": "663025e8c783dd91",
+      "durationMs": 1479,
+      "bytes": 12372
+    },
+    "ar/ui/cheer-color-1": {
+      "text": "ألوان حلوة… وكلها صح!",
+      "hash": "4d94d8a6ac53edc0",
+      "durationMs": 2758,
+      "bytes": 22612
+    },
+    "ar/ui/cheer-habitats-1": {
+      "text": "عرفنا وين يعيش!",
+      "hash": "ef11cd24fca8ab6e",
+      "durationMs": 1680,
+      "bytes": 14044
+    },
+    "ar/ui/cheer-habitats-2": {
+      "text": "حتى السمك فرحان!",
+      "hash": "f4a8ab6e0df4b0e7",
+      "durationMs": 1760,
+      "bytes": 14671
+    },
+    "ar/ui/cheer-homes-1": {
+      "text": "كل حيوان رجع بيته!",
+      "hash": "2b3309c929203e53",
+      "durationMs": 2096,
+      "bytes": 17388
+    },
+    "ar/ui/cheer-homes-2": {
+      "text": "البيوت كلها صح!",
+      "hash": "757ee8074e9a9a35",
+      "durationMs": 2024,
+      "bytes": 16761
+    },
+    "ar/ui/cheer-numbers-1": {
+      "text": "الأرقام كلها بمكانها!",
+      "hash": "f3358f76a7e52ac0",
+      "durationMs": 2099,
+      "bytes": 17388
+    },
+    "ar/ui/cheer-numbers-2": {
+      "text": "رقم رقم… وكلها صح!",
+      "hash": "a784a217d0442e61",
+      "durationMs": 3150,
+      "bytes": 25747
+    },
+    "ar/ui/cheer-protect-1": {
+      "text": "الأرض تقول: شكرا!",
+      "hash": "6cf7b95089fee57c",
+      "durationMs": 2320,
+      "bytes": 19060
+    },
+    "ar/ui/cheer-protect-2": {
+      "text": "البحر صار أنظف!",
+      "hash": "69a5d2a78f82b08a",
+      "durationMs": 1808,
+      "bytes": 15089
+    },
+    "ar/ui/cheer-protect-3": {
+      "text": "جذي نحمي بيئتنا!",
+      "hash": "eb9cb27ee8b4e4fe",
+      "durationMs": 1858,
+      "bytes": 15507
+    },
+    "ar/ui/cheer-scene-1": {
+      "text": "عيون صقر!",
+      "hash": "c528f5eaf56a4801",
+      "durationMs": 1155,
+      "bytes": 9865
+    },
+    "ar/ui/cheer-scene-2": {
+      "text": "ما فاتنا شي!",
+      "hash": "4275be8b0cb73b58",
+      "durationMs": 1207,
+      "bytes": 10283
+    },
+    "ar/ui/done-good-1": {
+      "text": "زين ما سوينا! ومرة ثانية نصير أحسن.",
+      "hash": "09168a9b13eb512b",
+      "durationMs": 3558,
+      "bytes": 29091
+    },
+    "ar/ui/done-good-2": {
+      "text": "خلصنا الجولة… والمرة الياية نجمع نجوم أكثر.",
+      "hash": "5e34ad93561d1ed8",
+      "durationMs": 4293,
+      "bytes": 34942
+    },
+    "ar/ui/done-great-1": {
+      "text": "خلصنا… والنتيجة تبيض الوجه!",
+      "hash": "16e668a645675244",
+      "durationMs": 3620,
+      "bytes": 29509
+    },
+    "ar/ui/done-great-2": {
+      "text": "كل النجوم! البر والبحر فرحانين.",
+      "hash": "a2d177407c129759",
+      "durationMs": 3572,
+      "bytes": 29091
+    },
+    "ar/ui/girls/cheer-1": {
+      "text": "يا بطلة!",
+      "hash": "b8cc3e8215d3da84",
+      "durationMs": 1149,
+      "bytes": 9656
+    },
+    "ar/ui/girls/cheer-2": {
+      "text": "يا شاطرة!",
+      "hash": "6e9717c40952523b",
+      "durationMs": 1360,
+      "bytes": 11536
+    },
+    "ar/ui/girls/cheer-3": {
+      "text": "يا عالمة صغيرة!",
+      "hash": "2a9cc5e8d0f51ffe",
+      "durationMs": 1593,
+      "bytes": 13208
+    },
+    "ar/ui/girls/done-great-1": {
+      "text": "إنتي عالمة صغيرة!",
+      "hash": "8256017acc172fbf",
+      "durationMs": 1765,
+      "bytes": 14671
+    },
+    "ar/ui/retry-1": {
+      "text": "ما عليه… الغلط يعلمنا.",
+      "hash": "f7d4807b355c26d6",
+      "durationMs": 2597,
+      "bytes": 21358
+    },
+    "ar/ui/retry-2": {
+      "text": "قربنا وايد! هذا هو الصح.",
+      "hash": "4a10368fc6d58a03",
+      "durationMs": 2818,
+      "bytes": 23030
+    },
+    "ar/ui/retry-3": {
+      "text": "هالمرة لا… بس الحين عرفناها.",
+      "hash": "64d9d781b1561555",
+      "durationMs": 2998,
+      "bytes": 24493
+    },
+    "ar/ui/retry-4": {
+      "text": "عادي… حتى العلماء يغلطون!",
+      "hash": "f9465cf8542f3898",
+      "durationMs": 2668,
+      "bytes": 21985
+    },
+    "ar/ui/retry-5": {
+      "text": "شوي شوي… ونصير أشطر.",
+      "hash": "623a6c3957a2fefe",
+      "durationMs": 2911,
+      "bytes": 23866
+    },
+    "ar/ui/retry-6": {
+      "text": "المحاولة حلوة… والصح هذا.",
+      "hash": "bc213cea430f97d7",
+      "durationMs": 2713,
+      "bytes": 22194
+    },
+    "ar/ui/retry-7": {
+      "text": "كل غلطة… درس جديد.",
+      "hash": "f6bac63c5053fee2",
+      "durationMs": 2555,
+      "bytes": 20940
+    },
+    "ar/ui/review-1": {
+      "text": "نطالع الحل الصح سوا…",
+      "hash": "30e8433b5387b3b4",
+      "durationMs": 1812,
+      "bytes": 15089
+    },
+    "ar/ui/review-2": {
+      "text": "هذا هو الحل… ونتعلم منه.",
+      "hash": "31d789da71874f25",
+      "durationMs": 2812,
+      "bytes": 23030
+    },
+    "ar/ui/review-3": {
+      "text": "خلنا نشوف وين الصح…",
+      "hash": "bbbb529a46055d6f",
+      "durationMs": 1990,
+      "bytes": 16552
+    },
+    "ar/ui/streak-3-1": {
+      "text": "ثلاثة على التوالي… يا سلام!",
+      "hash": "25803d366a9bd109",
+      "durationMs": 3211,
+      "bytes": 26165
+    },
+    "ar/ui/streak-3-2": {
+      "text": "ثلاثة صح… والرابع جاي!",
+      "hash": "ec3e6a19ba7f48c2",
+      "durationMs": 2552,
+      "bytes": 20940
+    },
+    "ar/ui/streak-5-1": {
+      "text": "خمسة على التوالي… شي ولا أروع!",
+      "hash": "433b9d0fb824012e",
+      "durationMs": 3600,
+      "bytes": 29300
+    },
+    "ar/ui/streak-5-2": {
+      "text": "خمس مرات صح! نجم العلوم!",
+      "hash": "e202ec617bb09410",
+      "durationMs": 2921,
+      "bytes": 23866
+    },
+    "ar/ui/test-intro-1": {
+      "text": "هذا نموذج اختبار… مثل ورقة المدرسة بالضبط.",
+      "hash": "025ce121413b1e8e",
+      "durationMs": 4103,
+      "bytes": 33479
+    },
+    "ar/ui/test-intro-2": {
+      "text": "يلا نجرب الاختبار… سؤال ورا سؤال، وعلى راحتنا.",
+      "hash": "60cc92d351ef19e4",
+      "durationMs": 4243,
+      "bytes": 34524
+    },
+    "ar/ui/welcome-1": {
+      "text": "حياكم! اليوم بنعرف وين تعيش الكائنات الحية… وشلون نحميها.",
+      "hash": "6ad993ea61e2f8d1",
+      "durationMs": 5520,
+      "bytes": 44764
+    },
+    "ar/ui/welcome-2": {
+      "text": "أهلا وسهلا! من البحر للبر… يلا نستكشف.",
+      "hash": "d7ec1297787a09fb",
+      "durationMs": 4360,
+      "bytes": 35360
+    },
+    "ar/ui/welcome-3": {
+      "text": "مستعدين؟ البر والبحر ينطرونا!",
+      "hash": "1671a7827feb7405",
+      "durationMs": 3328,
+      "bytes": 27210
     }
   }
 }

@@ -1,4 +1,5 @@
-"""Generate the narration clips with ElevenLabs (Maryam Essa - Kuwaiti Calm & Warm) into public/audio.
+"""Generate the narration clips with ElevenLabs into public/audio: Maryam Essa (Kuwaiti),
+in Kuwaiti dialect, for every instruction, question, choice, explanation and cheer.
 
 Usage (from the project root):
   python3 scripts/generate-audio.py [--only id1,id2] [--dry-run]
@@ -19,13 +20,14 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT = os.path.join(ROOT, 'public', 'audio')
 RAW = os.path.join(ROOT, '.audio-raw')
 MANIFEST = os.path.join(OUT, 'manifest.json')
-# The Kuwaiti voice and settings the user approved for «بصمة وأثر» (Oct 2026).
-VOICE_ID = 'w0uhBAmNIG5kUDeaFEsA'
-VOICE_NAME = 'Maryam Essa - Kuwaiti Calm & Warm'
+# The Kuwaiti voice the user approved for «بصمة وأثر» (October 2026).
+VOICES = {
+    'ar': {'id': 'w0uhBAmNIG5kUDeaFEsA', 'name': 'Maryam Essa - Kuwaiti Calm & Warm'},
+}
 MODEL = 'eleven_v4'
 SETTINGS = {'stability': 0.5, 'similarity_boost': 0.8, 'style': 0.2}
-# Explanations are read a little slower so a young learner can follow them.
-SPEED = {'f/': 0.88, 'q/': 0.94, 't/': 0.94, 'ui/': 0.97, 'o/': 1.0}
+# Explanations and questions are read a little slower so a young learner can follow them.
+SPEED = {'ar/f/': 0.88, 'ar/p/': 0.92, 'ar/r/': 0.92, 'ar/o/': 0.95, 'ar/q/': 0.95, 'ar/ui/': 0.97}
 SAFETY_MARGIN = 400
 CREDITS_PER_CHAR = 0.34
 
@@ -50,9 +52,13 @@ def settings_for(cue_id):
     return {**SETTINGS, 'speed': speed}
 
 
+def voice_for(cue_id):
+    return VOICES[cue_id.split('/', 1)[0]]
+
+
 def text_hash(text, cue_id):
     settings = json.dumps(settings_for(cue_id), sort_keys=True)
-    return hashlib.sha256(f'{VOICE_ID}|{MODEL}|{settings}|{text}'.encode()).hexdigest()[:16]
+    return hashlib.sha256(f"{voice_for(cue_id)['id']}|{MODEL}|{settings}|{text}".encode()).hexdigest()[:16]
 
 
 def process(raw_path, out_path):
@@ -79,7 +85,7 @@ def main():
         only = set(sys.argv[sys.argv.index('--only') + 1].split(','))
         cues = [cue for cue in cues if cue['id'] in only]
 
-    manifest = {'voice': VOICE_NAME, 'voiceId': VOICE_ID, 'model': MODEL, 'settings': SETTINGS, 'clips': {}}
+    manifest = {'voices': VOICES, 'model': MODEL, 'settings': SETTINGS, 'clips': {}}
     if os.path.exists(MANIFEST):
         manifest['clips'] = json.load(open(MANIFEST)).get('clips', {})
 
@@ -93,7 +99,7 @@ def main():
     key = api_key()
     sub = json.loads(request('https://api.elevenlabs.io/v1/user/subscription', key))
     remaining = sub['character_limit'] - sub['character_count']
-    # Arabic on eleven_v4 bills about a quarter credit per character (measured Oct 2026); plan for a third.
+    # eleven_v4 bills about a quarter credit per character in Arabic and English (measured Oct 2026); plan for a third.
     estimate = round(cost * CREDITS_PER_CHAR)
     if estimate + SAFETY_MARGIN > remaining:
         sys.exit(f'Stopping: about {estimate} credits needed but only {remaining} remain this cycle.')
@@ -106,7 +112,7 @@ def main():
             if os.path.exists(raw_path + '.hash') else False
         if not cached:
             audio = request(
-                f'https://api.elevenlabs.io/v1/text-to-speech/{VOICE_ID}?output_format=mp3_44100_128', key,
+                f"https://api.elevenlabs.io/v1/text-to-speech/{voice_for(cue['id'])['id']}?output_format=mp3_44100_128", key,
                 {'text': cue['text'], 'model_id': MODEL, 'language_code': 'ar', 'voice_settings': settings_for(cue['id'])},
             )
             with open(raw_path, 'wb') as handle:
