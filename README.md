@@ -36,3 +36,17 @@ npm run build:hub      # production Hub build into dist-hub/ (base /science-grad
 - Preview page: `npm run build:preview && node scripts/make-artifact-page.mjs` (one page for both copies; `#boys` opens the boys' copy)
 - Pictures: `python3 scripts/crop-pictures.py <renders> public/pics` (from the Ministry book, PDF page = printed + 71)
 - Hub seed: `npm run generate:hub-seed` → `integration/seed-science-grade1.sql`
+
+## Sound after leaving the page
+Safari on iPhone and iPad takes the sound away from a page that is left (another app, the home screen,
+a locked screen) and wakes it only inside a finished tap, not when the finger goes down. Since 8 November
+2026, leaving the page stops what is being said, and the first tap after coming back starts a fresh sound
+context (`src/audio/context.ts`); clips still loading are decoded again in it. `tests/e2e/sound.spec.ts`
+checks it, under that tap rule too.
+
+## Narration notes of 8 November 2026
+The family asked for no sighs, Kuwaiti words and Kuwaiti numbers. 45 of Maryam's clips were recorded
+again: every clip with a breath of 0.24 s or more at a «…» pause, every «نحوط» (now «نحط دائرة على»),
+counts said «ثلاثة», «خمسة», «فديت» removed from the cheers, and «السيكل» changed to «القاري». The voice
+read «القاري» the formal way («القارئ»), so it is sent as «الگاري» (`voiced()` in `src/data/catalog.ts`);
+the screen keeps «القاري». `tests/unit/catalog.test.ts` holds these rules.

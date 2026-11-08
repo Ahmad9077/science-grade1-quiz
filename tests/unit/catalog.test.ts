@@ -157,6 +157,20 @@ describe('catalog', () => {
 })
 
 describe('narration', () => {
+  // The family's notes of 8 November 2026.
+  it('uses Kuwaiti words: «نحط دائرة», «القاري», counts said as ثلاثة and خمسة, no «فديت»', () => {
+    const shortCounts = /(?<![\u0600-\u06FF])(ثلاث|أربع|خمس|ست|سبع|ثمان|تسع|عشر)(?![\u0600-\u06FF])/
+    for (const cue of audioCues()) {
+      expect(cue.text, cue.id).not.toMatch(/حو[ّ]?ط|سيكل|فديت/)
+      expect(cue.text, cue.id).not.toMatch(shortCounts)
+      expect(cue.text, cue.id).not.toMatch(/(?<![\u0600-\u06FF])(امم|أوه|آه|اوه)(?![\u0600-\u06FF])/)
+    }
+    // «القاري» is shown as written and sent to the voice as «الگاري», so its ق sounds like the one in «نقول».
+    expect(FACTS.bike.say).toContain('القاري')
+    expect(audioCues().find((cue) => cue.id === 'ar/f/bike')!.text).toContain('الگاري')
+    expect(audioCues().filter((cue) => cue.text.includes('قاري'))).toEqual([])
+  })
+
   const cues = audioCues()
   const texts = cues.map((cue) => cue.text)
 
